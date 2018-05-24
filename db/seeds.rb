@@ -6,21 +6,54 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create(email: "william@william.com", password:"password")
+User.create(email: "chelsea@chelsea.com", password:"password")
+User.create(email: "valerie@valerie.com", password:"password")
 
-music = SkillCategory.create(id: 1, name: "music")
-sports = SkillCategory.create(id: 2, name: "sports")
-food = SkillCategory.create(id: 3, name: "food")
-tech = SkillCategory.create(id: 4, name: "tech")
-business = SkillCategory.create(id: 5, name: "business")
+SkillCategory.create(name: "music")
+SkillCategory.create(name: "sports")
+SkillCategory.create(name: "food")
+SkillCategory.create(name: "tech")
+SkillCategory.create(name: "business")
 
-guitar = Skill.create(name: "guitar", skill_category_id: 1)
-violin = Skill.create(name: "violin", skill_category_id: 1)
-piano = Skill.create(name: "piano", skill_category_id: 1)
-flute = Skill.create(name: "flute", skill_category_id: 1)
-football = Skill.create(name: "football", skill_category_id: 2)
-skiing = Skill.create(name: "skiing", skill_category_id: 2)
-surfing = Skill.create(name: "surfing", skill_category_id: 2)
-asian = Skill.create(name: "asian", skill_category_id: 3)
-french = Skill.create(name: "french", skill_category_id: 3)
-ruby = Skill.create(name: "ruby", skill_category_id: 4)
-sql = Skill.create(name: "sql", skill_category_id: 4)
+Skill.create(name: "guitar", skill_category_id: 1)
+Skill.create(name: "violin", skill_category_id: 1)
+Skill.create(name: "piano", skill_category_id: 1)
+Skill.create(name: "flute", skill_category_id: 1)
+Skill.create(name: "football", skill_category_id: 2)
+Skill.create(name: "skiing", skill_category_id: 2)
+Skill.create(name: "surfing", skill_category_id: 2)
+Skill.create(name: "asian", skill_category_id: 3)
+Skill.create(name: "french", skill_category_id: 3)
+
+#MATCH 1 USER 1 AND 2
+UserSkill.create(user_id: 1, skill_id: 1, mode: "learn")
+UserSkill.create(user_id: 2, skill_id: 1, mode: "teach")
+
+#MATCH 2 USER 2 AND 1
+UserSkill.create(user_id: 2, skill_id: 2, mode: "learn")
+UserSkill.create(user_id: 1, skill_id: 2, mode: "teach")
+
+#MATCH 3 USER 3 AND 1
+
+UserSkill.create(user_id: 3, skill_id: 1, mode: "teach")
+
+#LONELY SKILL
+UserSkill.create(user_id: 3, skill_id: 7, mode: "learn")
+
+
+Match.create(teacher_skill_id: 2, student_skill_id: 1)
+Match.create(teacher_skill_id: 4, student_skill_id: 3)
+Match.create(teacher_skill_id: 5, student_skill_id: 1)
+
+
+#MESSAGES IN MATCH 1
+Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)
+Message.create(content: "Amazing experience (message from the teacher)", user_id: 2, match_id: 1)
+#MESSAGES IN MATCH 2
+Message.create(content: "Amazing experience (message from the student)", user_id: 2, match_id: 2)
+Message.create(content: "Amazing experience (message from the teacher)", user_id: 1, match_id: 2)
+#MESSAGES IN MATCH 3
+Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 3)
+Message.create(content: "Amazing experience (message from the teacher)", user_id: 3, match_id: 3)
+
