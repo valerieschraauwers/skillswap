@@ -1,7 +1,7 @@
 class MatchesController < ApplicationController
 
   def index
-    search_new_matches
+    search_and_create_matches
     puts "Search and creation FINISHED"
     @matches = Match.all
   end
