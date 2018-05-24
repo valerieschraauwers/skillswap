@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :matches do
     collection do
-      get :search_and_create_matches
+      post :search_and_create_matches
     end
   end
 

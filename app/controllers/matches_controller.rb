@@ -1,8 +1,6 @@
 class MatchesController < ApplicationController
 
   def index
-    # search_and_create_matches
-
     @matches = Match.all
   end
 

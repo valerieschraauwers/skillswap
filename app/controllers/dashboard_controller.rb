@@ -13,4 +13,8 @@ class DashboardController < ApplicationController
   @match = Match.find(1)
  end
 
+ def my_matches
+  @matches = current_user.matches
+ end
+
 end
