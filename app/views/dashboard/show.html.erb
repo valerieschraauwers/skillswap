@@ -1,9 +1,13 @@
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-pills flex-column" role="tablist">
     <li role="presentation" class="active">
       <a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a>
     </li>
-    <li role="presentation"><a href="#my-profile" aria-controls="my-profile" role="tab" data-toggle="tab">My Profile </a></li>
-    <li role="presentation"><a href="#my-matches" aria-controls="my-matches" role="tab" data-toggle="tab">My Matches </a></li>
+    <li role="presentation">
+      <a href="#my-profile" aria-controls="my-profile" role="tab" data-toggle="tab">My Profile </a>
+    </li>
+    <li role="presentation">
+      <a href="#my-matches" aria-controls="my-matches" role="tab" data-toggle="tab">My Matches </a>
+    </li>
 </ul>
 
   <div class="tab-content">
@@ -19,7 +23,6 @@
       <%= render 'my_matches' %>
     </div>
   </div>
-
 
 <% content_for :after_js do %>
   <script type="text/javascript">
