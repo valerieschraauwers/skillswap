@@ -1,19 +1,21 @@
 Rails.application.routes.draw do
+
+
+  resources :matches do
+    collection do
+      post :search_and_create_matches
+    end
+  end
+
+
+  resources :profiles, only: [:show, :edit, :update]
+  resources :user_skills
+  get '/learn', to: 'user_skills#learn', as: 'select_skills_to_learn'
+  get '/teach', to: 'user_skills#teach', as: 'select_skills_to_teach'
+
+
+  get '/dashboard', to: 'dashboard#show'
   get 'profiles/show'
-  get 'skills/index'
-  get 'skills/show'
-  get 'skills/new'
-  get 'skills/create'
-  get 'skills/edit'
-  get 'skills/update'
-  get 'skills/destroy'
-  get 'matches/index'
-  get 'matches/show'
-  get 'matches/new'
-  get 'matches/create'
-  get 'matches/edit'
-  get 'matches/update'
-  get 'matches/destroy'
 
   devise_for :users
   root to: 'pages#home'

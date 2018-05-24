@@ -1,0 +1,30 @@
+<h1>We are in my matches</h1>
+
+<h3>My role teacher matches</h3>
+
+
+<% current_user.owned_skills_matches.each do |match| %>
+<ul>
+ Match ID:<%= match.id %>
+    SKILL: <%= match.skill.name %>
+    <h3>Teacher:<%= match.teacher.email %> </h3>
+    <h3>Student:<%= match.student.email %> </h3>
+</ul>
+<% end %>
+
+
+<h3>My role student matches</h3>
+
+
+<% current_user.desired_skills_matches.each do |match| %>
+<ul>
+ Match ID:<%= match.id %>
+    SKILL: <%= match.skill.name %>
+    <h3>Teacher:<%= match.teacher.email %> </h3>
+    <h3>Student:<%= match.student.email %> </h3>
+</ul>
+<% end %>
+
+<%= link_to "A Match", match_path(1) %>
+
+

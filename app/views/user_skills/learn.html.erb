@@ -1,0 +1,19 @@
+<h1>Select skills you want to learn</h1>
+<% @skills.each do |skill| %>
+  <%= simple_form_for @user_skill do |f| %>
+    <%= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
+    <%= f.input :mode, as: :hidden, :input_html => {value: 'learn'} %>
+    <%= f.submit value: "Learn #{skill.name}" %>
+  <% end %>
+<% end %>
+
+<h1> Skills you have!</h1>
+<% current_user.user_skills.each do |user_skill| %>
+<h3>
+  <%= user_skill.skill.name %>
+</h3>
+<% end %>
+
+
+
+<%= link_to "next", select_skills_to_teach_path  %>
