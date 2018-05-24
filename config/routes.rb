@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'profiles/'
+  get 'profiles/show'
   get 'skills/index'
   get 'skills/show'
   get 'skills/new'
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'matches/edit'
   get 'matches/update'
   get 'matches/destroy'
+
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
