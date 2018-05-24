@@ -1,12 +1,6 @@
 class SkillsController < ApplicationController
 
-  def learn
-    @categories = SkillCategory.all
-  end
 
-  def teach
-    @categories = SkillCategory.all
-  end
 
   def show
 
