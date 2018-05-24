@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'profiles/show'
-  get 'skills/index'
+  get 'skills/index', as: 'skills'
   get 'skills/show'
   get 'skills/new'
   get 'skills/create'

@@ -5,6 +5,7 @@ class SkillsController < ApplicationController
   end
 
   def show
+    @category = SkillCategory.find(params[:id])
   end
 
   def new
