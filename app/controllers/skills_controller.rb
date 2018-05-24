@@ -1,10 +1,11 @@
 class SkillsController < ApplicationController
 
   def index
-    # show all skills to select page 1 and page 2
+    @categories = SkillCategory.all
   end
 
   def show
+    @category = SkillCategory.find(params[:id])
   end
 
   def new
