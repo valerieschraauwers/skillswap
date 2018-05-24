@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :user_skills
+  # mount_uploader :photo, PhotoUploader
   has_many :matches, through: :user_skill
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

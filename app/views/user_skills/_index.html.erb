@@ -1,0 +1,16 @@
+
+
+
+<h1>list of categories</h1>
+<ul>
+<% @categories.each do |category|%>
+<li><%= category.name %></li>
+<ul>
+<% category.skills.each do |skill| %>
+<div class="checkbox disabled">
+  <label><input type="checkbox" value=""><%= skill.name %></label>
+</div>
+<% end %>
+</ul>
+<% end %>
+</ul>
