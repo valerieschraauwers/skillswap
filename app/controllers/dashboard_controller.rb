@@ -1,13 +1,16 @@
 class DashboardController < ApplicationController
 
-  def matches
-    # number of matches
-    # last matches
-  end
+ def show
+  @messages = Message.all
+  @users = User.all
+  @matches = Match.all
+ end
 
-  def last_messages
-  end
+ def info
+  @messages = Message.all
+  @users = User.all
+  @matches = Match.all
+  @match = Match.find(1)
+ end
 
-  def profile
-  end
 end

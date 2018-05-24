@@ -4,6 +4,7 @@ class MatchesController < ApplicationController
   end
 
   def show
+    @match = Match.last
   end
 
   def new
