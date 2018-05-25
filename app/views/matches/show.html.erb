@@ -21,6 +21,8 @@
   <%= link_to 'Open Chat!', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post'%>
 </div>
 
+<h2>############REVIEW SYSTEM###############</h2>
+
 <div id="reviews">
   <% if @match.reviews.blank? %>
     Be the first to leave a review
@@ -30,5 +32,7 @@
     <% end %>
   <% end %>
 </div>
+
+<%= render 'reviews/form', match: @match, review: @review %>
 
 
