@@ -27,19 +27,19 @@ Skill.create(name: "asian", skill_category_id: 3)
 Skill.create(name: "french", skill_category_id: 3)
 
 #MATCH 1 USER 1 AND 2
-UserSkill.create(user_id: 1, skill_id: 1, mode: "student")  #WILLIAM STUDENT  --- GUITAR
-UserSkill.create(user_id: 2, skill_id: 1, mode: "teacher") #CHELSEA TEACHER ---- GUITAR
+UserSkill.create(user_id: 1, skill_id: 1, role: "student")  #WILLIAM STUDENT  --- GUITAR
+UserSkill.create(user_id: 2, skill_id: 1, role: "teacher") #CHELSEA TEACHER ---- GUITAR
 
 #MATCH 2 USER 2 AND 1
-UserSkill.create(user_id: 2, skill_id: 2, mode: "student") #CHELSEA STUDENT --- VIOLIN
-UserSkill.create(user_id: 1, skill_id: 2, mode: "teacher") #WILLIAM TEACHER --- VIOLIN
+UserSkill.create(user_id: 2, skill_id: 2, role: "student") #CHELSEA STUDENT --- VIOLIN
+UserSkill.create(user_id: 1, skill_id: 2, role: "teacher") #WILLIAM TEACHER --- VIOLIN
 
 #MATCH 3 USER 3 AND 1
 
-UserSkill.create(user_id: 3, skill_id: 1, mode: "teacher") # VALERIE TEACHER --- GUITAR
+UserSkill.create(user_id: 3, skill_id: 1, role: "teacher") # VALERIE TEACHER --- GUITAR
 
 #LONELY SKILL
-UserSkill.create(user_id: 3, skill_id: 7, mode: "student") # VALERIE STUDENT --- SURFING
+UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
 
 
 Match.create(teacher_skill_id: 2, student_skill_id: 1)

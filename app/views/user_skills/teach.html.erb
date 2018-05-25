@@ -1,6 +1,30 @@
 <h1>Select skills you want to teach</h1>
 
-<%= render 'form' %>
+<% @categories.each do |category|%>
+<h2><%= category.name %></h2>
+
+<% category.skills.each do |skill| %>
+  <%= simple_form_for @user_skill do |f| %>
+    <%= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
+    <%= f.input :role, as: :hidden, :input_html => {value: 'teacher'} %>
+    <% if @current_skills.any? {|currentskill| currentskill.skill_id == skill.id} %>
+    <%= f.submit value: "teach #{skill.name}", disabled: true%>
+      <% else %>
+      <!-- MAYBE A DESTROY BUTTON  -->
+      <%= f.submit value: "teach #{skill.name}" %>
+    <% end %>
+  <% end %>
+<% end %>
+<% end %>
+
+<h1> Skills you have selected!</h1>
+<% current_user.user_skills.each do |user_skill| %>
+<% if user_skill.role == "teacher" %>
+<h3>
+  <%= user_skill.skill.name %>
+</h3>
+<% end %>
+<% end %>
 
 <%= link_to "Next", edit_profile_path(current_user)  %>
 
