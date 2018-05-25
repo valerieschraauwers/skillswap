@@ -31,15 +31,15 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
 
       userid1 = user_skill.user_id
       skillid1 = user_skill.skill_id
-      mode1 = user_skill.mode
+      mode1 = user_skill.role
 
       @all_user_skills.each do |user_skill2|
         userid2 = user_skill2.user_id
         skillid2 = user_skill2.skill_id
-        mode2 = user_skill2.mode
+        mode2 = user_skill2.role
 
         if (userid1 != userid2 && skillid1 == skillid2 && mode1 != mode2)
-          if user_skill.mode == "student" && user_skill2.mode == "teacher"
+          if user_skill.role == "student" && user_skill2.role == "teacher"
             student = user_skill
             teacher = user_skill2
           else

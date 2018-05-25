@@ -5,7 +5,7 @@
 
 <% current_user.owned_skills_matches.each do |match| %>
 <ul>
- Match ID:<%= match.id %>
+ Match ID:<%= link_to match.id, match_path(match) %>
     SKILL: <%= match.skill.name %>
     <h3>Teacher:<%= match.teacher.email %> </h3>
     <h3>Student:<%= match.student.email %> </h3>
