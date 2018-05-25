@@ -11,10 +11,10 @@ class User < ApplicationRecord
 
   def owned_skills_matches
     # Match.joins(:user_skills).joins(:user).where("user_skills.mode = 'teacher' AND match.teacher_id = user_skills.id AND users.id == #{self.id}")
-    user_skills.where(mode: "teacher").map {|skill| skill.teacher_matches}.flatten
+    user_skills.where(role: "teacher").map {|skill| skill.teacher_matches}.flatten
   end
 
   def desired_skills_matches
-    user_skills.where(mode: "student").map { |skill| skill.student_matches }.flatten
+    user_skills.where(role: "student").map { |skill| skill.student_matches }.flatten
   end
 end
