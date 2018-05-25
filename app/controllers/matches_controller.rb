@@ -53,10 +53,6 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
     redirect_to matches_path
   end
 
-  def search_and_create_full_matches
-    #MAYBE DIRECTLY IN THE CARD...OR ADDING A VARIABLE INSIDE THE MATCH LIKE "HALF MATCH, FULL MATCH"
-  end
-
   private
 
   def set_match
