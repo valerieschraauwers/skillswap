@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_26_091550) do
+ActiveRecord::Schema.define(version: 2018_05_26_091551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 2018_05_26_091550) do
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["match_id"], name: "index_messages_on_match_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "match_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_reviews_on_match_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "skill_categories", force: :cascade do |t|
@@ -93,6 +103,8 @@ ActiveRecord::Schema.define(version: 2018_05_26_091550) do
   end
 
   add_foreign_key "messages", "matches"
+  add_foreign_key "reviews", "matches"
+  add_foreign_key "reviews", "users"
   add_foreign_key "skills", "skill_categories"
   add_foreign_key "user_skills", "skills"
   add_foreign_key "user_skills", "users"

@@ -7,7 +7,7 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-
+    @review = Review.new
   end
 
   def new
