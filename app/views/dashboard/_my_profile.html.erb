@@ -1,5 +1,24 @@
-<h1>We are in my profile</h1>
+<h1>My profile</h1>
 
 <%= cl_image_tag current_user.photo %>
+<h2><%= current_user.first_name%> <%=current_user.last_name %></h2>
+<h3><%= current_user.date_of_birth %></h3>
+<h4><%= current_user.bio %></h4>
+
+
+<h4>Skills you want to learn</h4>
+<% current_user.user_skills.each do |user_skill| %>
+<% if user_skill.role == "student" %>
+<p><%= user_skill.skill.name %></p>
+<% end %>
+<% end %>
+
+<h4>Skills you want to teach</h4>
+<% current_user.user_skills.each do |user_skill| %>
+<% if user_skill.role == "teacher" %>
+<p><%= user_skill.skill.name %></p>
+<% end %>
+<% end %>
 
 <%= link_to "Edit profile", edit_user_registration_path(current_user) %>
+<%= link_to "Back", :back %>
