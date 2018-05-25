@@ -1,11 +1,13 @@
 class MatchesController < ApplicationController
 
+before_action :set_match, only: [:show, :edit, :update, :destroy]
+
   def index
     @matches = Match.all
   end
 
   def show
-    @match = Match.last
+
   end
 
   def new
@@ -54,4 +56,11 @@ class MatchesController < ApplicationController
   def search_and_create_full_matches
     #MAYBE DIRECTLY IN THE CARD...OR ADDING A VARIABLE INSIDE THE MATCH LIKE "HALF MATCH, FULL MATCH"
   end
+
+  private
+
+  def set_match
+    @match = Match.find(params[:id])
+  end
+
 end
