@@ -47,13 +47,13 @@ Match.create(teacher_skill_id: 4, student_skill_id: 3)
 Match.create(teacher_skill_id: 5, student_skill_id: 1)
 
 
-#MESSAGES IN MATCH 1
-Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)
-Message.create(content: "Amazing experience (message from the teacher)", user_id: 2, match_id: 1)
-#MESSAGES IN MATCH 2
-Message.create(content: "Amazing experience (message from the student)", user_id: 2, match_id: 2)
-Message.create(content: "Amazing experience (message from the teacher)", user_id: 1, match_id: 2)
-#MESSAGES IN MATCH 3
-Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 3)
-Message.create(content: "Amazing experience (message from the teacher)", user_id: 3, match_id: 3)
+# #MESSAGES IN MATCH 1
+# Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)
+# Message.create(content: "Amazing experience (message from the teacher)", user_id: 2, match_id: 1)
+# #MESSAGES IN MATCH 2
+# Message.create(content: "Amazing experience (message from the student)", user_id: 2, match_id: 2)
+# Message.create(content: "Amazing experience (message from the teacher)", user_id: 1, match_id: 2)
+# #MESSAGES IN MATCH 3
+# Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 3)
+# Message.create(content: "Amazing experience (message from the teacher)", user_id: 3, match_id: 3)
 

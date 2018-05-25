@@ -17,6 +17,10 @@
 
 <h2>Send message:</h2>
 
+<div class="item">
+  <%= link_to 'Open Chat!', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post'%>
+</div>
+
 
 
 
