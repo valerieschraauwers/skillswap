@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get 'pages/skills'
+
   resources :conversations do
     resources :messages
   end
