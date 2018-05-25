@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :user_skills
-  # mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PhotoUploader
   has_many :matches, through: :user_skill
 
   # Include default devise modules. Others available are:
@@ -17,4 +17,11 @@ class User < ApplicationRecord
   def desired_skills_matches
     user_skills.where(role: "student").map { |skill| skill.student_matches }.flatten
   end
+
+  def full_profile?
+    first_name.present? && last_name.present?
+  end
 end
+
+
+# if full_profile? (all params filled out?) then show other button/info on edit/registrations page
