@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
  def show
   @messages = Message.all
   @users = User.all
+  @user_skills = UserSkill.all
   @matches = Match.all
  end
 

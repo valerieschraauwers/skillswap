@@ -1,8 +1,12 @@
 <h1>My awesome dashboard</h1>
 <ul>
-<li><%= @messages %></li>
+<li>
+  <% @messages.each do |message| %>
+  <p><%= message.content %></p>
+  <% end %>
+  </li>
 <li><%= @users %></li>
-<li><%= @matches %></li>
+<li>Number of matches: <%= @matches.count %></li>
 </ul>
 
 
