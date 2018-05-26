@@ -1,12 +1,14 @@
-<h1>My awesome dashboard</h1>
-<ul>
-<li>
-  <% @messages.each do |message| %>
-  <p><%= message.content %></p>
-  <% end %>
-  </li>
-<li><%= @users %></li>
-<li>Number of matches: <%= @matches.count %></li>
-</ul>
-
-
+<div class="row">
+  <div class="col-xs-3 col-sm-3 col-sm-offset-12">
+    <div class="info-card">
+      <% @messages.each do |message| %>
+      <p><%= message.content %></p>
+      <% end %>
+    </div>
+    <div class="info-card">
+      <% @matches.each do |match| %>
+      <p><%= match.teacher_skill.skill.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

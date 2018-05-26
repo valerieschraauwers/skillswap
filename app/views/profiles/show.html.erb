@@ -1,2 +1,27 @@
 <h1>Profiles#show</h1>
 <p>Find me in app/views/profiles/show.html.erb</p>
+
+<h5><%= current_user.first_name%></h5>
+
+<%= cl_image_tag current_user.photo, class: "avatar" %>
+
+<h3><%= current_user.date_of_birth %></h3>
+<h4><%= current_user.bio %></h4>
+
+
+<h4>Skills you want to learn</h4>
+<% current_user.user_skills.each do |user_skill| %>
+<% if user_skill.role == "student" %>
+<p><%= user_skill.skill.name %></p>
+<% end %>
+<% end %>
+
+<h4>Skills you want to teach</h4>
+<% current_user.user_skills.each do |user_skill| %>
+<% if user_skill.role == "teacher" %>
+<p><%= user_skill.skill.name %></p>
+<% end %>
+<% end %>
+
+<%= link_to "Edit profile", edit_user_registration_path(current_user) %>
+<%= link_to "Back", :back %>

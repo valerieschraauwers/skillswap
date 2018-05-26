@@ -1,34 +1,11 @@
-<ul class="nav nav-pills flex-column" role="tablist">
-    <li role="presentation" class="active">
-      <a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a>
-    </li>
-    <li role="presentation">
-      <a href="#my-profile" aria-controls="my-profile" role="tab" data-toggle="tab">My Profile </a>
-    </li>
-    <li role="presentation">
-      <a href="#my-matches" aria-controls="my-matches" role="tab" data-toggle="tab">My Matches </a>
-    </li>
-</ul>
+<div class="container-dashboard">
+  <div class="flexed-items">
+    <%= render 'sidebar' %>
+<!-- Page content -->
 
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="info">
-      <%= render 'info' %>
-    </div>
+      <div class="main">
+        <%= render 'info' %>
+      </div>
 
-    <div role="tabpanel" class="tab-pane" id="my-profile">
-      <%= render 'my_profile' %>
-    </div>
-
-    <div role="tabpanel" class="tab-pane" id="my-matches">
-      <%= render 'my_matches' %>
-    </div>
   </div>
-
-<% content_for :after_js do %>
-  <script type="text/javascript">
-    $('#myTabs a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-  </script>
-<% end %>
+</div>
