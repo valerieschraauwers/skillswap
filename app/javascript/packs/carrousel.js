@@ -13,6 +13,8 @@ function moveToSelected(element) {
   var prevSecond = $(prev).prev();
   var nextSecond = $(next).next();
 
+
+
   $(selected).removeClass().addClass("selected");
 
   $(prev).removeClass().addClass("prev");
