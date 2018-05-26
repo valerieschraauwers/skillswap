@@ -14,10 +14,12 @@ Rails.application.routes.draw do
   get '/teach', to: 'user_skills#teach', as: 'select_skills_to_teach'
 
   get '/dashboard', to: 'dashboard#show'
+  get '/dashboard/settings'
+  get '/dashboard/my_skills'
+  get '/dashboard/my_matches'
   get 'profiles/show'
 
   get 'pages/skills'
-  get 'pages/test'
 
   devise_for :users
   root to: 'pages#home'
