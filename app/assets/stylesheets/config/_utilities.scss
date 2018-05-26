@@ -1,9 +1,18 @@
+.container {
+  margin-top: 50px
+}
+
 .container-dashboard {
   padding: 25px 50px;
 }
 .flexed-items {
   display: flex;
   width: 100%;
+}
+
+.half-item {
+  width: 50%;
+  height: 100%;
 }
 
 #profile-card {

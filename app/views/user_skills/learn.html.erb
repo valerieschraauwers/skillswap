@@ -1,3 +1,7 @@
+
+<div class="flexed-items">
+    <div class="half-item">
+
 <h1>Select skills you want to learn</h1>
 
 <% @categories.each do |category|%>
@@ -8,7 +12,7 @@
     <%= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
     <%= f.input :role, as: :hidden, :input_html => {value: "student"} %>
     <% if @current_skills.any? {|currentskill| currentskill.skill_id == skill.id} %>
-    <%= f.submit value: "Learn #{skill.name}", disabled: true%>
+    <%= f.submit value: "Learn #{skill.name}", hidden: true%>
       <% else %>
       <!-- MAYBE A DESTROY BUTTON  -->
       <%= f.submit value: "Learn #{skill.name}" %>
@@ -16,6 +20,8 @@
   <% end %>
 <% end %>
 <% end %>
+</div>
+  <div class="half-item">
 
 <h1> Skills you have selected!</h1>
 <% current_user.user_skills.each do |user_skill| %>
@@ -25,8 +31,10 @@
 </h3>
 <% end %>
 <% end %>
-
+  </div>
+</div>
 
 <%= link_to "next", select_skills_to_teach_path  %>
 
 <%= link_to "Back", :back %>
+
