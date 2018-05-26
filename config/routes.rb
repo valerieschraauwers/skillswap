@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'profiles/show'
 
   get 'pages/skills'
+  get 'pages/test'
 
   devise_for :users
   root to: 'pages#home'
