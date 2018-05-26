@@ -1,7 +1,16 @@
 <h1>We are in my matches</h1>
 
+
+
+
 <h3>My role teacher matches</h3>
+
+
+
 <% current_user.owned_skills_matches.each do |match| %>
+
+
+
 <ul>
  Match ID:<%= link_to match.id, match_path(match) %>
  SKILL: <%= match.skill.name %>
@@ -29,6 +38,8 @@
     <% end %>
   <% end %>
 <% end %>
+
+
 
 
 
