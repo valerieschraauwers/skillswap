@@ -1,14 +1,27 @@
+<!-- Latest conversations > display last conversation > link to profile match -->
+<!-- Current number of matches -->
+
 <div class="row">
-  <div class="col-xs-3 col-sm-3 col-sm-offset-12">
+    <div class="col-xs-12 col-sm-4">
     <div class="info-card">
       <% @messages.each do |message| %>
       <p><%= message.content %></p>
       <% end %>
     </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
     <div class="info-card">
       <% @matches.each do |match| %>
       <p><%= match.teacher_skill.skill.name %></p>
       <% end %>
     </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="info-card">
+      <% @matches.each do |match| %>
+      <p><%= match.teacher_skill.skill.name %></p>
+      <% end %>
+    </div>
+    </div>
   </div>
-</div>
+
