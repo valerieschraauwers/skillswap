@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :user_skills
+  has_many :user_skills, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   has_many :matches, through: :user_skill
   has_many :reviews
@@ -7,7 +7,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
 
   def owned_skills_matches
@@ -21,6 +21,39 @@ class User < ApplicationRecord
   def full_profile?
     first_name.present? && last_name.present?
   end
+
+  def self.find_for_oauth(auth)
+    user = User.where(uid: auth.uid, provider: auth.provider).first
+
+    unless user
+      user = User.create(
+        uid:      auth.uid,
+        provider: auth.provider,
+        email:    auth.email,
+        # email:    User.dummy_email(auth),
+        password: Devise.friendly_token[0, 20]
+      )
+    end
+
+    user
+  end
+
+  def self.new_with_session(params, session)
+   super.tap do |user|
+     if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+       user.email = data["email"] if user.email.blank?
+     end
+   end
+  end
+
+  private
+
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
+
+
+
 end
 
 
