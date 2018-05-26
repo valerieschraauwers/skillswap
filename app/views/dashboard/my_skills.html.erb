@@ -1,0 +1,27 @@
+<div class="flexed-items">
+  <%= render 'sidebar' %>
+
+  <div class="main">
+    <div class="flexed-items">
+      <div class="half-item">
+        <h1> Skills you want to learn:</h1>
+        <% current_user.user_skills.each do |user_skill| %>
+        <% if user_skill.role == "student" %>
+        <h3><%= user_skill.skill.name %></h3>
+        <% end %>
+        <% end %>
+      </div>
+  <div class="half-item">
+    <h1> Skills you want to teach:</h1>
+    <% current_user.user_skills.each do |user_skill| %>
+    <% if user_skill.role == "teacher" %>
+    <h3><%= user_skill.skill.name %></h3>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<%= link_to "Back", :back %>
+</div>
+
+</div>
+
