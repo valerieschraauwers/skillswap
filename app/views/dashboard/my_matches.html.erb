@@ -1,46 +1,109 @@
 <div class="flexed-items">
-<%= render 'sidebar' %>
+  <%= render 'sidebar' %>
 
-<div class="main">
-<h1>We are in my matches</h1>
-<h3>My role teacher matches</h3>
-
-
-
-<% current_user.owned_skills_matches.each do |match| %>
+  <div class="main">
+    <h1>We are in my matches</h1>
+    <h3>My role teacher matches</h3>
 
 
 
-<ul>
- Match ID:<%= link_to match.id, match_path(match) %>
- SKILL: <%= match.skill.name %>
- <h3>Teacher:<%= match.teacher.email %> </h3>
- <h3>Student:<%= match.student.email %> </h3>
-</ul>
-<% end %>
+    <% current_user.owned_skills_matches.each do |match| %>
+    <ul>
+     Match ID:<%= link_to match.id, match_path(match) %>
+     SKILL: <%= match.skill.name %>
+   </ul>
+   <% end %>
 
-<h3>My role student matches</h3>
-<% current_user.desired_skills_matches.each do |match| %>
-<ul>
- Match ID:<%= match.id %>
- SKILL: <%= match.skill.name %>
- <h3>Teacher:<%= match.teacher.email %> </h3>
- <h3>Student:<%= match.student.email %> </h3>
-</ul>
-<% end %>
+   <h3>My role student matches</h3>
+   <% current_user.desired_skills_matches.each do |match| %>
+   <ul>
+     Match ID:<%= match.id %>
+     SKILL: <%= match.skill.name %>
+   </ul>
+   <% end %>
 
-<h3>MY FULL MATCHES</h3>
-<% current_user.desired_skills_matches.each do |match| %>
-  <% current_user.owned_skills_matches.each do |match2| %>
-    <% if match.skill != match2.skill && match.teacher == match2.student %>
-      <h1>YOU HAVE A FULL MATCH BIITTCHHHH!!!!</h1>
-      Between <%= match.id %> match and <%= match2.id %> match
-    <% end %>
+   <h3>MY FULL MATCHES</h3>
+   <% current_user.desired_skills_matches.each do |match| %>
+   <% current_user.owned_skills_matches.each do |match2| %>
+   <% if match.skill != match2.skill && match.teacher == match2.student %>
+   <h6>Full match Between <%= match.id %> match and <%= match2.id %> match</h6>
+
+   <% end %>
+   <% end %>
+   <% end %>
+
+ </div>
+</div>
+
+
+
+
+<%  matches = current_user.owned_skills_matches%>
+
+
+
+<%= i = matches.length/2%>
+<div id="carousel">
+  <% (i-3).times do |y|%>
+  <div class="hideLeft">
+    <a href="/matches/<%=matches[i-3-y].id%>">
+      <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+      <%=  matches[i-3-y]%>
+    </a>
+  </div>
   <% end %>
-<% end %>
+  <div class="prevLeftSecond">
+    <a href="/matches/<%=matches[i-2].id%>">
+    <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+    <%=  matches[i-2]%>
+  </a>
+  </div>
 
+  <div class="prev">
+    <a href="/matches/<%=matches[i-1].id%>">
+      <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+      <%= matches[i-1]%>
+    </a>
+  </div>
+
+  <div class="selected">
+    <a href="/matches/<%=matches[i].id%>">
+    <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+    <%=  matches[i]%>
+  </a>
+  </div>
+
+  <div class="next">
+    <a href="/matches/<%=matches[i+1].id%>">
+    <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+    <%=  matches[i+1]%>
+  </a>
+  </div>
+
+  <div class="nextRightSecond">
+    <a href="/matches/<%=matches[i+2].id%>">
+    <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+    <%=  matches[i+2]%>
+  </a>
+  </div>
+
+  <% (matches.length-(i+3)).times do |x|%>
+  <div class="hideRight">
+    <a href="/matches/<%=matches[i+3+x].id%>">
+    <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+    <%=  matches[i+3+x]%>
+  </a>
+  </div>
+  <% end %>
 </div>
+
+<div class="buttons">
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
 </div>
+
+<%= javascript_pack_tag 'carrousel' %>
+
 
 
 
