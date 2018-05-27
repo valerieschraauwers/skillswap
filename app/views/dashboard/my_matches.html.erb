@@ -5,8 +5,6 @@
     <h1>We are in my matches</h1>
     <h3>My role teacher matches</h3>
 
-
-
     <% current_user.owned_skills_matches.each do |match| %>
     <ul>
      Match ID:<%= link_to match.id, match_path(match) %>
@@ -54,12 +52,13 @@
   <% end %>
   <div class="prevLeftSecond">
     <a href="/matches/<%=matches[i-2].id%>">
-    <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-    <%=  matches[i-2]%>
-  </a>
+      <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+      <%=  matches[i-2]%>
+    </a>
   </div>
 
   <div class="prev">
+
     <a href="/matches/<%=matches[i-1].id%>">
       <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
       <%= matches[i-1]%>
@@ -67,32 +66,52 @@
   </div>
 
   <div class="selected">
-    <a href="/matches/<%=matches[i].id%>">
-    <img src="https://images.unsplash.com/photo-1445743432342-eac500ce72b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75b52f1402d260bc387f986992ef602&auto=format">
-    <%=  matches[i]%>
-  </a>
+                          <div class="blog-card spring-fever" style="margin-top: 0px">
+                            <div class="title-content">
+                              <h3>SPRING FEVER</h3>
+                              <hr />
+                              <div class="intro">Yllamco laboris nisi ut aliquip ex ea commodo.</div>
+                            </div><!-- /.title-content -->
+                            <div class="card-info">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                            </div><!-- /.card-info -->
+                            <div class="utility-info">
+                              <ul class="utility-list">
+                                <li class="comments">12</li>
+                                <li class="date">03.12.2015</li>
+                              </ul>
+                            </div><!-- /.utility-info -->
+                            <!-- overlays -->
+                            <div class="gradient-overlay"></div>
+                            <div class="color-overlay"></div>
+                          </div><!-- /.blog-card -->
+
+    <!-- <a href="/matches/<%#=matches[i].id%>">
+      <img src="https://images.unsplash.com/photo-1445743432342-eac500ce72b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75b52f1402d260bc387f986992ef602&auto=format">
+      <%#=  matches[i]%>
+    </a> -->
   </div>
 
   <div class="next">
     <a href="/matches/<%=matches[i+1].id%>">
-    <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-    <%=  matches[i+1]%>
-  </a>
+      <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+      <%=  matches[i+1]%>
+    </a>
   </div>
 
   <div class="nextRightSecond">
     <a href="/matches/<%=matches[i+2].id%>">
-    <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-    <%=  matches[i+2]%>
-  </a>
+      <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+      <%=  matches[i+2]%>
+    </a>
   </div>
 
   <% (matches.length-(i+3)).times do |x|%>
   <div class="hideRight">
     <a href="/matches/<%=matches[i+3+x].id%>">
-    <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-    <%=  matches[i+3+x]%>
-  </a>
+      <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+      <%=  matches[i+3+x]%>
+    </a>
   </div>
   <% end %>
 </div>
@@ -117,6 +136,7 @@
  <h3>Student:<%#= match.student.email %> </h3>
 </ul> -->
 <%# end %>
+
 
 
 
