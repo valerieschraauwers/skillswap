@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2018_05_26_113707) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.rating "integer"
     t.bigint "user_id"
     t.bigint "match_id"
     t.datetime "created_at", null: false
