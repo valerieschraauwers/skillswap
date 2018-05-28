@@ -27,7 +27,9 @@
   </div>
     <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
   <div>
-    <%= f.submit "Add Reply", class: "btn btn-primary" %>
+    <%= f.submit "Add Reply", class: "btn btn-sm btn-green" %>
   </div>
 
 <% end %>
+
+<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
