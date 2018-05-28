@@ -9,28 +9,35 @@
 <div class="flexed-items">
   <div class="half-item">
 
-
     <h1>Select skills you want to learn</h1>
-
-
 
     <% @categories.each do |category|%>
      <h2><%= category.name %></h2>
+        <% category.skills.first(2).each do |skill| %>
+          <div id="test" class= "icon_card">
 
-        <% category.skills.each do |skill| %>
-          <%= simple_form_for @user_skill do |f| %>
-            <%= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
-            <%= f.input :role, as: :hidden, :input_html => {value: "student"} %>
-            <% if @current_skills.any? {|currentskill| currentskill.skill_id == skill.id} %>
-              <%= f.submit value: "#{skill.name}", hidden: true%>
-            <% else %>
-              <!-- MAYBE A DESTROY BUTTON  -->
-              <%= f.submit value: "#{skill.name}" %>
-            <% end %>
-          <% end %>
+            <div class="form-group">
+              <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pool"><img src="<%= image_path 'trianglify2.png'%>"> class="img-responsive img-checkbox"></label></div>
+
+            </div>
+          </div>
         <% end %>
       <% end %>
   </div>
+
+
+
+<%#= simple_form_for @user_skill do |f| %>
+            <%#= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
+            <%#= f.input :role, as: :hidden, :input_html => {value: "student"} %>
+            <%# if @current_skills.any? {|currentskill| currentskill.skill_id == skill.id} %>
+              <%#= f.submit value: "#{skill.name}", hidden: true%>
+            <%# else %>
+              <!-- MAYBE A DESTROY BUTTON  -->
+              <%#= f.submit value: "#{skill.name}" %>
+            <%# end %>
+          <%# end %>
+
 
 
 <!--
@@ -81,3 +88,12 @@
 
   </div>
 </div>
+
+<div class="form-group">
+    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pool"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
+    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pets allowed"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
+    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="elevator"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
+    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="wifi"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
+</div>
+
+

@@ -1,0 +1,18 @@
+/* image checkbox buttons */
+.img-checkbox {
+    opacity: 0.3;
+    margin-bottom: 5px;
+}
+:checked+.img-checkbox {
+    opacity: 1;
+}
+
+/* Extra assumed classes */
+.checkbox > label > input[type=checkbox]
+{
+  display:none;
+}
+.checkbox-inline, .checkbox
+{
+  display: inline-block;
+}
