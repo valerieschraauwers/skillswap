@@ -10,4 +10,33 @@
 
 .btn-start:hover {
   background: rgb(67, 183, 170);
+  color: white;
+}
+
+.btn-green {
+  color: rgb(67, 183, 170);
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid rgb(67, 183, 170);
+  transition: background 0.3s ease;
+  font-family: "Signika";
+  font-weight: lighter;
+}
+
+.btn-xs.btn-green {
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px 15px;
+}
+
+.btn-sm.btn-green {
+  font-size: 15px;
+}
+
+.btn-green:hover {
+  text-decoration: none;
+  color: $dark-green;
+  border: 1px solid $dark-green;
 }

@@ -14,3 +14,59 @@
 </ul>
 
 <%= link_to "Search and Create Matches", search_and_create_matches_matches_path, method: :post %>
+
+
+
+
+<%= i = @matches.length/2%>
+    <div id="carousel">
+      <% (i-3).times do |y|%>
+        <div class="hideLeft">
+        <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+        <%=  @matches[i-3-y]%>
+      </div>
+      <% end %>
+      <div class="prevLeftSecond">
+        <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+        <%=  @matches[i-2]%>
+      </div>
+
+      <div class="prev">
+        <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+          <%= @matches[i-1]%>
+      </div>
+
+      <div class="selected">
+        <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+        <%=  @matches[i]%>
+      </div>
+
+      <div class="next">
+        <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+        <%=  @matches[i+1]%>
+      </div>
+
+      <div class="nextRightSecond">
+        <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+        <%=  @matches[i+2]%>
+      </div>
+
+      <% (@matches.length-(i+3)).times do |x|%>
+        <div class="hideRight">
+          <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+          <%=  @matches[i+3+x]%>
+        </div>
+      <% end %>
+
+    </div>
+
+    <div class="buttons">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+
+
+
+<%= javascript_pack_tag 'carrousel' %>
+
+<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>

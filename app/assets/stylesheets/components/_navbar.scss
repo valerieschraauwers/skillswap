@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  font-family: "Signika";
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 /* Logo */
@@ -83,4 +86,18 @@
   top: 0;
   width: 100%;
   background-color: white;
+}
+
+.navbar-wagon-brand.title {
+  font-family: "Flamenco";
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  color: $dark-green;
+  position: absolute;
+  display: block;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0.2em;
+  -webkit-margin-start: 150px;
+  -webkit-margin-end: 0px;
 }
