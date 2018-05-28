@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def skills
+    @skills = Skill.all
+  end
 end

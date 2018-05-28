@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
+// variables
+$card-width:  400px;
+$card-height: 500px;
+$h-color:     #9CC9E3;
+$purple:      #b9586d;
+$yellow:      #d8d44b;
+$txt-color:   #DCE3E7;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+.match-card{
+  width: $card-width;
+  height: $card-height;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -175px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  text-align: center;
+
+  &.match{
+    background: asset-url('cardbackground.png') no-repeat;
+  }
+
+  .color-overlay{
+    /* Rectangle 11: */
+    background: rgba(84,104,110,0.2);
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: background .3s cubic-bezier(.33,.66,.66,1);
+  }
+  .gradient-overlay{
+    /* bg-gradient: */
+    background-image: -webkit-linear-gradient(rgba(255,255,255,0.00) 0%, rgba(255,255,255,.6) 21%);
+    background-image: -moz-linear-gradient(rgba(255,255,255,0.00) 0%, rgba(255,255,255,.6) 21%);
+    background-image: -o-linear-gradient(rgba(255,255,255,0.00) 0%, rgba(255,255,255,.6) 21%);
+    background-image: linear-gradient(rgba(255,255,255,0.00) 0%, rgba(255,255,255,.6) 21%);
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    z-index: 15;
+  }
+
+  &:hover{
+
+    .card-info{
+      opacity: 1;
+    }
+    .color-overlay{
+      background: rgba(84,104,110,0.3);
+    }
+  }
+}
+
+.title-content{
+  text-align: center;
+  margin: 5px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+h3{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $purple;
+  font-family: 'Signika';
+  margin-bottom: 0;
+}
+hr{
+  width: 50px;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: $purple;
+}
+
+
+.intro{
+  width: 170px;
+  margin: 0 auto;
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+  #avatar-large {
+  width: 50px !important;
+  border-radius: 50%;
+}
+}
+.card-info{
+  width: 100%;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-style: 16px;
+  line-height: 24px;
+  z-index: 20;
+  opacity: 0;
+  transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+}
+
+.match-info{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 20;
+  color: $purple;
+}
+.match-list{
+  list-style-type: none;
+  margin: 0 0 30px 20px;
+  padding: 0;
+  width: 100%;
+  color: $purple;
+
+  li {
+    margin: 0 15px 0 0;
+    padding: 0 0 0 22px;
+    display: inline-block;
+    color: $purple;
+    font-family: 'Roboto', sans-serif;
+  }
+}

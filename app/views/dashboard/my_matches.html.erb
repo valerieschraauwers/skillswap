@@ -7,28 +7,29 @@
   <% (i-3).times do |y|%>
   <div class="hideLeft">
     <a href="/matches/<%=matches[i-3-y].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
-      <%=  matches[i-3-y]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <%  matches[i-3-y]%>
     </a>
   </div>
   <% end %>
   <div class="prevLeftSecond">
     <a href="/matches/<%=matches[i-2].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-      <%=  matches[i-2]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <%  matches[i-2]%>
     </a>
   </div>
 
   <div class="prev">
 
     <a href="/matches/<%=matches[i-1].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
-      <%= matches[i-1]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <% matches[i-1]%>
     </a>
   </div>
 
   <div class="selected">
                           <div class="match-card match" style="margin-top: 0px">
+
                             <div class="title-content">
                               <h3>FULL MATCH</h3>
                               <hr />
@@ -37,9 +38,9 @@
                                 <%= cl_image_tag current_user.photo, id: "avatar-large"%>
                               </div>
                               <div class="match-profile">
-                                <p>match avatar</p>
+
                               </div>
-                              Yllamco laboris nisi ut aliquip ex ea commodo.</div>
+                              </div>
 
                             </div><!-- /.title-content -->
                             <div class="card-info">
@@ -47,7 +48,7 @@
                             </div><!-- /.card-info -->
                             <div class="match-info">
                               <ul class="match-list">
-                                <li>What can we put here</li>
+                                <li>Reviews</li>
                               </ul>
                             </div><!-- /.utility-info -->
                             <!-- overlays -->
@@ -63,23 +64,23 @@
 
   <div class="next">
     <a href="/matches/<%=matches[i+1].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-      <%=  matches[i+1]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <%  matches[i+1]%>
     </a>
   </div>
 
   <div class="nextRightSecond">
     <a href="/matches/<%=matches[i+2].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-      <%=  matches[i+2]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <%  matches[i+2]%>
     </a>
   </div>
 
   <% (matches.length-(i+3)).times do |x|%>
   <div class="hideRight">
     <a href="/matches/<%=matches[i+3+x].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-      <%=  matches[i+3+x]%>
+      <img src="<%= image_path 'trianglify2.png'%>">
+      <%  matches[i+3+x]%>
     </a>
   </div>
   <% end %>
@@ -100,12 +101,18 @@
 </div> -->
 
 
-
 <%= javascript_pack_tag 'carrousel' %>
+
 <div class="flexed-items">
   <%= render 'sidebar' %>
 
   <div class="main">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <h1>We are in my matches</h1>
     <h3>My role teacher matches</h3>
 
@@ -154,6 +161,11 @@
  <h3>Student:<%#= match.student.email %> </h3>
 </ul> -->
 <%# end %>
+
+
+
+
+
 
 
 
