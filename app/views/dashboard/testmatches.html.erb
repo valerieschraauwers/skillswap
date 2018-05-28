@@ -1,160 +1,27 @@
-<%  matches = current_user.owned_skills_matches%>
-
-
-
-<%= i = matches.length/2%>
-<div id="carousel" class="carousel">
-  <% (i-3).times do |y|%>
-  <div class="hideLeft">
-    <a href="/matches/<%=matches[i-3-y].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
-      <%=  matches[i-3-y]%>
-    </a>
-  </div>
-  <% end %>
-  <div class="prevLeftSecond">
-    <a href="/matches/<%=matches[i-2].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-      <%=  matches[i-2]%>
-    </a>
-  </div>
-
-  <div class="prev">
-
-    <a href="/matches/<%=matches[i-1].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
-      <%= matches[i-1]%>
-    </a>
-  </div>
-
-  <div class="selected">
-                          <div class="match-card match" style="margin-top: 0px">
-                            <div class="title-content">
-                              <h3>FULL MATCH</h3>
-                              <hr />
-                              <div class="intro">
-                                <div class="my-profile">
-                                <%= cl_image_tag current_user.photo, id: "avatar-large"%>
-                              </div>
-                              <div class="match-profile">
-                                <p>match avatar</p>
-                              </div>
-                              Yllamco laboris nisi ut aliquip ex ea commodo.</div>
-
-                            </div><!-- /.title-content -->
-                            <div class="card-info">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-                            </div><!-- /.card-info -->
-                            <div class="match-info">
-                              <ul class="match-list">
-                                <li>What can we put here</li>
-                              </ul>
-                            </div><!-- /.utility-info -->
-                            <!-- overlays -->
-                            <div class="gradient-overlay"></div>
-                            <div class="color-overlay"></div>
-                          </div><!-- /.blog-card -->
-
-    <!-- <a href="/matches/<%#=matches[i].id%>">
-      <img src="https://images.unsplash.com/photo-1445743432342-eac500ce72b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75b52f1402d260bc387f986992ef602&auto=format">
-      <%#=  matches[i]%>
-    </a> -->
-  </div>
-
-  <div class="next">
-    <a href="/matches/<%=matches[i+1].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-      <%=  matches[i+1]%>
-    </a>
-  </div>
-
-  <div class="nextRightSecond">
-    <a href="/matches/<%=matches[i+2].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-      <%=  matches[i+2]%>
-    </a>
-  </div>
-
-  <% (matches.length-(i+3)).times do |x|%>
-  <div class="hideRight">
-    <a href="/matches/<%=matches[i+3+x].id%>">
-      <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-      <%=  matches[i+3+x]%>
-    </a>
-  </div>
-  <% end %>
-  <a class="left carousel-control" id="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Prev</span>
-  </a>
-  <a class="right carousel-control" id="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<!-- <div class="buttons">
-
-  <button id="prev">Prev</button>
-  <button id="next">Next</button>
-</div> -->
-
-
-
-<%= javascript_pack_tag 'carrousel' %>
 <div class="flexed-items">
   <%= render 'sidebar' %>
 
   <div class="main">
-    <h1>We are in my matches</h1>
-    <h3>My role teacher matches</h3>
 
-    <% current_user.owned_skills_matches.each do |match| %>
-    <ul>
-     Match ID:<%= link_to match.id, match_path(match) %>
-     SKILL: <%= match.skill.name %>
-   </ul>
-   <% end %>
+    <div class="match-card full">
+        <div class="flex-title">
+          <h3>FULL MATCH</h3>
+          <hr />
+        </div>
+        </div>
+        <div class="flex-profiles">
+          <div class="profile">
+            <h4>My profile</h4>
+          </div>
+          <div class="profile">
+            <h4>Match profile</h4>
+          </div>
+        </div>
+    </div>
+  </div>
 
-   <h3>My role student matches</h3>
-   <% current_user.desired_skills_matches.each do |match| %>
-   <ul>
-     Match ID:<%= match.id %>
-     SKILL: <%= match.skill.name %>
-   </ul>
-   <% end %>
 
-   <h3>MY FULL MATCHES</h3>
-   <% current_user.desired_skills_matches.each do |match| %>
-   <% current_user.owned_skills_matches.each do |match2| %>
-   <% if match.skill != match2.skill && match.teacher == match2.student %>
-   <h6>Full match Between <%= match.id %> match and <%= match2.id %> match</h6>
+  </div>
+  <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
 
-   <% end %>
-   <% end %>
-   <% end %>
-
- </div>
 </div>
-
-
-
-
-
-
-
-<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
-
-
-
-<!-- <ul>
- Match ID:<%#= match.id %>
- SKILL: <%#= match.skill.name %>
- <h3>Teacher:<%#= match.teacher.email %> </h3>
- <h3>Student:<%#= match.student.email %> </h3>
-</ul> -->
-<%# end %>
-
-
-
-
