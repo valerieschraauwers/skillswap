@@ -1,35 +1,42 @@
-<% if @over_ten %>
-   <%= link_to 'Show Previous', '?m=all' %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
 
-<div class="ui segment">
-  <% @messages.each do |message| %>
-    <% if message.content %>
-      <% user = User.find(message.user_id) %>
-      <div class="item">
-        <div class="content">
-          <div class="header"><strong><%= user.email %></strong> <%= message.message_time %></div>
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <%= message.content %>
+      <% if @over_ten %>
+      <%= link_to 'Show Previous', '?m=all' %>
+      <% end %>
+
+      <div>
+        <% @messages.each do |message| %>
+        <% if message.content %>
+        <% user = User.find(message.user_id) %>
+        <div >
+          <div >
+            <div ><strong><%= user.email %></strong> <%= message.message_time %></div>
+            <div>
+              <div>
+                <i></i>
+                <%= message.content %>
+              </div>
             </div>
           </div>
         </div>
+        <% end %>
+        <% end %>
       </div>
-    <% end %>
-  <% end %>
+
+      <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+      <div >
+        <%= f.text_area :content, class: "form-control" %>
+      </div>
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+      <div>
+        <%= f.submit "Add Reply", class: "btn btn-sm btn-green" %>
+      </div>
+
+      <% end %>
+
+      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+    </div>
+  </div>
 </div>
-
-<%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-  <div class="field">
-    <%= f.text_area :content, class: "form-control" %>
-  </div>
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div>
-    <%= f.submit "Add Reply", class: "btn btn-sm btn-green" %>
-  </div>
-
-<% end %>
-
-<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
