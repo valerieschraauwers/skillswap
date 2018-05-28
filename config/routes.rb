@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  get 'pages/skills'
+  get 'pages/skills', to: 'pages#skill'
 
   resources :conversations do
     resources :messages

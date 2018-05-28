@@ -3,12 +3,20 @@
 <div class="skills_container">
 
   <div class= "row justify-content-center">
-   <div class="col-xs-12 col-sm-2">
-    <div class= "icon_card">
-      <%= image_tag "icons/arts_and_crafts/jewelry_making.svg", width: 100 %>
-      <div class="icon-text"><h6>Jewelry Making</h6></div>
+
+<!--
+<%# @skills.each do |skill| %>
+    <div class="col-xs-12 col-sm-2">
+      <div class= "icon_card">
+        <%#= image_tag "icons/arts_and_crafts/#{skill.icon}", width: 100 %>
+        <div class="icon-text"><h6>#{skill.name}</h6></div>
+      </div>
     </div>
-  </div>
+    <%# end %>
+
+ -->
+
+
   <div class="col-xs-12 col-sm-2">
     <div class= "icon_card">
       <%= image_tag "icons/arts_and_crafts/knitting.svg", width: 100 %>
