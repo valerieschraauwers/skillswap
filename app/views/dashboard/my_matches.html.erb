@@ -1,41 +1,3 @@
-<div class="flexed-items">
-  <%= render 'sidebar' %>
-
-  <div class="main">
-    <h1>We are in my matches</h1>
-    <h3>My role teacher matches</h3>
-
-    <% current_user.owned_skills_matches.each do |match| %>
-    <ul>
-     Match ID:<%= link_to match.id, match_path(match) %>
-     SKILL: <%= match.skill.name %>
-   </ul>
-   <% end %>
-
-   <h3>My role student matches</h3>
-   <% current_user.desired_skills_matches.each do |match| %>
-   <ul>
-     Match ID:<%= match.id %>
-     SKILL: <%= match.skill.name %>
-   </ul>
-   <% end %>
-
-   <h3>MY FULL MATCHES</h3>
-   <% current_user.desired_skills_matches.each do |match| %>
-   <% current_user.owned_skills_matches.each do |match2| %>
-   <% if match.skill != match2.skill && match.teacher == match2.student %>
-   <h6>Full match Between <%= match.id %> match and <%= match2.id %> match</h6>
-
-   <% end %>
-   <% end %>
-   <% end %>
-
- </div>
-</div>
-
-
-
-
 <%  matches = current_user.owned_skills_matches%>
 
 
@@ -66,19 +28,26 @@
   </div>
 
   <div class="selected">
-                          <div class="blog-card spring-fever" style="margin-top: 0px">
+                          <div class="match-card match" style="margin-top: 0px">
                             <div class="title-content">
-                              <h3>SPRING FEVER</h3>
+                              <h3>FULL MATCH</h3>
                               <hr />
-                              <div class="intro">Yllamco laboris nisi ut aliquip ex ea commodo.</div>
+                              <div class="intro">
+                                <div class="my-profile">
+                                <%= cl_image_tag current_user.photo, id: "avatar-large"%>
+                              </div>
+                              <div class="match-profile">
+                                <p>match avatar</p>
+                              </div>
+                              Yllamco laboris nisi ut aliquip ex ea commodo.</div>
+
                             </div><!-- /.title-content -->
                             <div class="card-info">
                               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
                             </div><!-- /.card-info -->
-                            <div class="utility-info">
-                              <ul class="utility-list">
-                                <li class="comments">12</li>
-                                <li class="date">03.12.2015</li>
+                            <div class="match-info">
+                              <ul class="match-list">
+                                <li>What can we put here</li>
                               </ul>
                             </div><!-- /.utility-info -->
                             <!-- overlays -->
@@ -122,6 +91,44 @@
 </div>
 
 <%= javascript_pack_tag 'carrousel' %>
+<div class="flexed-items">
+  <%= render 'sidebar' %>
+
+  <div class="main">
+    <h1>We are in my matches</h1>
+    <h3>My role teacher matches</h3>
+
+    <% current_user.owned_skills_matches.each do |match| %>
+    <ul>
+     Match ID:<%= link_to match.id, match_path(match) %>
+     SKILL: <%= match.skill.name %>
+   </ul>
+   <% end %>
+
+   <h3>My role student matches</h3>
+   <% current_user.desired_skills_matches.each do |match| %>
+   <ul>
+     Match ID:<%= match.id %>
+     SKILL: <%= match.skill.name %>
+   </ul>
+   <% end %>
+
+   <h3>MY FULL MATCHES</h3>
+   <% current_user.desired_skills_matches.each do |match| %>
+   <% current_user.owned_skills_matches.each do |match2| %>
+   <% if match.skill != match2.skill && match.teacher == match2.student %>
+   <h6>Full match Between <%= match.id %> match and <%= match2.id %> match</h6>
+
+   <% end %>
+   <% end %>
+   <% end %>
+
+ </div>
+</div>
+
+
+
+
 
 
 
