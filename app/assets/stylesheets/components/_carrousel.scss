@@ -19,6 +19,7 @@ html, body, main {
 }
 #carousel div img {
   width: 400px;
+  border-radius: 10px;
   transition: width 1s;
 }
 #carousel div.hideLeft {
