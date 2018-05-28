@@ -1,20 +1,19 @@
-
+<div class="container">
 
 <div class="skills_container">
 
   <div class= "row justify-content-center">
 
-<!--
-<%# @skills.each do |skill| %>
+
+<% @skills.each do |skill| %>
     <div class="col-xs-12 col-sm-2">
       <div class= "icon_card">
-        <%#= image_tag "icons/arts_and_crafts/#{skill.icon}", width: 100 %>
-        <div class="icon-text"><h6>#{skill.name}</h6></div>
+        <%= image_tag "icons/arts_and_crafts/#{skill.icon}", width: 100 %>
+        <div class="icon-text"><h6><%= skill.name %></h6></div>
       </div>
     </div>
-    <%# end %>
+    <% end %>
 
- -->
 
 
   <div class="col-xs-12 col-sm-2">
@@ -628,6 +627,7 @@
    <i class="fas fa-laptop"></i>
    <div class="icon-text"><h6>technology & innovation</h6></div>
  </div>
+</div>
 </div>
 </div>
 </div>
