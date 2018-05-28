@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SkillSwap - Swap a Skill</title>
-    <% if user_signed_in? %>
-    <title><%= current_user.email %></title>
-    <% else %>
-    <title>SkillSwap</title>
-    <% end %>
-    <link rel="stylesheet"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SkillSwap - Swap a Skill</title>
+  <% if user_signed_in? %>
+  <title><%= current_user.email %></title>
+  <% else %>
+  <title>SkillSwap</title>
+  <% end %>
+  <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= favicon_link_tag 'favicon.ico' %>
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= favicon_link_tag 'favicon.ico' %>
 
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
-  <body>
+  <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+</head>
+<body>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/flashes' %>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : 'APP_ID',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v3.0'
+      });
+      FB.AppEvents.logPageView();
+    };
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : 'APP_ID',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.0'
-    });
-
-    FB.AppEvents.logPageView();
-
-  };
-
-  (function(d, s, id){
+    (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>
+ </script>
 
 
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-
-    <div id="user-info">
-      <% if user_signed_in? %>
-        <%#= current_user.name %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete  %>
-      <% else %>
-        <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-      <% end %>
-    </div>
+ <div id="user-info">
+  <% if user_signed_in? %>
+  <%#= current_user.name %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete  %>
+  <% else %>
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+  <% end %>
+</div>
 
 
 
-    <%= yield %>
+<%= yield %>
 
 
 
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-  </body>
+<%= javascript_include_tag 'application' %>
+<%= javascript_pack_tag 'application' %>
+</body>
 </html>

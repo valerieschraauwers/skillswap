@@ -44,6 +44,8 @@
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
+
+    <%= link_to "Sign up", new_registration_path(resource_name) %><br />
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
