@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_26_113707) do
+ActiveRecord::Schema.define(version: 2018_05_28_090015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_05_26_113707) do
     t.bigint "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
     t.index ["match_id"], name: "index_reviews_on_match_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
