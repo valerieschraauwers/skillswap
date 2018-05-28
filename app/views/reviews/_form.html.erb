@@ -1,4 +1,4 @@
 <%= simple_form_for([ match, review ], remote: true) do |form| %>
   <%= form.input :content, as: :text %>
-  <%= form.button :submit %>
+  <%= form.button :submit, class: "btn btn-sm btn-green" %>
 <% end %>

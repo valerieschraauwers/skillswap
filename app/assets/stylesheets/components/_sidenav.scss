@@ -6,18 +6,31 @@
     z-index: 1; /* Stay on top */
     top: 60px; /* Stay at the top */
     left: 0;
-    background-color: $semi-green;
+    background-color: #c2dcd9;
     overflow-x: hidden; /* Disable horizontal scroll */
-    font-family: "Open Sans";
-    padding: 30px;
+    font-family: "Signika";
+    padding: 0px 30px;
+    text-align: center;
+    h2 {
+      font-size: 19px;
+      color: #86b3ae;
+      font-family: "Signika";
+      font-weight: lighter;
+    }
+    hr {
+      background-color: transparent;
+      border-top: 1px solid #86b3ae;
+    }
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+
     text-decoration: none;
     font-size: 25px;
-    color: #a7f2e5;
+    color: #86b3ae;
+    font-family: "Signika";
+    font-weight: lighter;
     display: block;
 }
 
@@ -42,8 +55,6 @@
   overflow: hidden;
   height: 150px;
   width: 150px;
-  background-color: white;
-  border-radius: 1px;
 }
 
 #sidebarlinks {
