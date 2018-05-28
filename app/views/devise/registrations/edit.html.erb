@@ -25,7 +25,8 @@
                     :order => [:day, :month, :year],
                     :label => "Date of Birth",
                     :prompt => "Select" %>
-      <%= f.input :nationality %>
+      <%#= f.input :country %>
+      <%= f.country_select :nationality, label: "Country"%>
       <%= f.input :city %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
