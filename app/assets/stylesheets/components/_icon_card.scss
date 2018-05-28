@@ -1,3 +1,7 @@
+svg {
+  color: blue;
+}
+
 .icon_card {
   text-align: center;
   margin: 15px auto;
@@ -13,7 +17,7 @@
 }
 
 .fas {
-  color:rgb(0, 225, 200);
+  color:rgb(79, 79, 79);
   font-size:80px;
 }
 
@@ -22,10 +26,14 @@
 }
 
 .icon-text {
- color: rgb(0, 225, 200);
+ color: rgb(79, 79, 79);
  text-align: center;
 }
 
-.icon-text:hover{
+.icon-text:hover {
  color: rgb(67, 183, 170);
+}
+
+.svg path {
+  fill: red;
 }
