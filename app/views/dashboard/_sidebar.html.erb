@@ -1,8 +1,16 @@
 <div class="sidenav">
-  <h2>Welcome <%= current_user.first_name.capitalize!%>!</h2>
-    <%= cl_image_tag current_user.photo, class: "avatar-large", id: "avatar-sidebar" %>
+  <% if current_user.first_name%>
+    <h2>Welcome <%= current_user.first_name.capitalize!%>!</h2>
+  <% else%>
+    <h2>Welcome <%= current_user.email%>!</h2>
+  <% end %>
+
+  <% if current_user.photo %>
+     <%= cl_image_tag current_user.photo, class: "avatar-large", id: "avatar-sidebar" %>
+  <% end %>
     <hr>
   <div id="sidebarlinks">
+
   <%= link_to "Home", dashboard_path %>
   <%= link_to "Matches", dashboard_my_matches_path(current_user) %>
   <%= link_to "Reviews", match_reviews_path(current_user) %>

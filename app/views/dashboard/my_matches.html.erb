@@ -3,7 +3,7 @@
 
 
 <%= i = matches.length/2%>
-<div id="carousel">
+<div id="carousel" class="carousel">
   <% (i-3).times do |y|%>
   <div class="hideLeft">
     <a href="/matches/<%=matches[i-3-y].id%>">
@@ -83,12 +83,23 @@
     </a>
   </div>
   <% end %>
+  <a class="left carousel-control" id="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Prev</span>
+  </a>
+  <a class="right carousel-control" id="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
-<div class="buttons">
+<!-- <div class="buttons">
+
   <button id="prev">Prev</button>
   <button id="next">Next</button>
-</div>
+</div> -->
+
+
 
 <%= javascript_pack_tag 'carrousel' %>
 <div class="flexed-items">
