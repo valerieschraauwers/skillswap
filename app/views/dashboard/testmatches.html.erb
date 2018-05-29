@@ -2,26 +2,36 @@
   <%= render 'sidebar' %>
 
   <div class="main">
-
     <div class="match-card full">
-        <div class="flex-title">
-          <h3>FULL MATCH</h3>
-          <hr />
-        </div>
-        </div>
+      <div>
+        <h3>FULL MATCH</h3>
+        <hr/>
         <div class="flex-profiles">
           <div class="profile">
-            <h4>My profile</h4>
+            <%= cl_image_tag current_user.photo, class: "avatar-large"%>
           </div>
-          <div class="profile">
-            <h4>Match profile</h4>
+          <div class="profile match">
+            <%= cl_image_tag current_user.photo, class: "avatar-large"%>
+            <h6><%= current_user.first_name %></h6>
           </div>
         </div>
+        <div class="teacher-match">
+          <p>teach icon <%= image_tag "arrowsright.png", height: 70%></p>
+        </div>
+        <div class="student-match">
+          <p>learn icon <%= image_tag "arrowsleft.png", height: 70 %></p>
+        </div>
+        <div>
+        <div class="reviews">
+          <h3>reviews</h3>
+        </div>
+        </div>
+        <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
+      </div>
     </div>
-  </div>
 
 
   </div>
-  <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
 
 </div>
+<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
