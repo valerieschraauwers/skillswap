@@ -8,7 +8,13 @@
                     <tbody>
                       <tr>
                         <td>Name</td>
-                        <td><%= match %></td>
+                        <td>
+                          <% if match.teacher.id == current_user.id %>
+                          <%= match.student.first_name %>
+                          <% else %>
+                          <%= match.teacher.first_name %>
+                            <% end %>
+                          </td>
                       </tr>
                       <tr>
                         <td>City</td>

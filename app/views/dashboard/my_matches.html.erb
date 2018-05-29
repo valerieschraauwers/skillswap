@@ -2,15 +2,29 @@
   <%= render 'sidebar' %>
 
   <div class="main">
-    <%= @matches %>
-    <% @matches.each do |type, match| %>
-    <%= type %>
+
+
+
+<!-- {
+  full: [full_match1, full_match2],
+  teacher: [teacher_match1, teacher_match2],
+  student: [student_match1, student_match2, student_match3]
+} -->
+
+
+  <% @matches.each do |type, matches| %>
     <% if type == :teacher %>
-      <%= render 'fullmatchcard', match: match %>
+      <% matches.each do |match| %>
+        <%= render 'halfmatchcard', match: match %>
+      <% end %>
     <% elsif type == :student %>
-      <%= render 'fullmatchcard', match: match %>
+      <% matches.each do |match| %>
+        <%= render 'halfmatchcard', match: match %>
+      <% end %>
     <% elsif type == :full %>
-      <%= render 'fullmatchcard', match: match %>
+      <% matches.each do |match| %>
+        <%= render 'fullmatchcard', match: match %>
+      <% end %>
     <% end %>
     <% end %>
   </div>
