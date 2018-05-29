@@ -1,6 +1,6 @@
 .container_home {
-  display: grid;
-  grid-template-rows: 275px 80px 180px 400px 110px;
+  display: flex;
+  flex-direction: column;
   margin-top: 0px;
   margin-left: 35px;
 }
