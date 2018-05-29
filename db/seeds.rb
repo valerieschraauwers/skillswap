@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email: "william@william.com", password:"password")
-User.create(email: "chelsea@chelsea.com", password:"password")
+User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
 User.create(email: "valerie@valerie.com", password:"password")
 
 
@@ -139,6 +139,7 @@ Match.create(teacher_skill_id: 2, student_skill_id: 1)
 Match.create(teacher_skill_id: 4, student_skill_id: 3)
 Match.create(teacher_skill_id: 5, student_skill_id: 1)
 
+# FULL MATCH
 Match.create(teacher_skill_id: 5, student_skill_id: 6)
 Match.create(teacher_skill_id: 8, student_skill_id: 7)
 

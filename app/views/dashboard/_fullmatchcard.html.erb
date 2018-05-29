@@ -1,52 +1,49 @@
-    <div class="full-match-card full">
-      <div>
-        <h3>FULL MATCH</h3>
-        <hr/>
-        <div class="flex-profiles">
-          <div class="profile match">
-                  <table class="table table-user-information full">
-                    <tbody>
-                      <tr>
-                        <td>Name</td>
-                        <td>
-                          <% if match.teacher.id == current_user.id %>
-                          <%= match.student.first_name %>
-                          <% else %>
-                          <%= match.teacher.first_name %>
-                            <% end %>
-                          </td>
-                      </tr>
-                      <tr>
-                        <td>City</td>
-                        <td><%= current_user.city.capitalize! %>, <%= current_user.nationality %></td>
-                      </tr>
-                      <tr>
-                        <td>Biography:</td>
-                        <td><%= current_user.bio %></td>
-                      </tr>
-                  </tbody>
-                </table>
-            </div>
-          <div class="match-photo">
-            <%= cl_image_tag current_user.photo %>
-          </div>
-          </div>
-        <div class="teacher-match">
-          <p> <%= match.teacher_skill %> <%= image_tag "arrowsright.png", height: 70%></p>
-        </div>
-        <div class="student-match">
-          <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.student_skill %> </p>
-        </div>
-        <div>
-        <div id="reviews" class="text-left">
-          <h4>REVIEWS</h4>
-        </div>
-        </div>
+<% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
+<div class="full-match-card full">
+  <div>
+    <h3>FULL MATCH</h3>
+    <hr/>
+    <div class="flex-profiles">
+      <div class="profile match">
+        <table class="table table-user-information full">
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><%= card_user.first_name %>
 
-        <%= link_to "See match", matches_path, class: "btn btn-xs btn-green align-bottom" %>
-
+              </td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td><%= card_user.city.capitalize %>, <%= card_user.nationality %></td>
+            </tr>
+            <tr>
+              <td>Biography:</td>
+              <td><%= card_user.bio %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="match-photo">
+        <%= cl_image_tag card_user.photo %>
       </div>
     </div>
+    <div class="teacher-match">
+      <p> <%= match.teacher_skill %> <%= image_tag "arrowsright.png", height: 70%></p>
+    </div>
+    <div class="student-match">
+      <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.student_skill %> </p>
+    </div>
+    <div>
+      <div id="reviews" class="text-left">
+        <h4>REVIEWS</h4>
+      </div>
+    </div>
+
+    <%= link_to "See match", matches_path, class: "btn btn-xs btn-green align-bottom" %>
+
+  </div>
+</div>
 
 
 
