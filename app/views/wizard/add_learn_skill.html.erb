@@ -1,11 +1,84 @@
-<h1>Wizard#add_learn_skill</h1>
-<p>Find me in app/views/wizard/add_learn_skill.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
+
+      <div class="form-group">
+        <label class="control-label check_boxes optional">Skills</label>
+        <input type="hidden" name="post[skill_ids][]" value="">
+        <div class="skill-choices">
+          <% Skill.all.each do |skill| %>
+          <input type="checkbox" class="hidden" value="<%= skill.id %>" name="post[skill_ids][]" id="skill_ids_<%= skill.id %>">
+          <label class="skill-choice" for="post_skill_ids_<%= skill.id %>">
+            <%= skill.name %>
+            <i class="fa fa-check"></i>
+          </label>
+          <% end %>
+        </div>
+      </div>
 
 
-<%#= simple_form_for :user, as: :post, url: wizard_update_learn_skill_path(@user) do |f| %>
-<%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
 
-    <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
+      <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .form-post {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
+
+// Checkboxes design
+.skill-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill-choice {
+  background: #b7b7b7;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: .4;
+  flex: 0 0 30%;
+  text-align: center;
+  }
+
+.skill-choice:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .skill-choice.active {
+  background: lightblue;
+  color: white;
+  opacity: 1;
+  }
+
+</style>
+
+
+
+<%= javascript_pack_tag 'skill' %>

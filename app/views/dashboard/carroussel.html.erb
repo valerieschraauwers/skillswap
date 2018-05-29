@@ -1,99 +1,103 @@
 
-<%  matches = current_user.owned_skills_matches%>
+<% matches = current_user.owned_skills_matches + current_user.desired_skills_matches %>
 
+<% if matches.length >= 7  %>
 
+  <%= i = matches.length/2%>
+  <div id="carousel" class="carousel">
+    <% (i-3).times do |y|%>
+    <div class="hideLeft">
+      <a href="/matches/<%=matches[i-3-y].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <%  matches[i-3-y]%>
+      </a>
+    </div>
+    <% end %>
+    <div class="prevLeftSecond">
+      <a href="/matches/<%=matches[i-2].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <%  matches[i-2]%>
+      </a>
+    </div>
 
-<%= i = matches.length/2%>
-<div id="carousel" class="carousel">
-  <% (i-3).times do |y|%>
-  <div class="hideLeft">
-    <a href="/matches/<%=matches[i-3-y].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <%  matches[i-3-y]%>
+    <div class="prev">
+
+      <a href="/matches/<%=matches[i-1].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <% matches[i-1]%>
+      </a>
+    </div>
+
+    <div class="selected">
+                            <div class="match-card match" style="margin-top: 0px">
+
+                              <div class="title-content">
+                                <h3>FULL MATCH</h3>
+                                <hr />
+                                <div class="intro">
+                                  <div class="my-profile">
+                                  <%= cl_image_tag current_user.photo, id: "avatar-large"%>
+                                </div>
+                                <div class="match-profile">
+
+                                </div>
+                                </div>
+
+                              </div><!-- /.title-content -->
+                              <div class="card-info">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                              </div><!-- /.card-info -->
+                              <div class="match-info">
+                                <ul class="match-list">
+                                  <li>Reviews</li>
+                                </ul>
+                              </div><!-- /.utility-info -->
+                              <!-- overlays -->
+                              <div class="gradient-overlay"></div>
+                              <div class="color-overlay"></div>
+                            </div><!-- /.blog-card -->
+
+      <!-- <a href="/matches/<%#=matches[i].id%>">
+        <img src="https://images.unsplash.com/photo-1445743432342-eac500ce72b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75b52f1402d260bc387f986992ef602&auto=format">
+        <%#=  matches[i]%>
+      </a> -->
+    </div>
+
+    <div class="next">
+      <a href="/matches/<%=matches[i+1].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <%  matches[i+1]%>
+      </a>
+    </div>
+
+    <div class="nextRightSecond">
+      <a href="/matches/<%=matches[i+2].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <%  matches[i+2]%>
+      </a>
+    </div>
+
+    <% (matches.length-(i+3)).times do |x|%>
+    <div class="hideRight">
+      <a href="/matches/<%=matches[i+3+x].id%>">
+        <img src="<%= image_path 'trianglify2.png'%>">
+        <%  matches[i+3+x]%>
+      </a>
+    </div>
+    <% end %>
+    <a class="left carousel-control" id="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Prev</span>
+
+    </a>
+    <a class="right carousel-control" id="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
     </a>
   </div>
-  <% end %>
-  <div class="prevLeftSecond">
-    <a href="/matches/<%=matches[i-2].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <%  matches[i-2]%>
-    </a>
-  </div>
-
-  <div class="prev">
-
-    <a href="/matches/<%=matches[i-1].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <% matches[i-1]%>
-    </a>
-  </div>
-
-  <div class="selected">
-                          <div class="match-card match" style="margin-top: 0px">
-
-                            <div class="title-content">
-                              <h3>FULL MATCH</h3>
-                              <hr />
-                              <div class="intro">
-                                <div class="my-profile">
-                                <%= cl_image_tag current_user.photo, id: "avatar-large"%>
-                              </div>
-                              <div class="match-profile">
-
-                              </div>
-                              </div>
-
-                            </div><!-- /.title-content -->
-                            <div class="card-info">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-                            </div><!-- /.card-info -->
-                            <div class="match-info">
-                              <ul class="match-list">
-                                <li>Reviews</li>
-                              </ul>
-                            </div><!-- /.utility-info -->
-                            <!-- overlays -->
-                            <div class="gradient-overlay"></div>
-                            <div class="color-overlay"></div>
-                          </div><!-- /.blog-card -->
-
-    <!-- <a href="/matches/<%#=matches[i].id%>">
-      <img src="https://images.unsplash.com/photo-1445743432342-eac500ce72b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75b52f1402d260bc387f986992ef602&auto=format">
-      <%#=  matches[i]%>
-    </a> -->
-  </div>
-
-  <div class="next">
-    <a href="/matches/<%=matches[i+1].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <%  matches[i+1]%>
-    </a>
-  </div>
-
-  <div class="nextRightSecond">
-    <a href="/matches/<%=matches[i+2].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <%  matches[i+2]%>
-    </a>
-  </div>
-
-  <% (matches.length-(i+3)).times do |x|%>
-  <div class="hideRight">
-    <a href="/matches/<%=matches[i+3+x].id%>">
-      <img src="<%= image_path 'trianglify2.png'%>">
-      <%  matches[i+3+x]%>
-    </a>
-  </div>
-  <% end %>
-  <a class="left carousel-control" id="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Prev</span>
-  </a>
-  <a class="right carousel-control" id="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<% else %>
+<h1>YOU DONT HAVE MATCHES YET or you have < 7 matches (carrousel malfunction)</h1>
+<% end %>
 
 <!-- <div class="buttons">
 

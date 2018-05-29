@@ -1,9 +1,10 @@
-<h1>Wizard#add_teach_skill</h1>
-<p>Find me in app/views/wizard/add_teach_skill.html.erb</p>
-
-<%= simple_form_for(@user, url: wizard_update_teach_skill_path(@user), html: { method: :post }) do |f| %>
-
-    <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
-
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for(@user, url: wizard_update_teach_skill_path(@user), html: { method: :post }) do |f| %>
+      <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
