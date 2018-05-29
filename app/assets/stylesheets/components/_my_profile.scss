@@ -1,0 +1,67 @@
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid #C3DCD9;
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+.my-profile-card {
+  padding: 15px;
+  width: 1220px;
+  height: 100vh;
+  background-color: #F7FAF9 !important;
+  border-radius: 2px;
+}
+
+.profile-header {
+    color: #F7FAF9;
+    background-color: #F7FAF9;
+  }
+
+#profile-footer {
+    background-color: #F7FAF9;
+  }
+
+.panel-body {
+  background-color: #F7FAF9 !important;
+  font-family: "Signika";
+  font-weight: lighter;
+  color: $dark-green;
+  }
+
+.panel-heading {
+  background-color: $dark-green !important;
+  }
+
+.panel-title {
+  font-family: "Signika";
+  color: white;
+  }
+

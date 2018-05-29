@@ -2,11 +2,80 @@
 <%= render 'sidebar' %>
 
 <div class="main">
-<h1>What do you want to do?</h1>
+<div class="my-profile-card">
+<div class="panel panel-info" id="profile-header">
+  <div class="panel-heading">
+     <h3 class="panel-title">My Profile</h3>
+     </div>
+       <div class="panel-body" id="profile-body">
+         <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center">
+              <% if current_user.photo %>
+              <%= cl_image_tag current_user.photo, class: "avatar-square" %>
+              <% end %></div>
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Full name</td>
+                        <td><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize! %></td>
+                      </tr>
+                      <tr>
+                        <td>Date of Birth</td>
+                        <td><%= current_user.date_of_birth.strftime("%d/%m/%y") %></td>
+                      </tr>
+                      <tr>
+                        <td>Country</td>
+                        <td><%= current_user.nationality %></td>
+                      </tr>
 
-<%= link_to "Edit my profile", edit_user_registration_path %>
-<%= link_to "Change my password", new_user_password_path %>
+                         <tr>
+                             <tr>
+                        <td>City</td>
+                        <td><%= current_user.city.capitalize! %></td>
+                      </tr>
+                        <tr>
+                        <td>Biography:</td>
+                        <td><%= current_user.bio %></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><%= current_user.email %></td>
+                      </tr>
+                        <td>Skills I want to learn:</td>
+                        <td>
+                        <% current_user.user_skills.each do |user_skill| %>
+                        <% if user_skill.role == "student" %>
+                        <li><%= user_skill.skill.name %></li>
+                      <% end %>
+                      <% end %>
+                      </td>
+                      </tr>
+                      <td>Skills I want to teach:</td>
+                        <td>
+                        <% current_user.user_skills.each do |user_skill| %>
+                        <% if user_skill.role == "teacher" %>
+                        <li><%= user_skill.skill.name %></li>
+                      <% end %>
+                      <% end %>
+                      </td>
+                    </tr>
 
-<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer" id="profile-footer">
+                        <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+                        <span class="pull-right">
+                            <%= link_to "Edit my profile", edit_user_registration_path, class: "btn btn-xs btn-green"  %>
+                            <%= link_to "Edit my skills", select_skills_to_learn_path, class: "btn btn-xs btn-green"  %>
+                        </span>
+                    </div>
+
+</div>
+
+
 </div>
 </div>
