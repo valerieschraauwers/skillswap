@@ -2,9 +2,25 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= simple_form_for(@user, url: wizard_update_teach_skill_path(@user), html: { method: :post }) do |f| %>
-      <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
+
+      <div class="form-group">
+        <label class="control-label check_boxes optional">Skills</label>
+        <input type="hidden" name="user[skill_ids][]" value="">
+        <div class="skill-choices">
+          <% Skill.all.each do |skill| %>
+          <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
+          <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
+            <%= skill.name %>
+            <i class="fa fa-check"></i>
+          </label>
+          <% end %>
+        </div>
+      </div>
+      <%#= f.association :skills, as: :check_boxes %>
       <%= f.submit %>
       <% end %>
     </div>
   </div>
 </div>
+
+<%= javascript_pack_tag 'skill' %>

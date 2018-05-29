@@ -23,7 +23,7 @@ before_action :set_user
 
   def update_learn_skill
     # byebug
-    skills = user_params[:skills]
+    skills = user_params.to_h[:skill_ids]
     skills.each do |skill|
         UserSkill.create(user: current_user, skill_id: skill, role: "student")
     end
@@ -32,7 +32,7 @@ before_action :set_user
 
   def update_teach_skill
     # byebug
-    skills = user_params[:skills]
+    skills = user_params.to_h[:skill_ids]
     skills.each do |skill|
         UserSkill.create(user: current_user, skill_id: skill, role: "teacher")
     end
@@ -46,7 +46,7 @@ before_action :set_user
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :date_of_birth, :nationality, :city, :photo, :bio, :photo_cache, skills: [])
+    params.require(:user).permit(:first_name, :last_name, :date_of_birth, :nationality, :city, :photo, :bio, :photo_cache, skill_ids: [])
   end
 
 end
