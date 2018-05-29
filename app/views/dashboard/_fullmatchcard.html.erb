@@ -1,0 +1,45 @@
+
+    <div class="match-card full">
+      <div>
+        <h3>FULL MATCH</h3>
+        <hr/>
+        <div class="flex-profiles">
+          <div class="profile match">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td><%= current_user.first_name.capitalize %></td>
+                      </tr>
+                      <tr>
+                        <td>City</td>
+                        <td><%= current_user.city.capitalize! %>, <%= current_user.nationality %></td>
+                      </tr>
+                      <tr>
+                        <td>Biography:</td>
+                        <td><%= current_user.bio %></td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+          <div class="match-photo">
+            <%= cl_image_tag current_user.photo %>
+          </div>
+          </div>
+        <div class="teacher-match">
+          <p>teach icon <%= image_tag "arrowsright.png", height: 70%></p>
+        </div>
+        <div class="student-match">
+          <p>learn icon <%= image_tag "arrowsleft.png", height: 70 %></p>
+        </div>
+        <div>
+        <div id="reviews" class="text-left">
+          <h4>REVIEWS</h4>
+        </div>
+        </div>
+        <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
+      </div>
+    </div>
+
+
+

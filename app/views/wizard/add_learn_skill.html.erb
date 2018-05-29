@@ -1,0 +1,11 @@
+<h1>Wizard#add_learn_skill</h1>
+<p>Find me in app/views/wizard/add_learn_skill.html.erb</p>
+
+
+<%#= simple_form_for :user, as: :post, url: wizard_update_learn_skill_path(@user) do |f| %>
+<%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
+
+    <%= f.input :skills, collection: Skill.all, as: :check_boxes %>
+
+  <%= f.submit %>
+<% end %>
