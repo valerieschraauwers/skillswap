@@ -1,15 +1,14 @@
-
-    <div class="match-card full">
+    <div class="full-match-card full">
       <div>
         <h3>FULL MATCH</h3>
         <hr/>
         <div class="flex-profiles">
           <div class="profile match">
-                  <table class="table table-user-information">
+                  <table class="table table-user-information full">
                     <tbody>
                       <tr>
                         <td>Name</td>
-                        <td><%= current_user.first_name.capitalize %></td>
+                        <td><%= current_user.first_name %></td>
                       </tr>
                       <tr>
                         <td>City</td>
@@ -27,19 +26,22 @@
           </div>
           </div>
         <div class="teacher-match">
-          <p>teach icon <%= image_tag "arrowsright.png", height: 70%></p>
+          <p> <%= match.teacher_skill %> <%= image_tag "arrowsright.png", height: 70%></p>
         </div>
         <div class="student-match">
-          <p>learn icon <%= image_tag "arrowsleft.png", height: 70 %></p>
+          <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.student_skill %> </p>
         </div>
         <div>
         <div id="reviews" class="text-left">
           <h4>REVIEWS</h4>
         </div>
         </div>
-        <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
+
+        <%= link_to "See match", matches_path, class: "btn btn-xs btn-green align-bottom" %>
+
       </div>
     </div>
+
 
 
 

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get '/dashboard/profile'
   get '/dashboard/my_skills'
   get '/dashboard/my_matches'
-  get '/dashboard/testmatches'
+  get '/dashboard/carroussel'
   get 'profiles/show'
 
   get 'pages/skills'
