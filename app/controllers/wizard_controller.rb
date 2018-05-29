@@ -17,7 +17,7 @@ before_action :set_user
     if @user.save
       redirect_to wizard_add_learn_skill_path
     else
-      render :profile
+      render 'wizard/profile'
     end
   end
 
@@ -36,7 +36,7 @@ before_action :set_user
     skills.each do |skill|
         UserSkill.create(user: current_user, skill_id: skill, role: "teacher")
     end
-    redirect_to dashboard_my_matches_path
+    redirect_to edit_user_registration_path
   end
 
   private
@@ -46,7 +46,7 @@ before_action :set_user
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, skills: [])
+    params.require(:user).permit(:first_name, :last_name, :date_of_birth, :nationality, :city, :photo, :bio, :photo_cache, skills: [])
   end
 
 end

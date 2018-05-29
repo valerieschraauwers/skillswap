@@ -1,7 +1,6 @@
-<%  matches = current_user.owned_skills_matches%>
+<% matches = current_user.owned_skills_matches + current_user.desired_skills_matches %>
 
-
-<% if matches.nil?  %>
+<% if matches.length >= 7  %>
 
   <%= i = matches.length/2%>
   <div id="carousel" class="carousel">
@@ -95,7 +94,7 @@
     </a>
   </div>
 <% else %>
-<h1>YOU DONT HAVE MATCHES YET</h1>
+<h1>YOU DONT HAVE MATCHES YET or you have < 7 matches (carrousel malfunction)</h1>
 <% end %>
 
 <!-- <div class="buttons">
