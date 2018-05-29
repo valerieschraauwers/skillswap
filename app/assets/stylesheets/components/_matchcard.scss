@@ -1,14 +1,20 @@
 .match-card {
   display: flex;
+  flex: nowrap;
   width: 400px;
   height: 500px;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
-  text-align: center;
-  background-image: asset-url('cardbackground.png');
+  justify-content: center;
+  background-image: linear-gradient(-225deg, rgba(240,240,240,0.5) 0%, rgba(240,240,240,0.5) 0%), asset-url('cardbackground.png');
+  h3 {
+    text-align: center;
+
+  }
 }
 
 .flex-title {
+  flex: nowrap;
   width: 100%;
   height: 25%;
   text-align: center;
@@ -26,18 +32,80 @@ h3 {
 hr{
   width: 50px;
   height: 3px;
-  margin: 20px auto;
+  margin: 10px auto;
   border: 0;
   background: #b9586d;
 }
 
 .flex-profiles {
   display: flex;
-  width: 100%;
+  // justify-content: space-between;
+  align-items: center;
+  // width: 100%;
 }
 
-.profile {
-  width: 50%;
+.match-photo {
+  width: 150px;
+  height: 150px;
+  img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+.profile.match {
+  width: 250px;
+  height: 150px;
+  }
+
+  .table tr {
+    font-size: 15px;
+    font-family: "Signika";
+    font-weight: lighter;
+  }
+
+.teacher-match {
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  p {
+    margin: -5px 0 12.5px;
+  }
+
+}
+
+.student-match {
+  width: 100%;
+  height: 60px;
+
+  align-items: center;
+  p {
+    margin: -5px 0 12.5px;
+  }
+}
+
+.match-profile-card {
+  padding: 15px;
+  width: 150px;
+  height: 100vh;
+  background-color: #F7FAF9 !important;
+  border-radius: 2px;
+}
+
+#reviews {
+  margin-top: 10px;
+  border-top: 1px solid #b9586d;
+  h4 {
+    font-size: 18px;
+    font-family: "Signika";
+    color: #b9586d;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-left: 10px;
+    }
 }
 
 
