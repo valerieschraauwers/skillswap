@@ -15,7 +15,7 @@ class DashboardController < ApplicationController
  end
 
  def my_matches
-  @matches = current_user.randomized_matches_with_type
+  @matches = current_user.matches_with_type
  end
 
  def my_skills

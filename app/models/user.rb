@@ -9,24 +9,28 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
-  def randomized_matches_with_type
-    matches = []
+  def matches_with_type
+    matches = {
+      full: [],
+      teacher: [],
+      student: []
+    }
     owned_skills_matches.each do |match|
-      if match.full_match?
-        matches << { full: match }
+      if opp = match.full_match?
+        matches[:full] <<  match unless matches[:full].include?(opp)
       else
-        matches << { teacher: match }
+        matches[:teacher] << match
       end
     end
 
     desired_skills_matches.each do |match|
-      if match.full_match?
-        matches << { full: match }
+      if opp = match.full_match?
+        matches[:full] <<  match unless matches[:full].include?(opp)
       else
-        matches << { student: match }
+        matches[:student] << match
       end
     end
-    matches = matches.shuffle
+    matches
   end
 
 

@@ -130,15 +130,17 @@ UserSkill.create(user_id: 1, skill_id: 2, role: "teacher") #WILLIAM TEACHER --- 
 #MATCH 3 USER 3 AND 1
 
 UserSkill.create(user_id: 3, skill_id: 1, role: "teacher") # VALERIE TEACHER --- GUITAR
-
+UserSkill.create(user_id: 2, skill_id: 1, role: "student")
 #LONELY SKILL
 UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
-
+UserSkill.create(user_id: 2, skill_id: 7, role: "teacher")
 
 Match.create(teacher_skill_id: 2, student_skill_id: 1)
 Match.create(teacher_skill_id: 4, student_skill_id: 3)
 Match.create(teacher_skill_id: 5, student_skill_id: 1)
 
+Match.create(teacher_skill_id: 5, student_skill_id: 6)
+Match.create(teacher_skill_id: 8, student_skill_id: 7)
 
 # #MESSAGES IN MATCH 1
 # Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)

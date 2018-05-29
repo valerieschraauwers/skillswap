@@ -1,6 +1,6 @@
 <div class="sidenav">
   <% if current_user.first_name%>
-    <h2>Welcome <%= current_user.first_name.capitalize!%>!</h2>
+    <h2>Welcome <%= current_user.first_name.capitalize%>!</h2>
   <% else%>
     <h2>Welcome <%= current_user.email%>!</h2>
   <% end %>
