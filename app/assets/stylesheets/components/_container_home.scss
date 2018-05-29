@@ -1,8 +1,11 @@
 .container_home {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 70px;
   margin-top: 0px;
-  margin-left: 35px;
+  margin-left: 55px;
+  margin-right: 20px;
 }
 
 .skills_container {
