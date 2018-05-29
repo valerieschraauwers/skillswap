@@ -8,4 +8,10 @@ class RegistrationsController < Devise::RegistrationsController
         # edit_user_registration_path
         dashboard_my_matches_path
     end
+
+    def update_resource(resource, params)
+        resource.update_without_password(params)
+    end
+
+
 end
