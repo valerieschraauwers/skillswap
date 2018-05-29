@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'wizard/profile'
+  get 'wizard/add_learn_skill'
+  get 'wizard/add_teach_skill'
+  post 'wizard/update_user'
+  post 'wizard/update_learn_skill'
+  post 'wizard/update_teach_skill'
+
   get 'reviews/create'
+
   resources :matches do
     collection do
       post :search_and_create_matches
