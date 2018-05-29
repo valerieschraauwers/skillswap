@@ -2,7 +2,9 @@
   <%= render 'sidebar' %>
 
   <div class="main">
+    <%= @matches %>
     <% @matches.each do |type, match| %>
+    <%= type %>
     <% if type == :teacher %>
       <%= render 'fullmatchcard', match: match %>
     <% elsif type == :student %>
