@@ -1,7 +1,8 @@
 class UserSkill < ApplicationRecord
-  has_many :matches
-  belongs_to :user
   belongs_to :skill
+  belongs_to :user
+  has_many :matches
+
 
   def teacher_matches
     Match.where(teacher_skill_id: id)

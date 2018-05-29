@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/dashboard/settings'
   get '/dashboard/my_skills'
   get '/dashboard/my_matches'
+  get '/dashboard/testmatches'
   get 'profiles/show'
 
   get 'pages/skills'

@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_many :user_skills, dependent: :destroy
+  has_many :skills, through: :user_skills
   mount_uploader :photo, PhotoUploader
-  has_many :matches, through: :user_skill
   has_many :reviews
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
