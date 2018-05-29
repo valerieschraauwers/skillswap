@@ -1,9 +1,32 @@
-svg {
-  color: blue;
+.home_icon_card {
+  padding-top: 30px;
+  padding-left: 65px;
+  margin-bottom:60px;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 220px;
+  width: 220px;
+  text-align: center;
+  vertical-align: center;
 }
+
+.home_icon_card:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+  color: rgb(67, 183, 170);
+}
+
+.home_icon_text {
+ opacity: 0.65;
+ text-align: center;
+ font-family: "Signika";
+ font-weight: thin;
+}
+
 
 .icon_card {
   opacity: 0.9;
+  color:rgb(79, 79, 79);
   text-align: center;
   padding: 40px;
   margin: 15px;
@@ -39,6 +62,3 @@ svg {
  color: rgb(67, 183, 170);
 }
 
-.svg path {
-  fill: red;
-}
