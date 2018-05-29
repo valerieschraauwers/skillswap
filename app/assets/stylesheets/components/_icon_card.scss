@@ -1,11 +1,35 @@
-svg {
-  color: blue;
+.home_icon_card {
+  padding-top: 30px;
+  padding-left: 65px;
+  margin-bottom:60px;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 220px;
+  width: 220px;
+  text-align: center;
+  vertical-align: center;
 }
 
+.home_icon_card:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+  color: rgb(67, 183, 170);
+}
+
+.home_icon_text {
+ opacity: 0.65;
+ text-align: center;
+ font-family: "Signika";
+ font-weight: thin;
+}
+
+
 .icon_card {
-  text-opacity: 0.6;
+  opacity: 0.9;
+  color:rgb(79, 79, 79);
   text-align: center;
-  margin: 15px auto;
+  padding: 40px;
+  margin: 15px;
   margin-right: 35px;
   margin-left: 35px;
   height: 200px;
@@ -19,7 +43,7 @@ svg {
 }
 
 .fas {
-  opacity: 0.6;
+  opacity: 0.9;
   color:rgb(79, 79, 79);
   font-size:80px;
 }
@@ -38,6 +62,3 @@ svg {
  color: rgb(67, 183, 170);
 }
 
-.svg path {
-  fill: red;
-}
