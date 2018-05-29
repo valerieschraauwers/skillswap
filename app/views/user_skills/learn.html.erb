@@ -6,94 +6,37 @@
 <div class="container">
   <div class="row">
 
-<div class="flexed-items">
-  <div class="half-item">
+    <div class="flexed-items">
+      <div class="half-item">
 
-    <h1>Select skills you want to learn</h1>
+        <h1>Select skills you want to learn</h1>
 
-    <% @categories.each do |category|%>
-     <h2><%= category.name %></h2>
+        <% @categories.each do |category|%>
+        <h2><%= category.name %></h2>
         <% category.skills.first(2).each do |skill| %>
-          <div id="test" class= "icon_card">
+        <div id="test" class= "icon_card">
 
-            <div class="form-group">
-              <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pool"><img src="<%= image_path 'trianglify2.png'%>"> class="img-responsive img-checkbox"></label></div>
 
-            </div>
-          </div>
+        </div>
         <% end %>
-      <% end %>
-  </div>
+        <% end %>
+      </div>
 
 
 
-<%#= simple_form_for @user_skill do |f| %>
-            <%#= f.input :skill_id, as: :hidden, :input_html => {value: skill.id} %>
-            <%#= f.input :role, as: :hidden, :input_html => {value: "student"} %>
-            <%# if @current_skills.any? {|currentskill| currentskill.skill_id == skill.id} %>
-              <%#= f.submit value: "#{skill.name}", hidden: true%>
-            <%# else %>
-              <!-- MAYBE A DESTROY BUTTON  -->
-              <%#= f.submit value: "#{skill.name}" %>
-            <%# end %>
-          <%# end %>
+      <div class="half-item">
 
-
-
-<!--
-    <div id="test" class= "icon_card">
-      <%#= image_tag "icons/arts_and_crafts/knitting.svg", width: 100 %>
-      <div class="icon-text"><h6>Knitting</h6></div>
+        <h1> Skills you have selected!</h1>
+        <% current_user.user_skills.each do |user_skill| %>
+        <% if user_skill.role == "student" %>
+        <h3>
+          <%= user_skill.skill.name %>
+        </h3>
+        <% end %>
+        <% end %>
+      </div>
     </div>
 
-    <script type="text/javascript">
-  $(document).ready(function() {
-    $('#test').click(function(){
-      $('#new_user_skill').submit();
-      )};
-    // $('#submitID').hide();
-  )};
-</script> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="half-item">
-
-    <h1> Skills you have selected!</h1>
-    <% current_user.user_skills.each do |user_skill| %>
-    <% if user_skill.role == "student" %>
-    <h3>
-      <%= user_skill.skill.name %>
-    </h3>
-    <% end %>
-    <% end %>
   </div>
 </div>
-
-
-
-
-
-  </div>
-</div>
-
-<div class="form-group">
-    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pool"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
-    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="pets allowed"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
-    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="elevator"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
-    <div class="checkbox"><label class="checkbox-inline"><input type="checkbox" name="qRequirements" value="wifi"><img src="http://placehold.it/33x33" class="img-responsive img-checkbox"></label></div>
-</div>
-
 
