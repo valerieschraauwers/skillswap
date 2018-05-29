@@ -1,3 +1,4 @@
+
 <% matches = current_user.owned_skills_matches + current_user.desired_skills_matches %>
 
 <% if matches.length >= 7  %>
@@ -87,6 +88,7 @@
     <a class="left carousel-control" id="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Prev</span>
+
     </a>
     <a class="right carousel-control" id="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
@@ -148,33 +150,5 @@
 </div>
 
 
-
-
-
-
-
 <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
-
-
-
-
-
-
-
-
-<!-- <ul>
- Match ID:<%#= match.id %>
- SKILL: <%#= match.skill.name %>
- <h3>Teacher:<%#= match.teacher.email %> </h3>
- <h3>Student:<%#= match.student.email %> </h3>
-</ul> -->
-<%# end %>
-
-
-
-
-
-
-
-
 

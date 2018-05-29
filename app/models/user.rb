@@ -9,6 +9,27 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
+  def randomized_matches_with_type
+    matches = []
+    owned_skills_matches.each do |match|
+      if match.full_match?
+        matches << { full: match }
+      else
+        matches << { teacher: match }
+      end
+    end
+
+    desired_skills_matches.each do |match|
+      if match.full_match?
+        matches << { full: match }
+      else
+        matches << { student: match }
+      end
+    end
+    matches = matches.shuffle
+  end
+
+
 
   def owned_skills_matches
     user_skills.where(role: "teacher").map {|skill| skill.teacher_matches}.flatten

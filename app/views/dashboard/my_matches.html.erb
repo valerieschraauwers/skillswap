@@ -1,0 +1,19 @@
+<div class="flexed-items">
+  <%= render 'sidebar' %>
+
+  <div class="main">
+    <%= @matches %>
+    <% @matches.each do |type, match| %>
+    <%= type %>
+    <% if type == :teacher %>
+      <%= render 'fullmatchcard', match: match %>
+    <% elsif type == :student %>
+      <%= render 'fullmatchcard', match: match %>
+    <% elsif type == :full %>
+      <%= render 'fullmatchcard', match: match %>
+    <% end %>
+    <% end %>
+  </div>
+
+</div>
+<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
