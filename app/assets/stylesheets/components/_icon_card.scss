@@ -5,7 +5,7 @@
   margin-left: 40px;
   margin-right: 40px;
   height: 220px;
-  width: 300px;
+  width: 340px;
   text-align: center;
   vertical-align: center;
 }
@@ -16,9 +16,21 @@
   color: rgb(67, 183, 170);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+
 .home_icon_text {
  opacity: 0.9;
- margin-left: 25;
+ justify-content: center;
+ margin-left: 100px;
+ margin-bottom: 35px;
  font-family: "Signika";
  font-weight: thin;
 }
