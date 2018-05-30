@@ -40,3 +40,19 @@
   color: $dark-green;
   border: 1px solid $dark-green;
 }
+
+.btn.btn-green.btn-match {
+  height: 109px;
+  width: 109px;
+}
+
+.btn.btn-green.btn-match:hover {
+  color: #b9586d;
+  border: 1px solid #b9586d;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }

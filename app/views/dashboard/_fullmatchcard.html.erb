@@ -1,53 +1,51 @@
-
-
-<% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
-<div class="full-match-card full">
-  <div>
-    <h3>FULL MATCH</h3>
-    <hr/>
-    <div class="flex-profiles">
-      <div class="profile match">
-        <table class="table table-user-information full">
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td><%= card_user.first_name %>
-
-              </td>
-            </tr>
-            <tr>
-              <td>City</td>
-              <td><%= card_user.city.capitalize %>, <%= card_user.nationality %></td>
-            </tr>
-            <tr>
-              <td>Biography:</td>
-              <td><%= card_user.bio %></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="match-photo">
-        <%= cl_image_tag card_user.photo %>
-      </div>
-    </div>
-    <div class="match-icon">
-      <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%></p>
-    </div>
-    <div class="match-icon">
-      <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.full_match?.student_skill.skill.name %> </p>
-    </div>
+<li class="glide__slide">
+  <% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
+  <div class="full-match-card full">
     <div>
-      <div id="reviews" class="text-left">
-        <h4>REVIEWS</h4>
-        <p>*****</p>
-        <p>Great class!</p>
+      <h3>FULL MATCH</h3>
+      <hr/>
+      <div class="flex-profiles">
+        <div class="profile match">
+          <table class="table table-user-information full">
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td><%= card_user.first_name %>
+                </td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td><%= card_user.city.capitalize %>, <%= card_user.nationality %></td>
+              </tr>
+              <tr>
+                <td>Biography:</td>
+                <td><%= card_user.bio %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="match-button">
+          <%= link_to "OPEN MATCH", matches_path, class: "btn btn-xs btn-green btn-match text-vertical-center"%>
+        </div>
+      </div>
+      <div>
+        <div class="exchange">
+          <div class="match-icon">
+            <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%></p>
+          </div>
+          <div class="match-icon">
+            <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.full_match?.student_skill.skill.name %> </p>
+          </div>
+        </div>
+        <div id="reviews" class="text-left">
+          <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
+          <p>*****</p>
+          <p>Great class!</p>
+        </div>
+      </div>
       </div>
     </div>
-
-    <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
-
-  </div>
-</div>
+  </li>
 
 
 
