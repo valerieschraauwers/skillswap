@@ -22,10 +22,9 @@
     </div>
 
 
-    <div class= "whitecard">
+    <div class= "form_whitecard">
       <h4>Provide Feedback:</h4>
       <h6> Please rate the overall quality of your experience: </h6>
-
       <row>
         <span class="rating">
           <input type="radio" class="rating-input"
@@ -60,7 +59,9 @@
 
 
    <div class= "past_review_whitecard">
-    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <img class="avatar-large" id="avatar-sidebar" src="http://res.cloudinary.com/dpphwschw/image/upload/v1527583823/mwtu3jgltdyusnr0lglv.jpg">
+
+
     <%= render 'reviews/show', review: review %>
     <% end %>
     <% end %>
