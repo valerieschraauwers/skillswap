@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
         # puts 'this is happening yoyo mama'
         flash[:notice] = "Account succesfully updated"
         # edit_user_registration_path
-        dashboard_path
+        dashboard_my_matches_path
     end
 
     def update_resource(resource, params)
