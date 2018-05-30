@@ -9,6 +9,7 @@
 
 .footer {
   // background: #489992;
+  z-index: 10; position:relative;
   background-image: asset-url('trianglify2.png');
   display: flex;
   align-items: center;

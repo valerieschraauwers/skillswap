@@ -1,3 +1,4 @@
+
 <div class="flexed-items">
   <%= render 'dashboard/sidebar' %>
 
@@ -45,30 +46,26 @@
         </span>
       </row>
 
-
-
       <div id="reviews">
        <%= render 'reviews/form', match: @match, review: @review %>
        <% if @match.reviews.blank? %>
        Be the first to leave a review:
        <% else %>
        <% @match.reviews.each do |review| %>
-            <!-- note- brought reviews/show down from this place, to organize page -cs - 5-30-17 -->
+       <!-- note- brought reviews/show down from this place, to organize page -cs - 5-30-17 -->
 
        <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
-
      </div>
    </div>
- </div>
-</div>
 
-<div class= "past_review_whitecard">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <h3>Gab Dehan</h3>
-    <p>10/07/17</p>
- <%= render 'reviews/show', review: review %>
- <% end %>
- <% end %>
-</div>
 
+   <div class= "past_review_whitecard">
+    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <%= render 'reviews/show', review: review %>
+    <% end %>
+    <% end %>
+  </div>
+
+</div>
+</div>
 
