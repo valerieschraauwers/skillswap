@@ -47,3 +47,18 @@
   opacity: 1;
   }
 
+.skill-choice-cat {
+  background: #367f74;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: .4;
+  flex: 0 0 30%;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  }
+
+.skill-choice-cat:hover {
+    opacity: 1;
+    cursor: pointer;
+  }

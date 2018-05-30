@@ -61,15 +61,15 @@ User.create(email: "valerie@valerie.com", password:"password")
 #  same goes for fossil picking, best to have 10 general subcategories for each skill categories
 # can some subcategories belong to several categories?
 
-SkillCategory.create(name: "arts_and_crafts")
-SkillCategory.create(name: "business_and_technology")
-SkillCategory.create(name: "food_and_drink")
-SkillCategory.create(name: "game")
-SkillCategory.create(name: "language_and_culture")
-SkillCategory.create(name: "music")
-SkillCategory.create(name: "outdoors")
-SkillCategory.create(name: "practical")
-SkillCategory.create(name: "sport_and_active")
+SkillCategory.create(name: "Arts and Crafts")
+SkillCategory.create(name: "Business and technology")
+SkillCategory.create(name: "Food and Drink")
+SkillCategory.create(name: "Game")
+SkillCategory.create(name: "Language and Culture")
+SkillCategory.create(name: "Music")
+SkillCategory.create(name: "Outdoors")
+SkillCategory.create(name: "Practical")
+SkillCategory.create(name: "Sport and Active")
 
 
 Skill.create(name: "Jewelry Making", skill_category_id:1 , icon: "jewelry_making.svg")
