@@ -1,3 +1,4 @@
+
 <div class="flexed-items">
   <%= render 'dashboard/sidebar' %>
 
@@ -21,10 +22,9 @@
     </div>
 
 
-    <div class= "whitecard">
+    <div class= "form_whitecard">
       <h4>Provide Feedback:</h4>
       <h6> Please rate the overall quality of your experience: </h6>
-
       <row>
         <span class="rating">
           <input type="radio" class="rating-input"
@@ -46,34 +46,25 @@
       </row>
 
       <div id="reviews">
-        <% if @match.reviews.blank? %>
-        Be the first to leave a review:
-        <% else %>
-        <% @match.reviews.each do |review| %>
-        <%= render 'reviews/show', review: review %>
-        <% end %>
-        <% end %>
-      </div>
-      <%= render 'reviews/form', match: @match, review: @review %>
-    </div>
-  </div>
-</div>
-<%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+       <%= render 'reviews/form', match: @match, review: @review %>
+       <% if @match.reviews.blank? %>
+       Be the first to leave a review:
+       <% else %>
+       <% @match.reviews.each do |review| %>
+       <!-- note- brought reviews/show down from this place, to organize page -cs - 5-30-17 -->
 
-<div class="past_review">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <div class="message-name">
-    <h3>Gab Dehan</h3>
-    <p>10/07/17</p>
+       <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+     </div>
+   </div>
+
+
+   <div class= "past_review_whitecard">
+    <img class="avatar-large" id="avatar-sidebar" src="http://res.cloudinary.com/dpphwschw/image/upload/v1527583823/mwtu3jgltdyusnr0lglv.jpg">
+    <%= render 'reviews/show', review: review %>
+    <% end %>
+    <% end %>
   </div>
-  <div class="message-body">
-    <p><strong>I am not sure yet!</strong></p>
-    <p>
-      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
-    </p>
-  </div>
-  <div class="message-status">
-    <p class="status pending">Pending</p>
-    <p class="price">€345</p>
-  </div>
+
 </div>
+</div>
+

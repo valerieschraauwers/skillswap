@@ -5,8 +5,8 @@
   margin-left: -5px;
   margin-right: -5px;
   margin-bottom: 20px;
-  height: 255px;
-  width: 350px;
+  height: 280px;
+  width: 380px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position:50% 50% !important;
@@ -23,36 +23,22 @@
   transform: translateY(-10px);
 }
 
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+
+.card_description {
+ text-align: center;
+ margin-top: -23px;
+ color: white;
+ text-shadow: 1px;
 }
-.card-category {
-  position: absolute;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-shadow: 1px 1px #577626;
-}
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  margin-left: 10px;
-  font-size: 15px;
-}
-.card-description p {
-  font-size: 13px;
-  opacity: 0.8;
-  font-weight: lighter;
+
+.testimonial {
+  font-size: 14px;
+  text-align: center;
   color: white;
-  text-decoration: none;
+  text-shadow: 2px;
 }
+
+
 .card-link {
   position: absolute;
   top: 0;
