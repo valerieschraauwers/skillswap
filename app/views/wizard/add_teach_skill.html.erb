@@ -6,24 +6,24 @@
       <div class="form-group">
         <label class="control-label check_boxes optional">Skills</label>
         <input type="hidden" name="user[skill_ids][]" value="">
+
         <div class="skill-choices">
           <% Skill.all.each do |skill| %>
 
-          <% if  (@user.owned_skills.include? skill)%>
-          <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
-          <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
-            <%= skill.name %>
-            <i class="fa fa-check"></i>
-          </label>
-          <%elsif (@user.desired_skills.include? skill)%>
-
-          <% else %>
-          <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
-          <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
-            <%= skill.name %>
-            <i class="fa fa-check"></i>
-          </label>
-          <% end %>
+            <% if  (@user.owned_skills.include? skill)%>
+              <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
+              <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
+                <%= skill.name %>
+                <i class="fa fa-check"></i>
+              </label>
+            <%elsif (@user.desired_skills.include? skill)%>
+            <% else %>
+              <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
+              <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
+                <%= skill.name %>
+                <i class="fa fa-check"></i>
+              </label>
+            <% end %>
 
           <% end %>
         </div>
