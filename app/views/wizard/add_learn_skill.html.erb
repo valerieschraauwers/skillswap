@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 ">
       <%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
 
       <div class="form-group">
@@ -29,10 +29,14 @@
           <% end %>
         </div>
       </div>
-      <%= f.association :skills, as: :check_boxes %>
+      </div>
+      <%#= f.association :skills, as: :check_boxes %>
+      <div class="col-md-6 ">
       <%= f.submit %>
+
       <% end %>
     </div>
+
   </div>
 </div>
 
