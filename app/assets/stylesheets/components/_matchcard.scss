@@ -1,9 +1,28 @@
+.main{
+  margin:0;
+  padding:0;
+  width: 100%;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+}
+
+
 .full-match-card {
   display: flex;
   flex: nowrap;
   width: 400px;
   height: 500px;
   border-radius: 10px;
+  border: 1px solid #e6bfc7;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
   justify-content: center;
   background-image: asset-url('trianglify.png');
@@ -123,6 +142,7 @@ hr{
   width: 400px;
   height: 500px;
   border-radius: 10px;
+  border: 1px solid #e6bfc7;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
   justify-content: center;
   background-image: asset-url('triangle.png');
