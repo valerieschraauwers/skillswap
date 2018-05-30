@@ -50,7 +50,7 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
         end
       end
     end
-    redirect_to dashboard_path
+    redirect_to dashboard_my_matches_path
   end
 
   private
