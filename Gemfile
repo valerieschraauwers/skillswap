@@ -23,6 +23,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'country_select'
+gem 'flatpickr'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
