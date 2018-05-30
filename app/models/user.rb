@@ -33,7 +33,13 @@ class User < ApplicationRecord
     matches
   end
 
+  def desired_skills
+    user_skills.where(role: "student").map { |user_skill| user_skill.skill}.flatten
+  end
 
+  def owned_skills
+    user_skills.where(role: "teacher").map {|user_skill| user_skill.skill}.flatten
+  end
 
   def owned_skills_matches
     user_skills.where(role: "teacher").map {|skill| skill.teacher_matches}.flatten
