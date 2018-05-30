@@ -3,22 +3,34 @@
 
   <div class="main">
 
-  <% @matches.each do |type, matches| %>
-    <% if type == :teacher %>
-      <% matches.each do |match| %>
-        <%= render 'halfmatchcard', match: match %>
-      <% end %>
-    <% elsif type == :student %>
-      <% matches.each do |match| %>
-        <%= render 'halfmatchcard', match: match %>
-      <% end %>
-    <% elsif type == :full %>
-      <% matches.each do |match| %>
-        <%= render 'fullmatchcard', match: match %>
-      <% end %>
-    <% end %>
-    <% end %>
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <% @matches.each do |type, matches| %>
+          <% if type == :teacher %>
+            <% matches.each do |match| %>
+              <%= render 'halfmatchcard', match: match %>
+            <% end %>
+          <% elsif type == :student %>
+            <% matches.each do |match| %>
+              <%= render 'halfmatchcard', match: match %>
+            <% end %>
+          <% elsif type == :full %>
+            <% matches.each do |match| %>
+              <%= render 'fullmatchcard', match: match %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+
+
   </div>
 
 </div>
 <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+
+<%= javascript_pack_tag 'match_carousel' %>

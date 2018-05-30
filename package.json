@@ -2,6 +2,7 @@
   "name": "skillswap",
   "private": true,
   "dependencies": {
+    "@glidejs/glide": "^3.0.4",
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
     "jquery": "^3.3.1"
