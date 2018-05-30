@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "william@william.com", password:"password")
+User.create(email: "william@william.com", password:"password", first_name: "William", city: "Canggu", bio: "Soy William")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
-User.create(email: "valerie@valerie.com", password:"password")
+User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", city: "Canggu", bio: "I'm Valerie")
 
 # Create 12 more users (maybe everyone from the class) and fill out every detail, so:
 # email
