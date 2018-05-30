@@ -8,15 +8,26 @@
         <input type="hidden" name="user[skill_ids][]" value="">
         <div class="skill-choices">
           <% Skill.all.each do |skill| %>
+
+          <% if  (@user.skills.include? skill)%>
+          <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
+          <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
+            <%= skill.name %>
+            <i class="fa fa-check"></i>
+          </label>
+          <% else %>
           <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
           <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
             <%= skill.name %>
             <i class="fa fa-check"></i>
           </label>
           <% end %>
+
+
+          <% end %>
         </div>
       </div>
-      <%#= f.association :skills, as: :check_boxes %>
+      <%= f.association :skills, as: :check_boxes %>
       <%= f.submit %>
       <% end %>
     </div>
