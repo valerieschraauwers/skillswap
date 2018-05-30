@@ -1,15 +1,11 @@
 /* The sidebar menu */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    height: 100vh; /* Full-height: remove this if you want "auto" height */
+    flex: 0 0 160px; /* Set the width of the sidebar */
     z-index: 1; /* Stay on top */
-    top: 60px; /* Stay at the top */
-    left: 0;
     background-color: #eef5f3;
     overflow-x: hidden; /* Disable horizontal scroll */
     font-family: "Signika";
-    padding: 0px 30px;
     border-right: 1px solid #d7e2e1;
     text-align: center;
     h2 {
@@ -24,10 +20,6 @@
     }
 }
 
-.sticky-offset {
-    top: 65px;
-    left: 0;
-}
 
 /* The navigation menu links */
 .sidenav a {
@@ -48,8 +40,7 @@
 
 /* Style page content */
 .main {
-    margin-left: 200px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+  overflow-x:hidden;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
