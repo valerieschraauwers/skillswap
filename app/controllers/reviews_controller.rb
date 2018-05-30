@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def destroy
+  def Delete
     @match = Match.find(params[:match_id])
     @review = Review.find(params[:id])
     @review.match = @match
