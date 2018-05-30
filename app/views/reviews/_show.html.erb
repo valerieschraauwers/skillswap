@@ -2,4 +2,4 @@
 <p><%= review.content %></p>
 <p><%= review.rating %> stars</p>
 <p><%= review.created_at %></p>
-<%= link_to "destroy", match_review_path(@match, review), method: :delete %>
+<%= link_to "destroy", match_review_path(@match, review), method: :delete, class: "btn btn-sm btn-green" %>
