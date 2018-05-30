@@ -10,6 +10,56 @@ User.create(email: "william@william.com", password:"password")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
 User.create(email: "valerie@valerie.com", password:"password")
 
+# Create 12 more users (maybe everyone from the class) and fill out every detail, so:
+# email
+# password
+# first_name
+# last_name
+# date_of_birth
+# nationality (fill out a country here, not a nationality)
+# city
+# photo
+# bio
+
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.date "date_of_birth"
+    t.string "nationality"
+    t.string "city"
+    t.string "photo"
+    t.string "bio"
+    t.string "provider"
+    t.string "uid"
+
+# Create 10 categories:
+# - Arts & Crafts
+# - Business & Technology
+# - Food & Drinks
+# - Language & Culture
+# - Music & Dance
+# - Sports
+# - Outdoors
+# - Practical > can we find another word for this ?
+# - 1 more.....?
+
+#  Give every category 10 skills > arts & crafts
+# > maybe a bit more general so scrape the underwater basket weaving and jewelry making
+# e.g. knowledge on 17th century arts / modern art / design / etc.
+# the chess/ping pong etc. is are also sports, so I would skip the game category
+#  same goes for fossil picking, best to have 10 general subcategories for each skill categories
+# can some subcategories belong to several categories?
 
 SkillCategory.create(name: "arts_and_crafts")
 SkillCategory.create(name: "business_and_technology")
@@ -20,6 +70,7 @@ SkillCategory.create(name: "music")
 SkillCategory.create(name: "outdoors")
 SkillCategory.create(name: "practical")
 SkillCategory.create(name: "sport_and_active")
+
 
 Skill.create(name: "Jewelry Making", skill_category_id:1 , icon: "jewelry_making.svg")
 Skill.create(name: "Knitting", skill_category_id:1 , icon: "jewelry_making.svg")
