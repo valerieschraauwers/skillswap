@@ -18,17 +18,16 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @match = Match.find(params[:match_id])
     @review = Review.find(params[:id])
+    @review.match = @match
     @review.destroy
-
     redirect_to match_path
-  end
-
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :name)
   end
 end

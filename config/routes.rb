@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     collection do
       post :search_and_create_matches
     end
-    resources :reviews, only: :create
+    resources :reviews, only: [:create, :destroy]
   end
 
   resources :profiles, only: [:show, :edit, :update]
