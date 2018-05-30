@@ -1,41 +1,67 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 ">
       <%= simple_form_for(@user, url: wizard_update_teach_skill_path(@user), html: { method: :post }) do |f| %>
 
       <div class="form-group">
         <label class="control-label check_boxes optional">Skills</label>
         <input type="hidden" name="user[skill_ids][]" value="">
-
         <div class="skill-choices">
-          <% Skill.all.each do |skill| %>
 
+        <% SkillCategory.all.each do |skillC| %>
+
+          <p data-skill-id="<%= skillC.id %>" class="click-skill skill-choice-cat"><%= skillC.name %></p>
+
+           <div id="category<%= skillC.id %>" style="display:none; ">
+           <% Skill.all.where(skill_category_id: skillC.id).each do |skill| %>
             <% if  (@user.owned_skills.include? skill)%>
               <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
               <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
-                <%= skill.name %>
-                <i class="fa fa-check"></i>
+              <%= skill.name %>
+              <i class="fa fa-check"></i>
               </label>
             <%elsif (@user.desired_skills.include? skill)%>
             <% else %>
               <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
               <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
-                <%= skill.name %>
-                <i class="fa fa-check"></i>
+              <%= skill.name %>
+              <i class="fa fa-check"></i>
               </label>
             <% end %>
-
           <% end %>
+          </div>
+        <% end %>
+
         </div>
       </div>
-    </div>  <%#= f.association :skills, as: :check_boxes %>
+    </div>
+    <%#= f.association :skills, as: :check_boxes %>
     <div class="col-md-6 ">
       <%= f.submit %>
-
       <% end %>
-
     </div>
   </div>
 </div>
+
+<script>
+ const buttons = document.querySelectorAll(".click-skill");
+
+ buttons.forEach(button => {
+  button.addEventListener("click", myFunction)
+ })
+
+function myFunction(event) {
+    const element = event.target
+    const skillId = element.getAttribute('data-skill-id')
+
+    var x = document.getElementById(`category${skillId}`);
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 
 <%= javascript_pack_tag 'skill' %>
