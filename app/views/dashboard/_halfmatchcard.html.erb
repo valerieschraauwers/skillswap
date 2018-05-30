@@ -1,0 +1,61 @@
+
+
+<% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
+<div class="half-match-card half">
+  <div>
+    <% if current_user == match.teacher %>
+    <h3>TEACHER MATCH</h3>
+    <% else %>
+    <h3>STUDENT MATCH</h3>
+    <% end %>
+    <hr/>
+    <div class="flex-profiles">
+      <div class="profile match">
+        <table class="table table-user-information half">
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><%= card_user.first_name %>
+
+              </td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td><%= card_user.city.capitalize %>, <%= card_user.nationality %></td>
+            </tr>
+            <tr>
+              <td>Biography:</td>
+              <td><%= card_user.bio %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="match-photo">
+        <%= cl_image_tag card_user.photo %>
+      </div>
+    </div>
+    <% if card_user == match.teacher %>
+    <div class="match-icon">
+      <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%></p>
+    </div>
+    <% else %>
+ <div class="match-icon">
+      <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.student_skill.skill.name %> </p>
+    </div>
+    <% end %>
+    <div>
+      <div id="reviews" class="text-left">
+        <h4>REVIEWS</h4>
+        <p>*****</p>
+        <p>Great class!</p>
+      </div>
+    </div>
+
+    <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
+
+  </div>
+</div>
+
+
+
+

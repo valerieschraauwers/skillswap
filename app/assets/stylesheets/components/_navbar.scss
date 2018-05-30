@@ -42,11 +42,16 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+    font-size: 15px;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    color: #b9586d;
+    font-family: 'Signika';
+    text-decoration: none;
 }
 .navbar-wagon-link:hover {
   color: #b9586d;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -100,4 +105,8 @@
   -webkit-margin-after: 0.2em;
   -webkit-margin-start: 616px;
   -webkit-margin-end: 0px;
+}
+
+#avatar-navbar {
+  border: none;
 }

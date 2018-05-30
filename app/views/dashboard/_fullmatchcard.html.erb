@@ -1,3 +1,5 @@
+
+
 <% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
 <div class="full-match-card full">
   <div>
@@ -28,19 +30,21 @@
         <%= cl_image_tag card_user.photo %>
       </div>
     </div>
-    <div class="teacher-match">
-      <p> <%= match.teacher_skill %> <%= image_tag "arrowsright.png", height: 70%></p>
+    <div class="match-icon">
+      <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%></p>
     </div>
-    <div class="student-match">
-      <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.student_skill %> </p>
+    <div class="match-icon">
+      <p><%= image_tag "arrowsleft.png", height: 70 %> <%= match.full_match?.student_skill.skill.name %> </p>
     </div>
     <div>
       <div id="reviews" class="text-left">
         <h4>REVIEWS</h4>
+        <p>*****</p>
+        <p>Great class!</p>
       </div>
     </div>
 
-    <%= link_to "See match", matches_path, class: "btn btn-xs btn-green align-bottom" %>
+    <%= link_to "See match", matches_path, class: "btn btn-xs btn-green" %>
 
   </div>
 </div>
