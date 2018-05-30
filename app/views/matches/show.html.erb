@@ -1,7 +1,9 @@
 
+
 <div class="flexed-items">
   <%= render 'dashboard/sidebar' %>
 
+ <div class="container">
   <div class="main">
 
     <div class= "whitecard">
@@ -58,12 +60,21 @@
    </div>
 
 
-   <div class= "past_review_whitecard">
-    <img class="avatar-large" id="avatar-sidebar" src="http://res.cloudinary.com/dpphwschw/image/upload/v1527583823/mwtu3jgltdyusnr0lglv.jpg">
-    <%= render 'reviews/show', review: review %>
-    <% end %>
-    <% end %>
+
+
+
+    <div class="row">
+      <div class="col-xs-12">
+       <div class= "past_review_whitecard">
+        <img class="avatar-large" id="avatar-sidebar" src="http://res.cloudinary.com/dpphwschw/image/upload/v1527583823/mwtu3jgltdyusnr0lglv.jpg">
+        <%= render 'reviews/show', review: review %>
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
   </div>
+</div>
 
 </div>
 </div>
