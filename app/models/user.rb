@@ -37,7 +37,7 @@ class User < ApplicationRecord
     user_skills.where(role: "student").map { |user_skill| user_skill.skill}.flatten
   end
 
-  def owned_sills
+  def owned_skills
     user_skills.where(role: "teacher").map {|user_skill| user_skill.skill}.flatten
   end
 
