@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   resources :user_skills
   get '/learn', to: 'user_skills#learn', as: 'select_skills_to_learn'
   get '/teach', to: 'user_skills#teach', as: 'select_skills_to_teach'
-
   get '/dashboard', to: 'dashboard#show'
   get '/dashboard/profile'
   get '/dashboard/my_skills'

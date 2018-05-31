@@ -67,7 +67,9 @@ hr{
 .match-button {
   width: 150px;
   height: 150px;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile.match {
@@ -136,7 +138,7 @@ hr{
     }
 }
 
-.half-match-card {
+.half-match-card.teacher {
   display: flex;
   flex: nowrap;
   width: 400px;
@@ -147,6 +149,23 @@ hr{
   justify-content: center;
   background-image: asset-url('triangle.png');
   background-position: cover;
+  h3 {
+    text-align: center;
+
+  }
+}
+
+.half-match-card.student {
+  display: flex;
+  flex: nowrap;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #e6bfc7;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
+  justify-content: center;
+  background-image: asset-url('triangle2.png');
+  background-position: right bottom;
   h3 {
     text-align: center;
 

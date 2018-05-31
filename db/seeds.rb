@@ -5,11 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 User.create(email: "william@william.com", password:"password", first_name: "William", city: "Canggu", bio: "Soy William")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
 User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", city: "Canggu", bio: "I'm Valerie")
-
 # Create 12 more users (maybe everyone from the class) and fill out every detail, so:
 # email
 # password
@@ -20,7 +18,6 @@ User.create(email: "valerie@valerie.com", password:"password", first_name: "Vale
 # city
 # photo
 # bio
-
 # Create 10 categories:
 # - Arts & Crafts
 # - Business & Technology
@@ -31,14 +28,12 @@ User.create(email: "valerie@valerie.com", password:"password", first_name: "Vale
 # - Outdoors
 # - Practical > can we find another word for this ?
 # - 1 more.....?
-
 #  Give every category 10 skills > arts & crafts
 # > maybe a bit more general so scrape the underwater basket weaving and jewelry making
 # e.g. knowledge on 17th century arts / modern art / design / etc.
 # the chess/ping pong etc. is are also sports, so I would skip the game category
 #  same goes for fossil picking, best to have 10 general subcategories for each skill categories
 # can some subcategories belong to several categories?
-
 SkillCategory.create(name: "Arts and Crafts")
 SkillCategory.create(name: "Business and technology")
 SkillCategory.create(name: "Food and Drink")
@@ -48,7 +43,6 @@ SkillCategory.create(name: "Music")
 SkillCategory.create(name: "Outdoors")
 SkillCategory.create(name: "Practical")
 SkillCategory.create(name: "Sport and Active")
-
 
 Skill.create(name: "Jewelry Making", skill_category_id:1 , icon: "icons/arts_and_crafts/jewelry_making.svg")
 Skill.create(name: "Knitting", skill_category_id:1 , icon: "icons/arts_and_crafts/knitting.svg")
@@ -108,7 +102,6 @@ Skill.create(name: "Fishing", skill_category_id: 7, icon: "icons/outdoors/fishin
 Skill.create(name: "Fossil Picking", skill_category_id: 7, icon: "icons/outdoors/fossilhunting.svg")
 Skill.create(name: "Gardening", skill_category_id: 7, icon: "icons/outdoors/gardening.svg")
 
-
 Skill.create(name: "Driving", skill_category_id: 8, icon: "icons/practical/driving.svg")
 Skill.create(name: "Flying", skill_category_id: 8, icon: "icons/practical/flying.svg")
 Skill.create(name: "Plumbing", skill_category_id: 8, icon: "icons/practical/plumbing.svg")
@@ -139,27 +132,21 @@ Skill.create(name: "Yoga", skill_category_id: 9, icon: "icons/sport_and_active/y
 #MATCH 1 USER 1 AND 2
 UserSkill.create(user_id: 1, skill_id: 1, role: "student")  #WILLIAM STUDENT  --- GUITAR
 UserSkill.create(user_id: 2, skill_id: 1, role: "teacher") #CHELSEA TEACHER ---- GUITAR
-
 #MATCH 2 USER 2 AND 1
 UserSkill.create(user_id: 2, skill_id: 2, role: "student") #CHELSEA STUDENT --- VIOLIN
 UserSkill.create(user_id: 1, skill_id: 2, role: "teacher") #WILLIAM TEACHER --- VIOLIN
-
 #MATCH 3 USER 3 AND 1
-
 UserSkill.create(user_id: 3, skill_id: 1, role: "teacher") # VALERIE TEACHER --- GUITAR
 UserSkill.create(user_id: 2, skill_id: 1, role: "student")
 #LONELY SKILL
 UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
 UserSkill.create(user_id: 2, skill_id: 7, role: "teacher")
-
 Match.create(teacher_skill_id: 2, student_skill_id: 1)
 Match.create(teacher_skill_id: 4, student_skill_id: 3)
 Match.create(teacher_skill_id: 5, student_skill_id: 1)
-
 # FULL MATCH
 Match.create(teacher_skill_id: 5, student_skill_id: 6)
 Match.create(teacher_skill_id: 8, student_skill_id: 7)
-
 # #MESSAGES IN MATCH 1
 # Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)
 # Message.create(content: "Amazing experience (message from the teacher)", user_id: 2, match_id: 1)
@@ -169,4 +156,3 @@ Match.create(teacher_skill_id: 8, student_skill_id: 7)
 # #MESSAGES IN MATCH 3
 # Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 3)
 # Message.create(content: "Amazing experience (message from the teacher)", user_id: 3, match_id: 3)
-

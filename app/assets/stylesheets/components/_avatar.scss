@@ -25,7 +25,7 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
-.story_avatar_student {
+.avatar.story_avatar_student {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -33,9 +33,10 @@
     margin-top: 35px;
     overflow: hidden;
     z-index: 10; position:relative;
+    border: none !important;
 }
 
-.story_avatar_teacher {
+.avatar.story_avatar_teacher {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -43,10 +44,13 @@
     margin-top: -106px;
     overflow: hidden;
     z-index: 10;
-    position:relative;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    border: none !important;
 }
 
-.review_avatar {
+.avatar.review_avatar {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -56,10 +60,14 @@
     overflow: hidden;
     z-index: 10;
     position:relative;
+    background-size: cover;
+    background-position: center center;
+    border: none !important;
 }
 
 #avatar {
   width: 40px;
   border-radius: 50%;
+  border: 1px solid #67D9C8;
 }
 
