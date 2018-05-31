@@ -37,7 +37,7 @@
         <%= f.input :date_of_birth, as: :string, input_html: { class: 'datepicker textinput' }  %>
       <div class="row">
         <div class="col-xs-6">
-          <%= f.input :nationality, :as => :country, label: "Country", prompt: "Please select your country", input_html: { class: 'textinput' } %>
+          <%= f.input :nationality, :as => :country, label: "Country", prompt: "Please select your country", input_html: { class: 'textcountry' } %>
         </div>
         <div class="col-xs-6">
           <%= f.input :city, input_html: { class: 'textinput' } %>
@@ -51,10 +51,11 @@
 
     <div class="form-actions">
       <% if current_user.full_profile? %>
-      <%= f.button :submit, "Update profile", class: "btn btn-sm btn-green" %>
+
+      <%= f.button :submit, "Update profile", class: "btn btn-sm btn-green buttonedit" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% else %>
-      <%= f.button :submit, "Get me matched!", class: "btn btn-sm btn-green" %>
+      <%= f.button :submit, "Get me matched!",class: "btn btn-sm btn-green buttonedit" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% end %>
     </div>
@@ -64,43 +65,3 @@
 
 </div>
 
-<style>
-  .wrapper {
-    width: 100%;
-  background: #fff;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  /*flex-wrap: wrap;*/
-  align-items: stretch;
-  /*flex-direction: row-reverse;*/
-
-  }
-
-  .image {
-  width: calc(100% - 560px);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-  height: 600px;
-
-}
-
-.formulario {
-   padding: 10px 60px 10px 60px ;
-   background-color: #f7f7f7;
-}
-
-.textinput
- {
-  background-color: transparent;
-  padding:20px;
-  color: gray;
-  border-radius: 10px;
- }
-</style>

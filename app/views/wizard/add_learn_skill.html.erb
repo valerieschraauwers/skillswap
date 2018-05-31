@@ -1,11 +1,12 @@
-<div style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), url('https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8b5f5998cb98c2b00433c988006f22d&auto=format&fit=crop&w=1373&q=80');">
+<div id="backgroundSelection">
+    <h1 id="selectortitle">SELECT<br>THE<br>SKILLS<br>YOU<br>WANT TO<br>LEARN</h1>
 <div class="container animated zoomIn">
   <div class="row">
     <!-- <div class="col-xs-12 col-md-6 col-md-offset-3"> -->
       <%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
 
       <div class="form-group">
-        <label class="control-label check_boxes optional">SELECT THE SKILLS YOU WANNA LEARN</label>
+        <label class="control-label check_boxes optional"></label>
         <input type="hidden" name="user[skill_ids][]" value="">
         <div class="skill-choices">
 
@@ -34,7 +35,7 @@
               <% end %>
           </div>
         <% end %>
-          <%= f.button :submit, "NEXT" %>
+          <%= f.button :submit, "NEXT", id:"nextButton" %>
       </div>
     </div>
     <!-- </div> -->
@@ -42,20 +43,18 @@
   </div>
 </div>
 </div>
+<% end %>
 
-      <% end %>
-
-      <style>
-        @keyframes fade {
+<style>
+  @keyframes fade {
     0% {
-        opacity: 0;
+     opacity: 0;
     }
-
     100% {
-        opacity: 1;
+     opacity: 1;
     }
-}
-      </style>
+  }
+</style>
 
 <script>
  const buttons = document.querySelectorAll(".click-skill");

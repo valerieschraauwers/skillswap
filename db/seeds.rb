@@ -70,7 +70,7 @@ Skill.create(name: "Cooking", skill_category_id: 3, icon: "icons/food_and_drink/
 Skill.create(name: "French Cooking", skill_category_id: 3, icon: "icons/food_and_drink/french_cooking.svg")
 Skill.create(name: "Mexican Cooking", skill_category_id: 3, icon: "icons/food_and_drink/mexican.svg")
 Skill.create(name: "Thai Cooking", skill_category_id: 3, icon: "icons/food_and_drink/thai_cooking.svg")
-Skill.create(name: "Vietnamese Cooking", skill_category_id: 3, icon: "icons/food_and_drink/vietnamese_cooking.svg")
+Skill.create(name: "Vietnamese", skill_category_id: 3, icon: "icons/food_and_drink/vietnamese_cooking.svg")
 Skill.create(name: "Wine Tasting", skill_category_id: 3, icon: "icons/food_and_drink/winetasting.svg")
 
 Skill.create(name: "Chess", skill_category_id: 4, icon: "icons/game/chess.svg")
