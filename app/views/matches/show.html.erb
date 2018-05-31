@@ -1,9 +1,9 @@
 <% if @match.full_match? %>
 <div class="background" style="background-image: url('<%= image_path 'trianglify.png'%>')">
   <% elsif @match.teacher.id == current_user.id %>
-<div class="background.teacher" style="background-image: url('<%= image_path 'triangle.png'%>')">
+<div class="background" style="background-image: url('<%= image_path 'triangle.png'%>')">
   <% elsif @match.teacher.id != current_user.id%>
-  <div class="background.student" style="background-image: url('<%= image_path 'triangle2.png'%>')">
+  <div class="background" style="background-image: url('<%= image_path 'triangle2.png'%>')">
   <% end %>
   <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
 
