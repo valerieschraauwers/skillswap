@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+.container {
+    margin-top: 0;
+}
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    position: absolute;
+    margin-right: 0;
+    margin-left: 900px;
+    position:fixed;
+}

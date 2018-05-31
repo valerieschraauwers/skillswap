@@ -1,10 +1,11 @@
+<div style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), url('https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8b5f5998cb98c2b00433c988006f22d&auto=format&fit=crop&w=1373&q=80');">
 <div class="container animated zoomIn">
   <div class="row">
-
+    <!-- <div class="col-xs-12 col-md-6 col-md-offset-3"> -->
       <%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
 
       <div class="form-group">
-        <label class="control-label check_boxes optional">I wanna LEARN</label>
+        <label class="control-label check_boxes optional">SELECT THE SKILLS YOU WANNA LEARN</label>
         <input type="hidden" name="user[skill_ids][]" value="">
         <div class="skill-choices">
 
@@ -12,12 +13,13 @@
 
           <p data-skill-id="<%= skillC.id %>" class="click-skill skill-choice-cat"><%= skillC.name %></p>
 
-           <div id="category<%= skillC.id %>" style="display:none; ">
+           <div id="category<%= skillC.id %>" style="display:none; visibility: hidden; animation: fade 1s; transition: visibility 1s, opacity 0.5s ease-out; width: 100%; margin-left: 200px;">
                <% Skill.all.where(skill_category_id: skillC.id).each do |skill| %>
                 <% if  (@user.desired_skills.include? skill)%>
                   <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
                   <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
                   <%= skill.name %>
+                  <%= image_tag skill.icon, size: "160x100" %>
                   <i class="fa fa-check"></i>
                   </label>
                 <%elsif (@user.owned_skills.include? skill)%>
@@ -25,24 +27,38 @@
                   <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
                   <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
                   <%= skill.name %>
+                  <%= image_tag skill.icon, size: "160x100" %>
                   <i class="fa fa-check"></i>
                   </label>
                 <% end %>
               <% end %>
           </div>
         <% end %>
-
+          <%= f.button :submit, "NEXT" %>
       </div>
     </div>
+    <!-- </div> -->
     <%#= f.association :skills, as: :check_boxes %>
   </div>
 </div>
-      <%= f.button :submit, "NEXT", class: 'bigdiv' %>
+</div>
+
       <% end %>
+
+      <style>
+        @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+      </style>
 
 <script>
  const buttons = document.querySelectorAll(".click-skill");
-
  buttons.forEach(button => {
   button.addEventListener("click", myFunction)
  })
@@ -53,13 +69,17 @@ function myFunction(event) {
 
     var x = document.getElementById(`category${skillId}`);
 
-    if (x.style.display === "none") {
+    if (x.style.display === "none" && x.style.visibility === "hidden") {
+
         x.style.display = "block";
+        x.style.visibility = "visible";
 
     } else {
         x.style.display = "none";
+        x.style.visibility = "hidden";
     }
 }
 </script>
 
 <%= javascript_pack_tag 'skill' %>
+
