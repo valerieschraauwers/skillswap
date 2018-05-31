@@ -2,7 +2,7 @@ import Swiper from "swiper";
 
 var swiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
-  initialSlide: 3,
+  initialSlide: 2,
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
