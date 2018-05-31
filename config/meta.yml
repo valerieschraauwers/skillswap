@@ -2,4 +2,4 @@
 meta_product_name: "Skill Swap"
 meta_title: "SkillSwap - Swap a Skill!"
 meta_description: "Platform for exchange skills p2p in real life"
-meta_image: "trinaglify.png"                       # should exist in `app/assets/images/`
+meta_image: "paint.jpg"                       # should exist in `app/assets/images/`
