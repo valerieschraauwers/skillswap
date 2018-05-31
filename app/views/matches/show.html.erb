@@ -1,10 +1,30 @@
+<% if @match.full_match? %>
+<div class="background" style="background-image: url('<%= image_path 'trianglify.png'%>')">
+  <% elsif @match.teacher.id == current_user.id %>
+<div class="background" style="background-image: url('<%= image_path 'triangle.png'%>')">
+  <% elsif @match.teacher.id != current_user.id%>
+  <div class="background" style="background-image: url('<%= image_path 'triangle2.png'%>')">
+  <% end %>
+<div class="container">
+  <div class= "whitecard">
+    <% if @match.full_match? %>
+    <%= render 'full_match_show'%>
+    <% elsif @match.teacher.id == current_user.id %>
+    <%= render 'teacher_match_show'%>
+    <% elsif @match.teacher.id != current_user.id%>
+    <%= render 'student_match_show' %>
+    <% end %>
+  </div>
+</div>
+</div>
 
 
-<div class="flexed-items">
-  <%= render 'dashboard/sidebar' %>
+
+
+
 
   <div class="container">
-    <div class="main">
+
 
       <div class= "whitecard">
 
@@ -18,10 +38,7 @@
          <p><%= @match.student.email %></p>
 
         <h4>Contact:</h4>
-        <div class="chat_item">
-          <%= link_to 'Open Chat!', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post', class: "btn btn-xs btn-green"%>
-      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
-        </div>
+
       </div>
 
 
@@ -47,5 +64,4 @@
           <% end %>
       </div>
     </div>
-  </div>
-</div>
+

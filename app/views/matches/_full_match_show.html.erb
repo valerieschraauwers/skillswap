@@ -1,11 +1,20 @@
 <% @match.teacher.id == current_user.id ? card_user = @match.student : card_user = @match.teacher %>
 <div>
   <div class="match-title">
-  <h3>FULL MATCH</h3>
-  <hr/>
+    <h3>FULL MATCH</h3>
+    <hr/>
   </div>
+</div>
+<div><div class="exchange">
+  <div class="match-icon">
+    <p> <%= @match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag card_user.photo, id: "avatar" %></p>
+  </div>
+  <div class="match-icon">
+    <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %> <%= @match.full_match?.student_skill.skill.name %> </p>
+  </div>
+</div></div>
   <div class="flex-profiles">
-    <div class="profile match">
+    <div class="profile match large">
       <table class="table table-user-information full">
         <tbody>
           <tr>
@@ -21,25 +30,84 @@
             <td>From</td>
             <td><%= card_user.nationality %></td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="exchange">
-      <div class="match-icon">
-        <p> <%= @match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag card_user.photo, id: "avatar" %></p>
-      </div>
-      <div class="match-icon">
-        <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %> <%= @match.full_match?.student_skill.skill.name %> </p>
-      </div>
-    </div>
-
-  </div>
-  <div>
-
-    <div id="reviews" class="text-left">
-      <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
-      <p>*****</p>
-      <p>Great class!</p>
-    </div>
-  </div>
+          <tr>
+            <td>Email</td>
+            <td><%= card_user.email %></td>
+          </tr>
+          <td>Skills I want to learn:</td>
+          <td>
+            <% card_user.user_skills.each do |user_skill| %>
+            <% if user_skill.role == "student" %>
+            <li><%= user_skill.skill.name %></li>
+            <% end %>
+            <% end %>
+          </td>
+        </tr>
+        <td>Skills I want to teach:</td>
+        <td>
+          <% card_user.user_skills.each do |user_skill| %>
+          <% if user_skill.role == "teacher" %>
+          <li><%= user_skill.skill.name %></li>
+          <% end %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="chat_item">
+  <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+  <%= link_to 'Open Chat!', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post', class: "btn btn-xs btn-green"%>
 </div>
+</div>
+<div class="profile match large">
+  <table class="table table-user-information full">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><%= current_user.first_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>Lives in</td>
+        <td><%= current_user.city.capitalize %></td>
+      </tr>
+      <tr>
+        <td>From</td>
+        <td><%= current_user.nationality %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= current_user.email %></td>
+      </tr>
+      <td>Skills I want to learn:</td>
+      <td>
+        <% current_user.user_skills.each do |user_skill| %>
+        <% if user_skill.role == "student" %>
+        <li><%= user_skill.skill.name %></li>
+        <% end %>
+        <% end %>
+      </td>
+    </tr>
+    <td>Skills I want to teach:</td>
+    <td>
+      <% current_user.user_skills.each do |user_skill| %>
+      <% if user_skill.role == "teacher" %>
+      <li><%= user_skill.skill.name %></li>
+      <% end %>
+      <% end %>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br>
+</div>
+</div>
+</div>
+
+<div id="reviews" class="text-left">
+  <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
+  <p>*****</p>
+  <p>Great class!</p>
+</div>
+</div>
+

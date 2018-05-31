@@ -50,7 +50,7 @@ class User < ApplicationRecord
   end
 
   def full_profile?
-    first_name.present? && last_name.present?
+    first_name.present? && last_name.present? && city.present?
   end
 
   def self.find_for_oauth(auth)
