@@ -41,7 +41,7 @@
         <div id="other-skills" class="text-left">
           <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
           <% card_user.owned_skills.each do |skill|%>
-          <p><%= skill.name %></p>
+          <%= image_tag skill.icon id="avatar"%>
           <% end %>
         </div>
       </div>
