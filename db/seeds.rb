@@ -44,7 +44,6 @@ SkillCategory.create(name: "Outdoors")
 SkillCategory.create(name: "Practical")
 SkillCategory.create(name: "Sport and Active")
 
-Skill.create(name: "Jewelry Making", skill_category_id:1 , icon: "icons/arts_and_crafts/jewelry_making.svg")
 Skill.create(name: "Knitting", skill_category_id:1 , icon: "icons/arts_and_crafts/knitting.svg")
 Skill.create(name: "Painting", skill_category_id:1 , icon: "icons/arts_and_crafts/painting.svg")
 Skill.create(name: "Pottery", skill_category_id:1 , icon: "icons/arts_and_crafts/pottery.svg")
