@@ -1,0 +1,45 @@
+<% @match.teacher.id == current_user.id ? card_user = @match.student : card_user = @match.teacher %>
+<div>
+  <div class="match-title">
+  <h3>FULL MATCH</h3>
+  <hr/>
+  </div>
+  <div class="flex-profiles">
+    <div class="profile match">
+      <table class="table table-user-information full">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td><%= card_user.first_name %>
+            </td>
+          </tr>
+          <tr>
+            <td>Lives in</td>
+            <td><%= card_user.city.capitalize %></td>
+          </tr>
+          <tr>
+            <td>From</td>
+            <td><%= card_user.nationality %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="exchange">
+      <div class="match-icon">
+        <p> <%= @match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag card_user.photo, id: "avatar" %></p>
+      </div>
+      <div class="match-icon">
+        <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %> <%= @match.full_match?.student_skill.skill.name %> </p>
+      </div>
+    </div>
+
+  </div>
+  <div>
+
+    <div id="reviews" class="text-left">
+      <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
+      <p>*****</p>
+      <p>Great class!</p>
+    </div>
+  </div>
+</div>
