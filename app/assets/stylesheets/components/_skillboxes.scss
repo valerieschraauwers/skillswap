@@ -28,10 +28,10 @@
 }
 
 .skill-choice {
-  background: #b7b7b7;
+  background: #08D4D9;
   padding: 20px;
   border-radius: 5px;
-  opacity: .4;
+  opacity: .8;
   flex: 0 0 30%;
   text-align: center;
   }
@@ -42,16 +42,16 @@
   }
 
   .skill-choice.active {
-  background: lightblue;
+  background: #FF4365;
   color: white;
   opacity: 1;
   }
 
 .skill-choice-cat {
-  background: #367f74;
+  background: #2A2D34;
   padding: 20px;
   border-radius: 5px;
-  opacity: .4;
+  opacity: .8;
   flex: 0 0 30%;
   text-align: center;
   color:white;
@@ -62,3 +62,4 @@
     opacity: 1;
     cursor: pointer;
   }
+
