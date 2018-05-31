@@ -17,6 +17,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def all_reviews
+    @reviews = Review.all
+  end
+
+  def teacher_reviews
+  end
+
   def destroy
     @match = Match.find(params[:match_id])
     @review = Review.find(params[:id])

@@ -29,6 +29,11 @@ Rails.application.routes.draw do
 
   get 'pages/skills'
 
+  get '/reviews/all_reviews'
+
+
+
+
 
   root to: 'pages#home'
 
