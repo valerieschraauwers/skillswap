@@ -63,14 +63,18 @@
 }
 
 .btn.btn-green.btn-match {
-  height: 109px;
-  width: 109px;
   text-align: center;
+  margin-top: -18px;
+  background-color: rgba(47, 137, 131, 0.55);
+  border: 1px solid rgba(47, 137, 131, 0.55);
+  color: white;
+  opacity: 0.8;
 }
 
 .btn.btn-green.btn-match:hover {
-  color: #b9586d;
-  border: 1px solid #b9586d;
+  background-color: rgba(47, 137, 131, 0.9);
+  border: 1px solid rgba(47, 137, 131, 0.9);
+  opacity: 1;
 }
 
 .text-vertical-center {

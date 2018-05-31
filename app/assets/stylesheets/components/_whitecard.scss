@@ -1,14 +1,19 @@
+.match-title {
+  text-align: center;
+}
+
 .whitecard {
   padding: 25px;
   margin-bottom: 25px;
   margin-left: -75px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
   flex-basis: auto;
-  height: 438px;
-  width: 900px;
+
+  padding-top: 18px;
+  padding: 21px;
+  align-self: center;
+  height: 380px;
   background-color: white;
   position: relative;
   transition: .2s;

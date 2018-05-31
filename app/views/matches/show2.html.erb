@@ -1,0 +1,21 @@
+<% if @match.full_match? %>
+<div class="background" style="background-image: url('<%= image_path 'trianglify.png'%>')">
+  <% elsif @match.teacher.id == current_user.id %>
+<div class="background" style="background-image: url('<%= image_path 'triangle.png'%>')">
+  <% elsif @match.teacher.id != current_user.id%>
+  <div class="background" style="background-image: url('<%= image_path 'triangle2.png'%>')">
+  <% end %>
+<div class="container">
+  <div class= "whitecard">
+    <% if @match.full_match? %>
+    <%= render 'full_match_show'%>
+    <% elsif @match.teacher.id == current_user.id %>
+    <%= render 'teacher_match_show'%>
+    <% elsif @match.teacher.id != current_user.id%>
+    <%= render 'student_match_show' %>
+    <% end %>
+  </div>
+</div>
+</div>
+
+
