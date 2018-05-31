@@ -43,12 +43,14 @@ SkillCategory.create(name: "Music")
 SkillCategory.create(name: "Outdoors")
 SkillCategory.create(name: "Practical")
 SkillCategory.create(name: "Sport and Active")
+
 Skill.create(name: "Jewelry Making", skill_category_id:1 , icon: "icons/arts_and_crafts/jewelry_making.svg")
 Skill.create(name: "Knitting", skill_category_id:1 , icon: "icons/arts_and_crafts/knitting.svg")
 Skill.create(name: "Painting", skill_category_id:1 , icon: "icons/arts_and_crafts/painting.svg")
 Skill.create(name: "Pottery", skill_category_id:1 , icon: "icons/arts_and_crafts/pottery.svg")
 Skill.create(name: "Sewing", skill_category_id:1 , icon: "icons/arts_and_crafts/sewing.svg")
 Skill.create(name: "Weaving", skill_category_id:1 , icon: "icons/arts_and_crafts/weaving.svg")
+
 Skill.create(name: "Analytics", skill_category_id:2 , icon: "icons/business_and_technology/analytics.svg")
 Skill.create(name: "Coding", skill_category_id:2 , icon: "icons/business_and_technology/coding.svg")
 Skill.create(name: "CSS", skill_category_id:2 , icon: "icons/business_and_technology/css.svg")
@@ -61,6 +63,7 @@ Skill.create(name: "Powerpoint", skill_category_id: 2, icon: "icons/business_and
 Skill.create(name: "Public Speaking", skill_category_id:2 , icon: "icons/business_and_technology/public_speaking.svg")
 Skill.create(name: "Social Media", skill_category_id:2 , icon: "icons/business_and_technology/social_media.svg")
 Skill.create(name: "Tech", skill_category_id:2 , icon: "icons/business_and_technology/tech.svg")
+
 Skill.create(name: "Baking", skill_category_id: 3, icon: "icons/food_and_drink/baking.svg")
 Skill.create(name: "Coffee", skill_category_id: 3, icon: "icons/food_and_drink/coffee.svg")
 Skill.create(name: "Cooking", skill_category_id: 3, icon: "icons/food_and_drink/cooking.svg")
@@ -69,9 +72,11 @@ Skill.create(name: "Mexican Cooking", skill_category_id: 3, icon: "icons/food_an
 Skill.create(name: "Thai Cooking", skill_category_id: 3, icon: "icons/food_and_drink/thai_cooking.svg")
 Skill.create(name: "Vietnamese Cooking", skill_category_id: 3, icon: "icons/food_and_drink/vietnamese_cooking.svg")
 Skill.create(name: "Wine Tasting", skill_category_id: 3, icon: "icons/food_and_drink/winetasting.svg")
+
 Skill.create(name: "Chess", skill_category_id: 4, icon: "icons/game/chess.svg")
 Skill.create(name: "Ping Pong", skill_category_id: 4, icon: "icons/game/ping_pong.svg")
 Skill.create(name: "Pool", skill_category_id: 4, icon: "icons/game/pool.svg")
+
 Skill.create(name: "Arabic", skill_category_id: 5, icon: "icons/language_and_culture/arabic.svg")
 Skill.create(name: "Chinese", skill_category_id: 5, icon: "icons/language_and_culture/chinese.svg")
 Skill.create(name: "English", skill_category_id: 5, icon: "icons/language_and_culture/english.svg")
@@ -82,23 +87,27 @@ Skill.create(name: "Japanese", skill_category_id: 5, icon: "icons/language_and_c
 Skill.create(name: "Portuguese", skill_category_id: 5, icon: "icons/language_and_culture/portugese.svg")
 Skill.create(name: "Spanish", skill_category_id: 5, icon: "icons/language_and_culture/spanish.svg")
 Skill.create(name: "Swedish", skill_category_id: 5, icon: "icons/language_and_culture/swedish.svg")
+
 Skill.create(name: "Flute", skill_category_id: 6, icon: "icons/music/flute.svg")
 Skill.create(name: "Guitar", skill_category_id: 6, icon: "icons/music/guitar.png")
 Skill.create(name: "Piano", skill_category_id: 6, icon: "icons/music/piano.svg")
 Skill.create(name: "Singing", skill_category_id: 6, icon: "icons/music/singing.svg")
 Skill.create(name: "Trombone", skill_category_id: 6, icon: "icons/music/trombone.svg")
 Skill.create(name: "Violin", skill_category_id: 6, icon: "icons/music/violin.svg")
+
 Skill.create(name: "Archery", skill_category_id: 7, icon: "icons/outdoors/archery.svg")
 Skill.create(name: "Astronomy", skill_category_id: 7, icon: "icons/outdoors/astronomy.svg")
 Skill.create(name: "Bird Watching", skill_category_id: 7, icon: "icons/outdoors/bird_watching.svg")
 Skill.create(name: "Fishing", skill_category_id: 7, icon: "icons/outdoors/fishing.svg")
 Skill.create(name: "Fossil Picking", skill_category_id: 7, icon: "icons/outdoors/fossilhunting.svg")
 Skill.create(name: "Gardening", skill_category_id: 7, icon: "icons/outdoors/gardening.svg")
+
 Skill.create(name: "Driving", skill_category_id: 8, icon: "icons/practical/driving.svg")
 Skill.create(name: "Flying", skill_category_id: 8, icon: "icons/practical/flying.svg")
 Skill.create(name: "Plumbing", skill_category_id: 8, icon: "icons/practical/plumbing.svg")
 Skill.create(name: "Welding", skill_category_id: 8, icon: "icons/practical/welding.svg")
 Skill.create(name: "Carpentry", skill_category_id: 8, icon: "icons/practical/woodworking.svg")
+
 Skill.create(name: "Archery", skill_category_id: 9, icon: "icons/sport_and_active/archery.svg")
 Skill.create(name: "Ballet", skill_category_id: 9, icon: "icons/sport_and_active/ballet.svg")
 Skill.create(name: "Baseball", skill_category_id: 9, icon: "icons/sport_and_active/baseball.svg")
@@ -119,6 +128,7 @@ Skill.create(name: "Tennis", skill_category_id: 9, icon: "icons/sport_and_active
 Skill.create(name: "Volleyball", skill_category_id: 9, icon: "icons/sport_and_active/volleyball.svg")
 Skill.create(name: "Weight Lifting", skill_category_id: 9, icon: "icons/sport_and_active/weight_lifting.svg")
 Skill.create(name: "Yoga", skill_category_id: 9, icon: "icons/sport_and_active/yoga.svg")
+
 #MATCH 1 USER 1 AND 2
 UserSkill.create(user_id: 1, skill_id: 1, role: "student")  #WILLIAM STUDENT  --- GUITAR
 UserSkill.create(user_id: 2, skill_id: 1, role: "teacher") #CHELSEA TEACHER ---- GUITAR
