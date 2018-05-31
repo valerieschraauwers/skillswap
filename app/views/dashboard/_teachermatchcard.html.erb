@@ -1,6 +1,6 @@
 <div class="swiper-slide">
   <% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
-  <div class="half-match-card half">
+  <div class="half-match-card teacher">
     <div>
       <% if current_user == match.teacher %>
       <h3>ARE YOU READY TO TEACH?</h3>
@@ -18,12 +18,12 @@
                 </td>
               </tr>
               <tr>
-                <td>City</td>
-                <td><%= card_user.city.capitalize %>, <%= card_user.nationality %></td>
+                <td>Lives in</td>
+                <td><%= card_user.city.capitalize %></td>
               </tr>
               <tr>
-                <td>Biography:</td>
-                <td><%= card_user.bio %></td>
+                <td>From</td>
+                <td><%= card_user.nationality %></td>
               </tr>
             </tbody>
           </table>
@@ -34,30 +34,16 @@
       </div>
       <div>
         <div class="exchange">
-          <% if current_user == match.teacher %>
           <div class="match-icon">
             <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag match.student.photo, id: "avatar" %></p>
           </div>
-          <% else %>
-          <div class="match-icon">
-            <p> <%= match.student_skill.skill.name %><%= image_tag "arrowsleft.png", height: 70 %><%= cl_image_tag card_user.photo, id: "avatar" %></p>
-          </div>
-          <% end %>
         </div>
-        <% if current_user == match.teacher %>
         <div id="other-skills" class="text-left">
           <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
           <% card_user.owned_skills.each do |skill|%>
           <p><%= skill.name %></p>
           <% end %>
         </div>
-        <% else %>
-        <div id="reviews" class="text-left">
-          <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
-          <p>*****</p>
-          <p>Great class!</p>
-        </div>
-        <% end %>
       </div>
     </div>
   </div>

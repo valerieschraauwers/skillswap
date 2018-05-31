@@ -1,12 +1,16 @@
 <div class="swiper-slide">
   <% match.teacher.id == current_user.id ? card_user = match.student : card_user = match.teacher %>
-  <div class="full-match-card full">
+  <div class="half-match-card student">
     <div>
-      <h3>FULL MATCH</h3>
+      <% if current_user == match.teacher %>
+      <h3>ARE YOU READY TO TEACH?</h3>
+      <% else %>
+      <h3>ARE YOU READY TO LEARN?</h3>
+      <% end %>
       <hr/>
       <div class="flex-profiles">
         <div class="profile match">
-          <table class="table table-user-information full">
+          <table class="table table-user-information half">
             <tbody>
               <tr>
                 <td>Name</td>
@@ -31,10 +35,7 @@
       <div>
         <div class="exchange">
           <div class="match-icon">
-            <p> <%= match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag card_user.photo, id: "avatar" %></p>
-          </div>
-          <div class="match-icon">
-            <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %> <%= match.full_match?.student_skill.skill.name %> </p>
+            <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %><%= match.student_skill.skill.name %></p>
           </div>
         </div>
         <div id="reviews" class="text-left">
@@ -43,9 +44,9 @@
           <p>Great class!</p>
         </div>
       </div>
-      </div>
     </div>
- </div>
+  </div>
+</div>
 
 
 
