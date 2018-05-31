@@ -1,4 +1,5 @@
 .btn-start {
+  text-align: center;
   color: white;
   padding: 15px 20px;
   border-radius: 4px;
@@ -14,6 +15,7 @@
 }
 
 .btn-green {
+  text-align: center;
   color: rgb(67, 183, 170);
   padding: 15px 20px;
   border-radius: 4px;
@@ -26,15 +28,17 @@
 }
 
 .btn-xs.btn-green {
+  text-align: center;
   font-size: 14px;
   font-weight: lighter;
-  padding: 10px 15px;
+  padding: 14px 15px;
   margin-top: 15px;
   width: 125px;
   height: 50px
 }
 
 .btn-sm.btn-green {
+  text-align: center;
   font-size: 15px;
   width: 125px;
   height: 50px;
