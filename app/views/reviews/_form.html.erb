@@ -1,6 +1,8 @@
 <%= simple_form_for([ match, review ], remote: true) do |form| %>
-  <%= form.input :first_name, as: :text %>
-  <%= form.input :content, as: :text %>
+  <p><%= form.input :first_name, as: :text %></p>
+  <p><%= form.input :content, as: :text %></p>
+  <p>Stars</p>
+  <br>
         <row>
         <span class="rating">
           <input type="radio" value="5" class="rating-input"
@@ -20,5 +22,6 @@
           <label for="rating-input-1-1" class="rating-star"></label>
         </span>
       </row>
+      <br>
   <%= form.button :submit, class: "btn btn-sm btn-green" %>
 <% end %>

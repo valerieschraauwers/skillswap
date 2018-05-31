@@ -28,6 +28,7 @@
 }
 
 .btn-xs.btn-green {
+  background-color: white;
   text-align: center;
   font-size: 14px;
   font-weight: lighter;
@@ -38,6 +39,7 @@
 }
 
 .btn-sm.btn-green {
+  background-color: white;
   text-align: center;
   font-size: 15px;
   width: 125px;
@@ -65,3 +67,14 @@
     text-align: center;
     vertical-align: middle;
   }
+
+.btn-review {
+  text-align: center;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #57d6c5;
+  transition: background 0.3s ease;
+}
