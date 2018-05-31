@@ -1,10 +1,12 @@
+<div id="backgroundSelection2">
+    <h1 id="selectortitle">SELECT<br>THE<br>SKILLS<br>YOU<br>WANT TO<br>TEACH</h1>
 <div class="container animated zoomIn">
   <div class="row">
 
       <%= simple_form_for(@user, url: wizard_update_teach_skill_path(@user), html: { method: :post }) do |f| %>
 
       <div class="form-group">
-        <label class="control-label check_boxes optional">Skills you want to TEACH?</label>
+        <label class="control-label check_boxes optional"></label>
         <input type="hidden" name="user[skill_ids][]" value="">
         <div class="skill-choices">
 
@@ -32,13 +34,15 @@
           </div>
         <% end %>
 
+      <%= f.button :submit, "NEXT", id:"nextButton" %>
       </div>
     </div>
   </div>
     <%#= f.association :skills, as: :check_boxes %>
 </div>
-      <%= f.button :submit, "NEXT", class: 'bigdiv' %>
+    </div>
       <% end %>
+
 
 <script>
  const buttons = document.querySelectorAll(".click-skill");

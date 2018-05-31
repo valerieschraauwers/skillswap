@@ -4,11 +4,39 @@
 }
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+#nextButton
+
+{
     -webkit-appearance: button;
     cursor: pointer;
-    position: absolute;
+    // position: absolute;
     margin-right: 0;
-    margin-left: 900px;
+    margin-left: 1020px;
     position:fixed;
+    background: #2A2D34;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: .8;
+    flex: 0 0 30%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+}
+
+#selectortitle {
+    position: absolute;
+    color:white;
+    position: fixed;
+    margin-top: 40px;
+    margin-left: 32px;
+    text-shadow: 1px 1px gray;
+  }
+
+#backgroundSelection {
+  background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), asset-url('trianglify.png');
+}
+
+#backgroundSelection2 {
+  background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), asset-url('trianglify2.png');
 }
