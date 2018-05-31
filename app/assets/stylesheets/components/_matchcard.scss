@@ -90,10 +90,9 @@ hr{
     border-top: 0.5px solid rgba(185, 88, 109, 0.38);
   }
 
-  .profile.match.large {
-  width: 50%;
-  height: 150px;
-  padding: 10px;
+  #profile-match-large {
+    width: 50%;
+    padding: 20px;
   }
 
   .table-user-information.full > tbody > tr:first-child {
@@ -112,6 +111,11 @@ hr{
   padding: 10px;
 }
 
+#exchange-large {
+  text-align: center;
+  padding: 25px;
+}
+
 .match-icon {
   width: 100%;
   height: 60px;
@@ -121,6 +125,11 @@ hr{
     margin: -5px 0 12.5px;
   }
 
+}
+
+.match-icon-large {
+  width: 100%;
+  align-items: center;
 }
 
 .match-profile-card {

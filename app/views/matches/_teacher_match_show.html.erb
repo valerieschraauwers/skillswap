@@ -3,15 +3,13 @@
   <% @match.teacher.id == current_user.id ? card_user = @match.student : card_user = @match.teacher %>
 
     <div class="match-title">
-      <h3>FULL MATCH</h3>
+      <h3>ARE YOU READY TO TEACH?</h3>
       <hr/>
     </div>
 
     <div id="exchange-large">
       <div class="match-icon-large">
-        <%= image_tag @match.teacher_skill.skill.icon, id: "avatar-large" %> <%= image_tag "arrowsright.png", height: 100%><%= cl_image_tag card_user.photo, id: "avatar-large" %>
-        <br>
-        <%= cl_image_tag current_user.photo, id: "avatar-large" %><%= image_tag "arrowsleft.png", height: 100 %> <%= image_tag @match.full_match?.student_skill.skill.icon, id: "avatar-large" %>
+        <%= image_tag @match.teacher_skill.skill.icon, id: "avatar-large"%> <%= image_tag "arrowsright.png", height: 100%><%= cl_image_tag @match.student.photo, id: "avatar-large" %>
       </div>
     </div>
   </div>
@@ -129,9 +127,7 @@
         </div>
           <% end %>
       </div>
-      <br>
   </div>
-
 
 
 

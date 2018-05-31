@@ -35,7 +35,7 @@
       <div>
         <div class="exchange">
           <div class="match-icon">
-            <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %><%= match.student_skill.skill.name %></p>
+            <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %><%= image_tag match.student_skill.skill.icon %></p>
           </div>
         </div>
         <div id="reviews" class="text-left">
