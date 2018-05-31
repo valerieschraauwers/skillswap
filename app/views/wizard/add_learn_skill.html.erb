@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animated zoomIn">
   <div class="row">
 
       <%= simple_form_for(@user, url: wizard_update_learn_skill_path(@user), html: { method: :post }) do |f| %>
@@ -55,6 +55,7 @@ function myFunction(event) {
 
     if (x.style.display === "none") {
         x.style.display = "block";
+
     } else {
         x.style.display = "none";
     }
