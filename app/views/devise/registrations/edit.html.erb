@@ -51,10 +51,10 @@
 
     <div class="form-actions">
       <% if current_user.full_profile? %>
-      <%= f.button :submit, "Update", class: "btn btn-sm btn-green" %>
+      <%= f.button :submit, "Update profile", class: "btn btn-sm btn-green" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% else %>
-      <%= f.button :submit, "Get me matched!", class: "btn btn-sm btn-green" %>
+      <%= f.button :submit, "Create account", class: "btn btn-sm btn-green" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% end %>
     </div>
