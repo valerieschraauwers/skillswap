@@ -1,11 +1,11 @@
+
+<div class="se-pre-con">Computing New Matches.....</div>
 <div class="flexed-items">
   <%= render 'sidebar' %>
 
   <div class="main">
-
-  <div class="glide">
-    <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
         <% @matches.each do |type, matches| %>
           <% if type == :teacher %>
             <% matches.each do |match| %>
@@ -21,16 +21,15 @@
             <% end %>
           <% end %>
         <% end %>
-      </ul>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
-
-
-
-
-  </div>
-
 </div>
 <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
 
 <%= javascript_pack_tag 'match_carousel' %>
+
+
+

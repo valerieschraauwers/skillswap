@@ -11,14 +11,28 @@
   <% end %>
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= favicon_link_tag 'favicon.ico' %>
 
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+  //paste this code under head tag or in a seperate js file.
+  // Wait for window load
+    $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  </script>
 </head>
+
 <body>
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -52,6 +66,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
  </script>
+
 
 
 <!--  <div id="user-info">

@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "william@william.com", password:"password")
+User.create(email: "william@william.com", password:"password", first_name: "William", city: "Canggu", bio: "Soy William")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
-User.create(email: "valerie@valerie.com", password:"password")
+User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", city: "Canggu", bio: "I'm Valerie")
 
 # Create 12 more users (maybe everyone from the class) and fill out every detail, so:
 # email
@@ -20,28 +20,6 @@ User.create(email: "valerie@valerie.com", password:"password")
 # city
 # photo
 # bio
-
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
-    t.date "date_of_birth"
-    t.string "nationality"
-    t.string "city"
-    t.string "photo"
-    t.string "bio"
-    t.string "provider"
-    t.string "uid"
 
 # Create 10 categories:
 # - Arts & Crafts

@@ -1,60 +1,106 @@
-<div class="container">
-  <div class="row">
-   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+<div class="wrapper">
+
+<div class="image" style="background-image: url('https://images.unsplash.com/photo-1522199780729-a356c844222a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1bd52b437d57c3bfa14ccb7c6985b02e&auto=format&fit=crop&w=1504&q=80');">
+        </div>
+
+<div class="formulario">
   <% if current_user.full_profile? %>
   <h2>Edit profile</h2>
   <% else %>
-  <h2>Create profile</h2>
+  <h3>Create profile</h3>
   <% end %>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
     <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
+      <%#= f.input :email, required: true, autofocus: true %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
       <% end %>
       <div class="row">
         <div class="col-xs-6">
-          <%= f.input :first_name %>
+          <%= f.input :first_name, input_html: { class: 'textinput' }   %>
         </div>
         <div class="col-xs-6">
-          <%= f.input :last_name %>
+          <%= f.input :last_name, input_html: { class: 'textinput' } %>
         </div>
       </div>
 
-      <%= f.input :date_of_birth, :as => :date,
+      <%#= f.input :date_of_birth, :as => :date, input_html: { class: 'datepicker' },
       :start_year => Date.today.year - 18,
       :end_year => Date.today.year - 99,
       :month => Date.today.month,
       :order => [:day, :month, :year],
       :label => "Date of Birth",
       :prompt => "Select" %>
+        <%= f.input :date_of_birth, as: :string, input_html: { class: 'datepicker textinput' }  %>
       <div class="row">
         <div class="col-xs-6">
-          <%= f.input :nationality, :as => :country, label: "Country", prompt: "Please select your country" %>
+          <%= f.input :nationality, :as => :country, label: "Country", prompt: "Please select your country", input_html: { class: 'textinput' } %>
         </div>
         <div class="col-xs-6">
-          <%= f.input :city %>
+          <%= f.input :city, input_html: { class: 'textinput' } %>
         </div>
       </div>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
-      <%= f.input :bio %>
+      <%= f.input :bio, input_html: { class: 'textinput' } %>
 
     </div>
 
     <div class="form-actions">
       <% if current_user.full_profile? %>
-      <%= f.button :submit, "Update", class: "btn btn-sm btn-green" %>
+      <%= f.button :submit, "Update profile", class: "btn btn-sm btn-green" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% else %>
-      <%= f.button :submit, "Get me matched!", class: "btn btn-sm btn-green" %>
+      <%= f.button :submit, "Create account", class: "btn btn-sm btn-green" %>
       <%= link_to "Back", :back, class: "btn btn-sm btn-green" %>
       <% end %>
     </div>
     <% end %>
-  </div>
-</div>
+
 </div>
 
+</div>
+
+<style>
+  .wrapper {
+    width: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*flex-wrap: wrap;*/
+  align-items: stretch;
+  /*flex-direction: row-reverse;*/
+
+  }
+
+  .image {
+  width: calc(100% - 560px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  height: 600px;
+
+}
+
+.formulario {
+   padding: 10px 60px 10px 60px ;
+   background-color: #f7f7f7;
+}
+
+.textinput
+ {
+  background-color: transparent;
+  padding:20px;
+  color: gray;
+  border-radius: 10px;
+ }
+</style>

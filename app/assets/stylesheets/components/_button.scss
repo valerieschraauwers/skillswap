@@ -7,6 +7,7 @@
   font-size: 20px;
   background: #57d6c5;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .btn-start:hover {
@@ -25,6 +26,7 @@
   transition: background 0.3s ease;
   font-family: "Signika";
   font-weight: lighter;
+  text-align: center;
 }
 
 .btn-xs.btn-green {
@@ -34,16 +36,24 @@
   font-weight: lighter;
   padding: 14px 15px;
   margin-top: 15px;
-  width: 125px;
-  height: 50px
+  height: 50px;
+  text-align: center;
+}
+
+.btn-xs.btn-green.back {
+  position: relative;
+  bottom: 5px;
+  left: 10px;
+
 }
 
 .btn-sm.btn-green {
   background-color: white;
   text-align: center;
   font-size: 15px;
-  width: 125px;
+ // width: 125px;
   height: 50px;
+  text-align: center;
 }
 
 .btn-green:hover {
@@ -55,6 +65,7 @@
 .btn.btn-green.btn-match {
   height: 109px;
   width: 109px;
+  text-align: center;
 }
 
 .btn.btn-green.btn-match:hover {
