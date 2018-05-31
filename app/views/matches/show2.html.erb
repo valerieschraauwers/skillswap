@@ -1,21 +1,55 @@
-<% if @match.full_match? %>
-<div class="background" style="background-image: url('<%= image_path 'trianglify.png'%>')">
-  <% elsif @match.teacher.id == current_user.id %>
-<div class="background" style="background-image: url('<%= image_path 'triangle.png'%>')">
-  <% elsif @match.teacher.id != current_user.id%>
-  <div class="background" style="background-image: url('<%= image_path 'triangle2.png'%>')">
-  <% end %>
-<div class="container">
-  <div class= "whitecard">
-    <% if @match.full_match? %>
-    <%= render 'full_match_show'%>
-    <% elsif @match.teacher.id == current_user.id %>
-    <%= render 'teacher_match_show'%>
-    <% elsif @match.teacher.id != current_user.id%>
-    <%= render 'student_match_show' %>
-    <% end %>
+
+
+
+
+<div class="flexed-items">
+  <%= render 'dashboard/sidebar' %>
+
+  <div class="container">
+    <div class="main">
+
+      <div class= "whitecard">
+
+        <h4>Skill to share:</h4>
+        <p><%= @match.skill.name %></p>
+
+        <h4>Teacher:</h4>
+        <p><%= @match.teacher.email %></p>
+
+        <h4>Student:</h4>
+         <p><%= @match.student.email %></p>
+
+        <h4>Contact:</h4>
+        <div class="chat_item">
+          <%= link_to 'Open Chat!', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post', class: "btn btn-xs btn-green"%>
+      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+        </div>
+      </div>
+
+
+      <div class= "form_whitecard">
+        <h4>Provide Feedback:</h4>
+        <h6> Please rate the overall quality of your experience: </h6>
+         <%= render 'reviews/form', match: @match, review: @review %>
+      </div>
+
+        <div id="reviews">
+         <% if @match.reviews.blank? %>
+         <br>
+         Be the first to leave a review:
+         <% else %>
+         <!-- note- brought reviews/show down from this place, to organize page -cs - 5-30-17 -->
+         <div class="row">
+           <% @match.reviews.each do |review| %>
+           <div class="col-xs-12">
+            <%= render 'reviews/show', review: review %>
+          </div>
+          <% end %>
+        </div>
+          <% end %>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 

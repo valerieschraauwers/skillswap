@@ -90,8 +90,30 @@ hr{
     border-top: 0.5px solid rgba(185, 88, 109, 0.38);
   }
 
+  #profile-match-large {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .table-user-information.full > tbody > tr:first-child {
+    border-top: 0;
+
+}
+
+  .table.table-user-information.full tr {
+    font-size: 15px;
+    font-family: "Signika";
+    font-weight: lighter;
+    border-top: 0.5px solid rgba(185, 88, 109, 0.38);
+  }
+
 .exchange {
   padding: 10px;
+}
+
+#exchange-large {
+  text-align: center;
+  padding: 25px;
 }
 
 .match-icon {
@@ -103,6 +125,11 @@ hr{
     margin: -5px 0 12.5px;
   }
 
+}
+
+.match-icon-large {
+  width: 100%;
+  align-items: center;
 }
 
 .match-profile-card {

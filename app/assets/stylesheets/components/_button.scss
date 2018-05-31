@@ -30,7 +30,7 @@
 }
 
 .btn-xs.btn-green {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5686274509803921);
   text-align: center;
   font-size: 14px;
   font-weight: lighter;
@@ -48,7 +48,7 @@
 }
 
 .btn-sm.btn-green {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5686274509803921);
   text-align: center;
   font-size: 15px;
  // width: 125px;
@@ -92,4 +92,8 @@
   font-size: 20px;
   background: #57d6c5;
   transition: background 0.3s ease;
+}
+
+#chat {
+  width: 100%;
 }
