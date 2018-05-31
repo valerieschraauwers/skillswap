@@ -3,9 +3,13 @@
 }
 
 .whitecard {
+  padding: 25px;
+  margin-bottom: 25px;
+  margin-left: -75px;
   display: flex;
   flex-direction: column;
   flex-basis: auto;
+
   padding-top: 18px;
   padding: 21px;
   align-self: center;
@@ -19,16 +23,18 @@
   font-family: 'Signika';
 }
 
+.whitecard p {
+  color: rgb(0, 226, 201);
+  font-size: 18.5px;
+}
+
 .form_whitecard {
+  padding: 25px;
+  padding-left: 25px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  padding-top: 18px;
-  padding: 21px;
   margin-left: -75px;
-  height: 590px;
+  height: 500px;
   width: 900px;
   background-color: white;
   position: relative;
@@ -39,24 +45,32 @@
   font-family: 'Signika';
 }
 
+.form_whitecard p {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form_whitecard h4 {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
 .past_review_whitecard {
   display: flex;
-  align-items: center;
-  padding: 20px;
+  padding: 25px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
-  overflow-wrap: break-word;
-  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 4px;
-  padding-top: 18px;
-  padding: 21px;
   margin-left: -75px;
   margin-right: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
-  height: 375px;
+  height: 300px;
   width: 900px;
   background-color: white;
   position: relative;
@@ -65,9 +79,12 @@
 }
 
 .column_left {
- height: 100%;
- width: 35%;
- float: left;
+    float: left;
+    width: 90px;
+    height: 100%;
+    margin: 20px;
+    text-align: center;
+    align: center;
 }
 
 
@@ -75,4 +92,10 @@
  height: 100%;
  width: 65%;
  float: right;
+ overflow-wrap: break-word;
+ margin-right: 20px;
+ margin-left: 60px;
+ margin-top: 20px;
+ margin-bottom: 20px;
 }
+

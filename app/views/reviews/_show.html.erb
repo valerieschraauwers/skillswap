@@ -1,5 +1,15 @@
+   <div class= "past_review_whitecard">
 
+    <div class = "column_left">
+      <img class="review_avatar" src="http://res.cloudinary.com/dpphwschw/image/upload/v1527583823/mwtu3jgltdyusnr0lglv.jpg">
+      <p><%= review.first_name %></p>
+      <p><%= review.created_at %></p>
+    </div>
+    <div class="column_right">
 
-<p><%= review.rating %> stars</p>
-<p><%= review.content %></p>
-<%= link_to "Delete", match_review_path(@match, review), method: :delete, class: "btn btn-sm btn-green" %>
+      <p><%= review.rating %> stars</p>
+      <p><%= review.content %></p>
+      <%= link_to "Delete", match_review_path(@match, review), method: :delete, class: "btn btn-sm btn-green" %>
+    </div>
+
+  </div>
