@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.match = @match
     @review.destroy
-    redirect_to match_path
+    redirect_to match_path(@match)
   end
 
   private

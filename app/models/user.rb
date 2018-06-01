@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills
   mount_uploader :photo, PhotoUploader
-  has_many :reviews
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -53,6 +52,10 @@ class User < ApplicationRecord
     first_name.present? && last_name.present? && city.present?
   end
 
+  def last_user_reviews
+    self.owned_skills_matches.map { |match| match.reviews.last }.select { |review| !review.nil? }
+  end
+
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
 
@@ -82,8 +85,6 @@ class User < ApplicationRecord
   def self.dummy_email(auth)
     "#{auth.uid}-#{auth.provider}@example.com"
   end
-
-
 
 end
 

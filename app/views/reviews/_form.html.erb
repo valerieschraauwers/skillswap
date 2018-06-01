@@ -1,7 +1,8 @@
 <%= simple_form_for([ match, review ], remote: true) do |form| %>
-  <p><%= form.input :first_name, as: :text %></p>
+  <%= form.label :first_name %>: <%= current_user.first_name %>
+  <%= form.input_field :first_name, as: :hidden, value: current_user.first_name %>
   <p><%= form.input :content, as: :text %></p>
-  <p>Stars</p>
+  Stars
   <br>
         <row>
         <span class="rating">

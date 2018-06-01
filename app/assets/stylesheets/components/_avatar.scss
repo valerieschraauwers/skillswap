@@ -70,16 +70,32 @@
     border: none !important;
 }
 
-#avatar {
-  width: 40px;
+.avatar-round {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  border: 1px solid #67D9C8;
+  img {
+    width: 100%;
+  }
 }
 
-#avatar-large {
-  width: 80px;
+.avatar-large-round {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 1px solid #67D9C8;
+  img {
+    width: 100%;
+  }
 }
+
+.skill-large-round {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  img {
+    width: 100%;
+  }
+}
+
 
 
