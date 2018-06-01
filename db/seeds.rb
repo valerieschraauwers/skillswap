@@ -101,7 +101,7 @@ Skill.create(name: "Baking", skill_category_id: 3, icon: "icons/food_and_drink/b
 Skill.create(name: "Coffee", skill_category_id: 3, icon: "icons/food_and_drink/coffee.svg")
 Skill.create(name: "Cooking", skill_category_id: 3, icon: "icons/food_and_drink/cooking.svg")
 Skill.create(name: "French Cooking", skill_category_id: 3, icon: "icons/food_and_drink/french_cooking.svg")
-Skill.create(name: "Mexican Cooking", skill_category_id: 3, icon: "icons/food_and_drink/mexican.svg")
+Skill.create(name: "Mexican Cooking", skill_category_id: 3, icon: "icons/food_and_drink/mexicanhappytaco.svg")
 Skill.create(name: "Thai Cooking", skill_category_id: 3, icon: "icons/food_and_drink/thai_cooking.svg")
 Skill.create(name: "Vietnamese", skill_category_id: 3, icon: "icons/food_and_drink/vietnamese_cooking.svg")
 Skill.create(name: "Wine Tasting", skill_category_id: 3, icon: "icons/food_and_drink/winetasting.svg")
@@ -109,6 +109,8 @@ Skill.create(name: "Wine Tasting", skill_category_id: 3, icon: "icons/food_and_d
 Skill.create(name: "Chess", skill_category_id: 4, icon: "icons/game/chess.svg")
 Skill.create(name: "Ping Pong", skill_category_id: 4, icon: "icons/game/ping_pong.svg")
 Skill.create(name: "Pool", skill_category_id: 4, icon: "icons/game/pool.svg")
+Skill.create(name: "Poker", skill_category_id: 4, icon: "icons/game/cards.svg")
+Skill.create(name: "Gaming", skill_category_id: 4, icon: "icons/game/gaming.svg")
 
 Skill.create(name: "Arabic", skill_category_id: 5, icon: "icons/language_and_culture/arabic.svg")
 Skill.create(name: "Chinese", skill_category_id: 5, icon: "icons/language_and_culture/chinese.svg")
@@ -188,12 +190,88 @@ UserSkill.create(user_id: 2, skill_id: 1, role: "student")
 #LONELY SKILL
 UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
 UserSkill.create(user_id: 2, skill_id: 7, role: "teacher")
+
 Match.create(teacher_skill_id: 2, student_skill_id: 1)
 Match.create(teacher_skill_id: 4, student_skill_id: 3)
 Match.create(teacher_skill_id: 5, student_skill_id: 1)
 # FULL MATCH
 Match.create(teacher_skill_id: 5, student_skill_id: 6)
 Match.create(teacher_skill_id: 8, student_skill_id: 7)
+
+
+
+UserSkill.create(user_id: 3, skill_id: 24, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 5, skill_id: 24, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 6, skill_id: 21, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 21 role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 20, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 9, skill_id: 20, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 10, skill_id: 17, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 17, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 16, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 13, skill_id: 16, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 14, skill_id: 14, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 14, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 12, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 17, skill_id: 12, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 18, skill_id: 10, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 10, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 8, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 21, skill_id: 8, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 6, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 23, skill_id: 6, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 4, skill_id: 50, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 50, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 48, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 7, skill_id: 48 role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 8, skill_id: 46, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 46, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 43, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 11, skill_id: 43, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 12, skill_id: 41, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 41, role: "teacher") #VALERIE TEACHER
+
+UserSkill.create(user_id: 3, skill_id: 39, role: "student") #VALERIE STUDENT
+UserSkill.create(user_id: 15, skill_id: 39, role: "teacher") #TEACHER
+
+UserSkill.create(user_id: 16, skill_id: 37, role: "student") #STUDENT
+UserSkill.create(user_id: 3, skill_id: 37, role: "teacher") #VALERIE TEACHER
+
+#experimental matches... no idea what I am doing here... not correct.
+Match.create(teacher_skill_id: 8, student_skill_id: 25)
+Match.create(teacher_skill_id: 9, student_skill_id: 24)
+Match.create(teacher_skill_id: 10, student_skill_id: 23)
+Match.create(teacher_skill_id: 11, student_skill_id: 21)
+Match.create(teacher_skill_id: 12, student_skill_id: 22)
+Match.create(teacher_skill_id: 13, student_skill_id: 20)
+Match.create(teacher_skill_id: 14, student_skill_id: 19)
+Match.create(teacher_skill_id: 15, student_skill_id: 18)
+Match.create(teacher_skill_id: 16, student_skill_id: 17)
+Match.create(teacher_skill_id: 17, student_skill_id: 16)
+Match.create(teacher_skill_id: 18, student_skill_id: 15)
+Match.create(teacher_skill_id: 19, student_skill_id: 14)
+Match.create(teacher_skill_id: 20, student_skill_id: 13)
+Match.create(teacher_skill_id: 21, student_skill_id: 12)
+Match.create(teacher_skill_id: 22, student_skill_id: 11)
+Match.create(teacher_skill_id: 23, student_skill_id: 10)
+Match.create(teacher_skill_id: 24, student_skill_id: 9)
+Match.create(teacher_skill_id: 25, student_skill_id: 8)
+
+
 # #MESSAGES IN MATCH 1
 # Message.create(content: "Amazing experience (message from the student)", user_id: 1, match_id: 1)
 # Message.create(content: "Amazing experience (message from the teacher)", user_id: 2, match_id: 1)
