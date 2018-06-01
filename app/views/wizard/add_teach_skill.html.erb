@@ -19,17 +19,15 @@
                 <% if  (@user.owned_skills.include? skill)%>
                   <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
                   <label class="skill-choice active" for="user_skill_ids<%= skill.id %>">
-                  <%= skill.name %>
+                  <p><%= skill.name %></p>
                   <%= image_tag skill.icon, size: "160x100" %>
-                  <i class="fa fa-check"></i>
                   </label>
                 <%elsif (@user.desired_skills.include? skill)%>
                 <% else %>
                   <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">
                   <label class="skill-choice" for="user_skill_ids<%= skill.id %>">
-                  <%= skill.name %>
+                  <p><%= skill.name %></p>
                   <%= image_tag skill.icon, size: "160x100" %>
-                  <i class="fa fa-check"></i>
                   </label>
                 <% end %>
               <% end %>
