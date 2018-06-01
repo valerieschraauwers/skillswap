@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
   get '/reviews/all_reviews'
 
+  get 'dashboard/animation'
 
 
 

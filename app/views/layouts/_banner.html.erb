@@ -1,10 +1,17 @@
 <div class="banner ">
   <div class="banner-content animated zoomIn">
 
-    <h1 class="animated zoomIn">SkillSwap</h1>
+    <h1 id="titlebanner" class="animated zoomIn" >SkillSwap</h1>
      <h2 class="animated zoomIn">new connections & new skills</h2>
 
       <%= link_to "Start now!", wizard_add_learn_skill_path, class: "btn btn-lg btn-start animated zoomIn"  %>
   </div>
 </div>
 
+
+<style>
+
+  .banner #titlebanner {
+    font-family: $hastafont;
+  }
+</style>
