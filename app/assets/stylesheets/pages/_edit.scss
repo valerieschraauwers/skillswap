@@ -15,19 +15,20 @@
   }
 
   .image {
-  width: calc(100% - 560px);
+  width: calc(100% - 800px);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 1;
-  height: 600px;
+  height: 100vh;
 
 }
 
 .formulario {
    padding: 10px 60px 10px 60px ;
-   background-color: #f7f7f7;
+   height: 100vh;
+   background-color: $light-light-green;
 }
 
 .textinput
