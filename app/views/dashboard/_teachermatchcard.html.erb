@@ -35,13 +35,15 @@
       <div>
         <div class="exchange">
           <div class="match-icon">
-            <p> <%= image_tag match.teacher_skill.skill.icon, id: "avatar" %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag match.student.photo, id: "avatar" %></p>
+            <br>
+            <br>
+            <p> <%= image_tag match.teacher_skill.skill.icon, class: "avatar-round" %> <%= image_tag "arrowsright.png", height: 50%><%= cl_image_tag match.student.photo, class: "avatar-round" %></p>
           </div>
         </div>
         <div id="other-skills" class="text-left">
           <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
           <% card_user.owned_skills.each do |skill|%>
-          <%= image_tag skill.icon, id:"avatar"%>
+          <%= image_tag skill.icon, class: "avatar-round"%>
           <% end %>
         </div>
       </div>

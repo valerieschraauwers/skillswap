@@ -58,7 +58,6 @@
 .past_review_whitecard {
   display: flex;
   padding: 25px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
@@ -67,11 +66,7 @@
   margin-right: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
-  height: 300px;
-  width: 900px;
-  background-color: white;
   position: relative;
-  box-shadow: 1.5px 1.5px lightgrey;
   font-family: 'Signika';
 }
 
@@ -96,6 +91,62 @@
  margin-bottom: 20px;
 }
 
+
+.review {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+.review:last-child {
+  border-bottom: none;
+}
+.review-body {
+  flex-grow: 1;
+}
+.review-name {
+  padding-left: 10px;
+  min-width: 170px;
+}
+.review-name h3 {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.review-name p {
+  font-size: 13px;
+  font-weight: lighter;
+  font-family: "Signika";
+  color: grey;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+
+.review-stars {
+  padding: 10px;
+}
+
+.review-name strong {
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+.review-body {
+  padding-left: 20px;
+  font-size: 15px;
+  color: rgba(0,0,0,0.7);
+}
+.review-body {
+  padding-left: 20px;
+  color: rgba(0,0,0,0.4);
+}
+.review-body strong{
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+.review-body p {
+  // margin: 6px 0;
+  font-family: "Signika";
+  color: grey;
+}
 
 .all_reviews_whitecard {
   padding-left: 107px;
@@ -138,4 +189,5 @@
  margin-left: 60px;
  margin-top: 20px;
  margin-bottom: 20px;
+
 }

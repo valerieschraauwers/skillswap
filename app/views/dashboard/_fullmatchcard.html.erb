@@ -31,16 +31,21 @@
       <div>
         <div class="exchange">
           <div class="match-icon">
-            <p> <%= image_tag match.teacher_skill.skill.icon, id: "avatar" %> <%= image_tag "arrowsright.png", height: 70%><%= cl_image_tag card_user.photo, id: "avatar" %></p>
+            <p> <%= image_tag match.teacher_skill.skill.icon, class: "avatar-round" %> <%= image_tag "arrowsright.png", height: 50%><%= cl_image_tag card_user.photo, class: "avatar-round" %></p>
           </div>
           <div class="match-icon">
-            <p><%= cl_image_tag current_user.photo, id: "avatar" %><%= image_tag "arrowsleft.png", height: 70 %> <%= image_tag match.full_match?.student_skill.skill.icon, id: "avatar" %> </p>
+            <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %> <%= image_tag match.full_match?.student_skill.skill.icon, class: "avatar-round" %> </p>
           </div>
         </div>
         <div id="reviews" class="text-left">
           <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
-          <p>*****</p>
-          <p>Great class!</p>
+          <p><%= card_user.last_user_reviews.last.first_name %> |
+            <% card_user.last_user_reviews.last.rating.to_i.times do %>
+            <i class="far fa-star"></i>
+              <% end %>
+          </p>
+
+          <p><%= card_user.last_user_reviews.last.content %></p>
         </div>
       </div>
       </div>

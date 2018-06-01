@@ -1,15 +1,23 @@
-   <div class= "past_review_whitecard">
 
-    <div class = "column_left">
-      <img class="review_avatar">
-      <p><%= review.first_name %></p>
-      <p><%= review.created_at %></p>
+<div class="review">
+<div class="review_avatar text-center">
+      <%= cl_image_tag review.user.photo, class: "avatar-large" %>
     </div>
-    <div class="column_right">
+  <div class="review-name text-center">
 
-      <p><%= review.rating %> stars</p>
-      <p><%= review.content %></p>
-      <%= link_to "Delete", match_review_path(@match, review), method: :delete, class: "btn btn-sm btn-green" %>
-    </div>
-
+      <p><strong><%= review.first_name %></strong></p>
+      <p><%= review.created_at.strftime("%b %d, %Y")%></p>
   </div>
+  <div class="review-body text-left">
+    <div class="review-stars">
+    <strong><p><% review.rating.to_i.times do %>
+            <i class="far fa-star"></i>
+              <% end %></strong></p>
+            </div>
+            <div class="review-content">
+
+    <p><%= review.content %></p>
+    </div>
+  </div>
+
+</div>

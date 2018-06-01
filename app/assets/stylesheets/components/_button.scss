@@ -96,4 +96,15 @@
 
 #chat {
   width: 100%;
+  font-family: "Signika";
+  letter-spacing: 2px;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  background-color: #5cc5b6;
+  opacity: 0.8;
+}
+
+#chat:hover {
+  opacity: 1;
 }
