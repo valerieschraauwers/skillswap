@@ -25,7 +25,10 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
   def destroy
   end
 
+
+
   def search_and_create_matches
+    sleep 2
     @all_user_skills = UserSkill.all
     @all_user_skills.each do |user_skill|
 
@@ -50,7 +53,7 @@ before_action :set_match, only: [:show, :edit, :update, :destroy]
         end
       end
     end
-    redirect_to dashboard_my_matches_path
+    redirect_to dashboard_animation_path
   end
 
   private
