@@ -62,7 +62,8 @@ User.create(email: "Dirk@jmail.com", password:"password", first_name: "Dirk", ci
 # the chess/ping pong etc. is are also sports, so I would skip the game category
 #  same goes for fossil picking, best to have 10 general subcategories for each skill categories
 # can some subcategories belong to several categories?
-SkillCategory.create(name: "Arts and CraftsAminaSkillCategory.create(name: "Business and technology")
+SkillCategory.create(name: "Arts")
+SkillCategory.create(name: "Business and technology")
 SkillCategory.create(name: "Food and Drink")
 SkillCategory.create(name: "Game")
 SkillCategory.create(name: "Language and Culture")
@@ -76,6 +77,9 @@ Skill.create(name: "Painting", skill_category_id:1 , icon: "icons/arts_and_craft
 Skill.create(name: "Pottery", skill_category_id:1 , icon: "icons/arts_and_crafts/pottery.svg")
 Skill.create(name: "Sewing", skill_category_id:1 , icon: "icons/arts_and_crafts/sewing.svg")
 Skill.create(name: "Weaving", skill_category_id:1 , icon: "icons/arts_and_crafts/weaving.svg")
+Skill.create(name: "Calligraphy", skill_category_id:1 , icon: "icons/arts_and_crafts/calligraphy.svg")
+Skill.create(name: "Modern Art", skill_category_id:1 , icon: "icons/arts_and_crafts/modernart.svg")
+Skill.create(name: "Art History", skill_category_id:1 , icon: "icons/arts_and_crafts/monalisa.svg")
 
 Skill.create(name: "Analytics", skill_category_id:2 , icon: "icons/business_and_technology/analytics.svg")
 Skill.create(name: "Coding", skill_category_id:2 , icon: "icons/business_and_technology/coding.svg")
