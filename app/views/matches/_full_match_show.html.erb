@@ -17,7 +17,7 @@
   </div>
   <div class="whitecard">
 <div class="chat_item">
-          <%= link_to 'OPEN CHAT', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post', class: "btn btn-xs btn-green", id: "chat"%>
+          <%= link_to 'OPEN CHAT', conversations_path(sender_id: @match.teacher.id, recipient_id: @match.student.id), method: 'post', class: "btn btn-xs btn-green", id: "chat", target: "_blank"%>
         </div>
     <div class="flex-profiles">
       <div id="profile-match-large">
