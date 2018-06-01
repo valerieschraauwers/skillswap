@@ -96,3 +96,46 @@
  margin-bottom: 20px;
 }
 
+
+.all_reviews_whitecard {
+  padding-left: 107px;
+  display: flex;
+  padding: 25px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border-radius: 4px;
+  margin-left: -75px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 300px;
+  width: 900px;
+  background-color: white;
+  position: relative;
+  box-shadow: 1.5px 1.5px lightgrey;
+  font-family: 'Signika';
+}
+
+.all_reviews_column_left {
+    float: left;
+    width: 90px;
+    height: 100%;
+    margin: 20px;
+    text-align: center;
+    align: center;
+    margin-left: 85px;
+}
+
+
+.all_reviews_column_right {
+ height: 100%;
+ width: 65%;
+ float: right;
+ overflow-wrap: break-word;
+ margin-right: 20px;
+ margin-left: 60px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
