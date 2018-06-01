@@ -8,8 +8,36 @@
 User.create(email: "william@william.com", password:"password", first_name: "William", city: "Canggu", bio: "Soy William")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
 User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", city: "Canggu", bio: "I'm Valerie")
-# Create 12 more users (maybe everyone from the class) and fill out every detail, so:
-# email
+
+User.create(email: "Kirsten@jmail.com", password: "password", first_name: "Kirsten", city: "Denver", bio: "Hello, I'm Kirsten")
+User.create(email: "Andrea@jmail.com", password: "password", first_name: "Andrea", city: "Bogota", bio: "Hello, I'm Andrea")
+User.create(email: "Thomas@jmail.com", password: "password", first_name: "Thomas", city: "Chicago", bio: "Hello, I'm Thomas")
+User.create(email: "Steve@jmail.com", password: "password", first_name: "Steve", city: "Brussels", bio: "Hello, I'm Steve")
+User.create(email: "Laura@jmail.com", password: "password", first_name: "Laura", city: "Denver", bio: "Hello, I'm Laura")
+User.create(email: "Beverly@jmail.com", password: "password", first_name: "Beverly", city: "Denver", bio: "Hello, I'm Beverly")
+User.create(email: "Jesse@jmail.com", password: "password", first_name: "Jesse", city: "Amsterdam", bio: "Hello, I'm Jesse")
+User.create(email: "Johanna@jmail.com", password: "password", first_name: "Johanna", city: "Amsterdam", bio: "Hello, I'm Johanna")
+User.create(email: "Karen@jmail.com", password: "password", first_name: "Karen", city: "San Diego", bio: "Hello, I'm Karen")
+User.create(email: "Gus@jmail.com", password: "password", first_name: "Gus", city: "San Diego", bio: "Hello, I'm Gus")
+User.create(email: "John@jmail.com", password: "password", first_name: "John", city: "Brussels", bio: "Hello, I'm John")
+User.create(email: "Glen@jmail.com", password: "password", first_name: "Glen", city: "Brussels", bio: "Hello, I'm John")
+
+User.create(email: "Phil@jmail.com", password:"password", first_name: "Phil", city: "Canggu", bio: "Hey there, I'm Phil")
+User.create(email: "Ryan@jmail.com", password:"password", first_name: "Ryan", city: "Canggu", bio: "Hey there, I'm Ryan")
+User.create(email: "Irvin@jmail.com", password:"password", first_name: "Irvin", city: "Canggu", bio: "Hey there, I'm Irvin")
+User.create(email: "Amina@jmail.com", password:"password", first_name: "Amina", city: "Canggu", bio: "Hey there, I'm Amina")
+User.create(email: "Erin@jmail.com", password:"password", first_name: "Erin", city: "Canggu", bio: "Hey there, I'm Erin")
+User.create(email: "Adrien@jmail.com", password:"password", first_name: "Adrien", city: "Canggu", bio: "Hey there, I'm Adrien")
+User.create(email: "Greg@jmail.com", password:"password", first_name: "Greg", city: "Canggu", bio: "Hey there, I'm Greg")
+User.create(email: "Daniel@jmail.com", password:"password", first_name: "Daniel", city: "Canggu", bio: "Hey there, I'm Daniel")
+User.create(email: "Cassy@jmail.com", password:"password", first_name: "Cassy", city: "Canggu", bio: "Hey there, I'm Cassy")
+User.create(email: "Yitzak@jmail.com", password:"password", first_name: "Yitzak", city: "Canggu", bio: "Hey there, I'm Yitzak")
+User.create(email: "Urvi@jmail.com", password:"password", first_name: "Urvi", city: "Canggu", bio: "Hey there, I'm Urvi")
+User.create(email: "Ellyn@jmail.com", password:"password", first_name: "Ellyn", city: "Canggu", bio: "Hey there, I'm Ellyn")
+User.create(email: "Inou@jmail.com", password:"password", first_name: "Inou", city: "Canggu", bio: "Hey there, I'm Inou")
+User.create(email: "Luca@jmail.com", password:"password", first_name: "Luca", city: "Canggu", bio: "Hey there, I'm Luca")
+User.create(email: "Dirk@jmail.com", password:"password", first_name: "Dirk", city: "Canggu", bio: "Hey there, I'm Dirk")
+
 # password
 # first_name
 # last_name
@@ -34,8 +62,7 @@ User.create(email: "valerie@valerie.com", password:"password", first_name: "Vale
 # the chess/ping pong etc. is are also sports, so I would skip the game category
 #  same goes for fossil picking, best to have 10 general subcategories for each skill categories
 # can some subcategories belong to several categories?
-SkillCategory.create(name: "Arts and Crafts")
-SkillCategory.create(name: "Business and technology")
+SkillCategory.create(name: "Arts and CraftsAminaSkillCategory.create(name: "Business and technology")
 SkillCategory.create(name: "Food and Drink")
 SkillCategory.create(name: "Game")
 SkillCategory.create(name: "Language and Culture")
