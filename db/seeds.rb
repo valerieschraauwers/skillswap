@@ -150,9 +150,9 @@ Skill.create(name: "Plumbing", skill_category_id: 8, icon: "icons/practical/plum
 Skill.create(name: "Welding", skill_category_id: 8, icon: "icons/practical/welding.svg")
 Skill.create(name: "Carpentry", skill_category_id: 8, icon: "icons/practical/woodworking.svg")
 Skill.create(name: "Mechanics", skill_category_id: 8, icon: "icons/practical/mechanics.svg")
-Skill.create(name: "Sewing", skill_category_id: 8 , icon: "icons/arts_and_crafts/sewing.svg")
-Skill.create(name: "Knitting", skill_category_id:8 , icon: "icons/arts_and_crafts/knitting.svg")
-Skill.create(name: "Weaving", skill_category_id:8 , icon: "icons/arts_and_crafts/weaving.svg")
+Skill.create(name: "Sewing", skill_category_id: 8 , icon: "icons/arts/sewing.svg")
+Skill.create(name: "Knitting", skill_category_id:8 , icon: "icons/arts/knitting.svg")
+Skill.create(name: "Weaving", skill_category_id:8 , icon: "icons/arts/weaving.svg")
 
 Skill.create(name: "Archery", skill_category_id: 9, icon: "icons/sport_and_active/archery.svg")
 Skill.create(name: "Ballet", skill_category_id: 9, icon: "icons/sport_and_active/ballet.svg")
