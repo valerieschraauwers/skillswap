@@ -1,19 +1,23 @@
+<div class="background" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('<%= image_path 'trianglify2.png'%>')">
 <div class="container">
+      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+  <h4>MESSAGES</h4>
+  <div class="whitecard">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>CHAT</h2>
+
 
       <% if @over_ten %>
       <%= link_to 'Show Previous', '?m=all' %>
       <% end %>
-
+      <br>
       <div>
         <% @messages.each do |message| %>
         <% if message.content %>
         <% user = User.find(message.user_id) %>
-        <div >
-          <div >
-            <div ><strong><%= user.email %></strong> <%= message.message_time %></div>
+        <div>
+          <div>
+            <div><strong><%= user.first_name %></strong> <%= message.message_time %></div>
             <div>
               <div>
                 <i></i>
@@ -25,19 +29,20 @@
         <% end %>
         <% end %>
       </div>
-
+      <br>
       <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
       <div >
         <%= f.text_area :content, class: "form-control" %>
       </div>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
       <div>
-        <%= f.submit "Add Reply", class: "btn btn-sm btn-green" %>
+        <br>
+        <%= f.submit "Send message", class: "btn btn-sm btn-green" %>
       </div>
 
       <% end %>
 
-      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
     </div>
   </div>
+</div>
 </div>

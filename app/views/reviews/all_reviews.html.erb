@@ -1,31 +1,51 @@
 <div class="flexed-items">
   <%= render 'dashboard/sidebar' %>
-  <div class="container">
-    <div class="main">
-      <h1> All Reviews </h1>
+  <div class="main">
+    <div class="background" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('<%= image_path 'trianglify2.png'%>')">
+    <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+    <div class="container">
+      <% if current_user.last_user_reviews.any? %>
+      <h1> ALL REVIEWS </h1>
+      <div class="whitecard">
+        <div class="review">
+          <div class="review_avatar text-center">
+            <% current_user.last_user_reviews.each do |review| %>
+            <%= cl_image_tag review.user.photo, class: "avatar-large" %>
+          </div>
+          <div class="review-name text-center">
+            <p><strong><%= review.first_name %></strong></p>
+            <p><%= review.created_at.strftime("%b %d, %Y")%></p>
+          </div>
+          <div class="review-body text-left">
+            <div class="review-stars">
+              <strong><p><% review.rating.to_i.times do %>
+                <i class="far fa-star"></i>
+                <% end %></strong></p>
+              </div>
+              <div class="review-content">
 
-      <% @reviews.each do |review| %>
-
-      <div class= "all_reviews_whitecard">
-        <div class = "all_reviews_column_left">
-          <img class="review_avatar" img-src >
-          <p><%= review.first_name %></p>
-          <p><%= review.created_at %></p>
-        </div>
-        <div class="all_reviews_column_right">
-          <p><%= review.rating %> stars</p>
-          <p><%= review.content %></p>
+                <p><%= review.content %></p>
+              </div>
+            </div>
+            <% end %>
+            <% else %>
+            <h1>YOU DON'T HAVE REVIEWS YET</h1>
+            <% end %>
+          </div>
         </div>
       </div>
-
-      <% end %>
-
     </div>
-    <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
   </div>
 </div>
 </div>
-</div>
+
+
+
+
+
+
+
+
 
 
 

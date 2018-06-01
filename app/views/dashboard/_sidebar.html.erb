@@ -13,13 +13,14 @@
 
   <%= link_to "MATCHES", dashboard_my_matches_path %>
   <%= link_to "PROFILE", dashboard_profile_path %>
+  <%= link_to "REVIEWS", reviews_all_reviews_path %>
 
-  <%= link_to "REVIEWS", match_reviews_path(current_user) %>
 
 
   <a class="animated pulse" id="littlematchedbutton" url: "search_and_create_matches" data-method="post" href="/matches/search_and_create_matches" >
       <span>Get me new Matches!</span>
     </a>
+
   </div>
 </div>
 

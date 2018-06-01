@@ -8,10 +8,6 @@
       format("truetype");
 }
 
-body {
-  text-align: center;
-}
-
 #matchedbutton {
   display: inline-block;
   margin-top: 20px;
@@ -31,6 +27,7 @@ body {
   background-size: 500px;
   width: 500px;
   height: 200px;
+  text-align: center;
 }
 
 #matchedbutton span {
