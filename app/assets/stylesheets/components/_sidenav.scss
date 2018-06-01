@@ -41,6 +41,12 @@
 /* Style page content */
 .main {
   overflow-x:hidden;
+  h1 {
+  font-family: "Signika";
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #b9586d;
+}
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

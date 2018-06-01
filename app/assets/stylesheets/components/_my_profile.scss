@@ -35,6 +35,8 @@
 }
 
 .my-profile-card {
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   width: 900px;
   height: 100vh;
@@ -65,5 +67,10 @@
 .panel-title {
   font-family: "Signika";
   color: white;
+  }
+
+  .center_main {
+    display: flex;
+
   }
 
