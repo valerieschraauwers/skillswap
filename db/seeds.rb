@@ -152,17 +152,17 @@ Skill.create(name: "Yoga", skill_category_id: 9, icon: "icons/sport_and_active/y
 
 
 
-User.create(email: "william@william.com", password:"password", first_name: "William", last_name: "Calderon", city: "Bogota", nationality: "Colombia", bio: "Soy William")
+User.create(email: "william@william.com", password:"password", first_name: "William", last_name: "Calderon", city: "Bogota", nationality: "CO", bio: "Soy William")
 User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
-User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", last_name: "Schraauwers", city: "Bogota", nationality: "Netherlands", bio: "I'm Valerie")
+User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", last_name: "Schraauwers", city: "Bogota", nationality: "NL", bio: "I'm Valerie")
 
-User.create(email: "carlos@mail.com", password:"password", first_name: "Carlos", last_name: "Rodriguez", city: "Bogota",nationality: "Colombia", bio: "Soy Carlito")
-User.create(email: "catalina@mail.com", password: "password", first_name: "Catalina", last_name: "Suarez",city: "Bogota",nationality: "Colombia", bio: "I'm Catalina")
-User.create(email: "andrea@mail.com", password: "password", first_name: "Andrea", last_name: "Garcon", city: "Bogota",nationality: "Colombia", bio: "Hello, I'm Andrea")
+User.create(email: "carlos@mail.com", password:"password", first_name: "Carlos", last_name: "Rodriguez", city: "Bogota",nationality: "CO", bio: "Soy Carlito")
+User.create(email: "catalina@mail.com", password: "password", first_name: "Catalina", last_name: "Suarez",city: "Bogota",nationality: "CO", bio: "I'm Catalina")
+User.create(email: "andrea@mail.com", password: "password", first_name: "Andrea", last_name: "Garcon", city: "Bogota",nationality: "CO", bio: "Hello, I'm Andrea")
 
-User.create(email: "daniel@mail.com", password:"password", first_name: "Daniel", last_name: "Cali", city: "Bogota",nationality: "Colombia", bio: "Hey there, I'm Daniel")
-User.create(email: "ellyn@mail.com", password:"password", first_name: "Ellyn", last_name: "Francesa", city: "Bogota",nationality: "France", bio: "Hey there, I'm Ellyn")
-User.create(email: "lucas@mail.com", password:"password", first_name: "Luca", last_name: "Santos", city: "Bogota",nationality: "Colombia", bio: "Hey there, I'm Luca")
+User.create(email: "daniel@mail.com", password:"password", first_name: "Daniel", last_name: "Cali", city: "Bogota",nationality: "CO", bio: "Hey there, I'm Daniel")
+User.create(email: "ellyn@mail.com", password:"password", first_name: "Ellyn", last_name: "Francesa", city: "Bogota",nationality: "FR", bio: "Hey there, I'm Ellyn")
+User.create(email: "lucas@mail.com", password:"password", first_name: "Luca", last_name: "Santos", city: "Bogota",nationality: "CO", bio: "Hey there, I'm Luca")
 
 
 
