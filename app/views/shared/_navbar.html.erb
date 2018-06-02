@@ -1,5 +1,7 @@
 <div class="navbar-wagon sticky">
   <!-- Logo -->
+
+  <div style="display: flex; justify-content: space-between">
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "307475-arrows copy 3.png", height: 50 %>
   <% end %>
@@ -8,8 +10,8 @@
   <h1 class="navbar-wagon-brand title">SkillSwap!</h1>
   </div>
   <!-- Right Navigation -->
+</div>
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
