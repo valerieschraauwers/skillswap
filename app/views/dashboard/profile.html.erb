@@ -1,3 +1,6 @@
+  <% if !current_user.full_profile? %>
+  <% redirect_to edit_user_registration_path %>
+  <% else %>
 <div class="flexed-items">
 <%= render 'sidebar' %>
 
@@ -22,10 +25,12 @@
                         <td>Full name</td>
                         <td><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></td>
                       </tr>
+                        <% if current_user.date_of_birth.present? %>
                       <tr>
                         <td>Date of Birth</td>
                         <td><%= current_user.date_of_birth.strftime("%d/%m/%y") %></td>
                       </tr>
+                      <% end %>
                       <tr>
                         <td>Country</td>
                         <td><%= current_user.nationality %></td>
@@ -81,3 +86,4 @@
 </div>
 </div>
 </div>
+<% end %>

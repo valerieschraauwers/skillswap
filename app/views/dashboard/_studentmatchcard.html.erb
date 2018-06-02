@@ -40,11 +40,25 @@
             <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %><%= image_tag match.student_skill.skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: match.student_skill.skill.name %></p>
           </div>
         </div>
+        <% if card_user.last_user_reviews.any? %>
         <div id="reviews" class="text-left">
           <h4>WHAT OTHERS HAVE SAID ABOUT <%= card_user.first_name.upcase %></h4>
-          <p>*****</p>
-          <p>Great class!</p>
+          <p><%= card_user.last_user_reviews.last.first_name %> |
+            <% card_user.last_user_reviews.last.rating.to_i.times do %>
+            <i class="far fa-star"></i>
+              <% end %>
+          </p>
+
+          <p><%= card_user.last_user_reviews.last.content %></p>
         </div>
+        <% else %>
+         <div id="other-skills" class="text-left">
+          <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
+          <% card_user.owned_skills.each do |skill|%>
+          <%= image_tag skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: skill.name%>
+          <% end %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
