@@ -52,7 +52,7 @@
         <% else %>
          <div id="other-skills" class="text-left">
           <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
-          <% card_user.owned_skills.each do |skill|%>
+          <% card_user.owned_skills.first(5).each do |skill|%>
           <%= image_tag skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: skill.name%>
           <% end %>
         </div>
