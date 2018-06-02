@@ -2,7 +2,6 @@
   <%= render 'dashboard/sidebar' %>
   <div class="main">
     <div class="background" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('<%= image_path 'trianglify2.png'%>')">
-    <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
     <div class="container">
       <% if current_user.last_user_reviews.any? %>
       <h1> ALL REVIEWS </h1>
