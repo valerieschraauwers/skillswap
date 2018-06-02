@@ -14,7 +14,7 @@
 
           <p data-skill-id="<%= skillC.id %>" class="click-skill skill-choice-cat"><%= skillC.name %></p>
 
-           <div id="category<%= skillC.id %>" style="display:none; visibility: hidden; animation: fade 1s; transition: visibility 1s, opacity 0.5s ease-out; width: 100%; margin-left: 100px;">
+           <div id="category<%= skillC.id %>" style="display:none; visibility: hidden; animation: fade 1s; transition: visibility 1s, opacity 0.5s ease-out; width: 100%; margin-left: 170px;">
                <% Skill.all.where(skill_category_id: skillC.id).each do |skill| %>
                 <% if  (@user.desired_skills.include? skill)%>
                   <input type="checkbox" class="hidden" value="<%= skill.id %>" name="user[skill_ids][]" id="user_skill_ids<%= skill.id %>">

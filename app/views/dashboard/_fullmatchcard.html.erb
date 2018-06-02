@@ -32,10 +32,10 @@
       <div>
         <div class="exchange">
           <div class="match-icon">
-            <p> <%= image_tag match.teacher_skill.skill.icon, class: "avatar-round" %> <%= image_tag "arrowsright.png", height: 50%><%= cl_image_tag card_user.photo, class: "avatar-round" %></p>
+            <p> <%= image_tag match.teacher_skill.skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: match.teacher_skill.skill.name %> <%= image_tag "arrowsright.png", height: 50%><%= cl_image_tag card_user.photo, class: "avatar-round" %></p>
           </div>
           <div class="match-icon">
-            <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %> <%= image_tag match.full_match?.student_skill.skill.icon, class: "avatar-round" %> </p>
+            <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %> <%= image_tag match.full_match?.student_skill.skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: match.full_match?.student_skill.skill.name %> </p>
           </div>
         </div>
         <% if card_user.last_user_reviews.any? %>
@@ -53,7 +53,7 @@
          <div id="other-skills" class="text-left">
           <h4>OTHER SKILLS <%= card_user.first_name.upcase %> HAS TO OFFER</h4>
           <% card_user.owned_skills.each do |skill|%>
-          <%= image_tag skill.icon, class: "avatar-round"%>
+          <%= image_tag skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: skill.name%>
           <% end %>
         </div>
         <% end %>
