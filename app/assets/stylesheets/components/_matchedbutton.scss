@@ -23,7 +23,7 @@
   transition: box-shadow 0.1s ease-in-out;
   font-size: 70px;
   color: #fff;
-  background-image: url("https://files.slack.com/files-pri/T02NE0241-FB0QDP78F/trianglify.png");
+  background-image: asset-url("trianglify.png");
   background-size: 500px;
   width: 500px;
   height: 200px;
@@ -111,7 +111,7 @@
   transition: box-shadow 0.1s ease-in-out;
   font-size: 10px;
   color: #fff;
-  background-image: url("https://files.slack.com/files-pri/T02NE0241-FB0QDP78F/trianglify.png");
+  background-image: asset-url("trianglify.png");
   background-size: 500px;
   width: 80px;
   height: 80px;

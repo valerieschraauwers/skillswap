@@ -1,0 +1,18 @@
+// Here you generate *JavaScript* that would be executed in the browser
+function refreshForm(innerHTML) {
+  const newmessageForm = document.getElementById("new_message");
+  newmessageForm.innerHTML = innerHTML;
+}
+
+function addReview(reviewHTML) {
+  const messages = document.getElementById("aquitest");
+  messages.insertAdjacentHTML('beforeend', reviewHTML);
+}
+
+
+<% if @message.errors.any? %>
+  refreshForm("<%= j render 'match/index', match: @match%>");
+<% else %>
+  addReview("<%= j render 'match/index', match: 38 %>");
+  refreshForm("<%= j render 'match/index' match: 38 %>");
+<% end %>
