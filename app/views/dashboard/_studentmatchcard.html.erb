@@ -37,7 +37,7 @@
           <div class="match-icon">
             <br>
             <br>
-            <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %><%= image_tag match.student_skill.skill.icon, class: "avatar-round" %></p>
+            <p><%= cl_image_tag current_user.photo, class: "avatar-round" %><%= image_tag "arrowsleft.png", height: 50 %><%= image_tag match.student_skill.skill.icon, class: "avatar-round", data: { toggle: 'tooltip' }, title: match.student_skill.skill.name %></p>
           </div>
         </div>
         <div id="reviews" class="text-left">
