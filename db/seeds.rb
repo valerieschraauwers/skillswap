@@ -1,67 +1,37 @@
+# User.create(email: "Thomas@mail.com", password: "password", first_name: "Thomas", city: "Chicago", bio: "Hello, I'm Thomas")
+# User.create(email: "Steve@mail.com", password: "password", first_name: "Steve", city: "Brussels", bio: "Hello, I'm Steve")
+# User.create(email: "Laura@mail.com", password: "password", first_name: "Laura", city: "Denver", bio: "Hello, I'm Laura")
+# User.create(email: "Beverly@mail.com", password: "password", first_name: "Beverly", city: "Denver", bio: "Hello, I'm Beverly")
+# User.create(email: "Jesse@mail.com", password: "password", first_name: "Jesse", city: "Amsterdam", bio: "Hello, I'm Jesse")
+# User.create(email: "Johanna@mail.com", password: "password", first_name: "Johanna", city: "Amsterdam", bio: "Hello, I'm Johanna")
+# User.create(email: "Karen@mail.com", password: "password", first_name: "Karen", city: "San Diego", bio: "Hello, I'm Karen")
+# User.create(email: "Gus@mail.com", password: "password", first_name: "Gus", city: "San Diego", bio: "Hello, I'm Gus")
+# User.create(email: "John@mail.com", password: "password", first_name: "John", city: "Brussels", bio: "Hello, I'm John")
+# User.create(email: "Glen@mail.com", password: "password", first_name: "Glen", city: "Brussels", bio: "Hello, I'm John")
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# User.create(email: "Phil@mail.com", password:"password", first_name: "Phil", city: "Canggu", bio: "Hey there, I'm Phil")
+# User.create(email: "Ryan@mail.com", password:"password", first_name: "Ryan", city: "Canggu", bio: "Hey there, I'm Ryan")
+# User.create(email: "Irvin@mail.com", password:"password", first_name: "Irvin", city: "Canggu", bio: "Hey there, I'm Irvin")
+# User.create(email: "Amina@mail.com", password:"password", first_name: "Amina", city: "Canggu", bio: "Hey there, I'm Amina")
+# User.create(email: "Erin@mail.com", password:"password", first_name: "Erin", city: "Canggu", bio: "Hey there, I'm Erin")
+# User.create(email: "Adrien@mail.com", password:"password", first_name: "Adrien", city: "Canggu", bio: "Hey there, I'm Adrien")
+# User.create(email: "Greg@mail.com", password:"password", first_name: "Greg", city: "Canggu", bio: "Hey there, I'm Greg")
+# User.create(email: "Cassy@mail.com", password:"password", first_name: "Cassy", city: "Canggu", bio: "Hey there, I'm Cassy")
+# User.create(email: "Yitzak@mail.com", password:"password", first_name: "Yitzak", city: "Canggu", bio: "Hey there, I'm Yitzak")
+# User.create(email: "Urvi@mail.com", password:"password", first_name: "Urvi", city: "Canggu", bio: "Hey there, I'm Urvi")
+# User.create(email: "Dirk@mail.com", password:"password", first_name: "Dirk", city: "Canggu", bio: "Hey there, I'm Dirk")
+# User.create(email: "Inou@mail.com", password:"password", first_name: "Inou", city: "Canggu", bio: "Hey there, I'm Inou")
 #
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email: "william@william.com", password:"password", first_name: "William", city: "Canggu", bio: "Soy William")
-User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
-User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", city: "Canggu", bio: "I'm Valerie")
 
-User.create(email: "Kirsten@jmail.com", password: "password", first_name: "Kirsten", city: "Denver", bio: "Hello, I'm Kirsten")
-User.create(email: "Andrea@jmail.com", password: "password", first_name: "Andrea", city: "Bogota", bio: "Hello, I'm Andrea")
-User.create(email: "Thomas@jmail.com", password: "password", first_name: "Thomas", city: "Chicago", bio: "Hello, I'm Thomas")
-User.create(email: "Steve@jmail.com", password: "password", first_name: "Steve", city: "Brussels", bio: "Hello, I'm Steve")
-User.create(email: "Laura@jmail.com", password: "password", first_name: "Laura", city: "Denver", bio: "Hello, I'm Laura")
-User.create(email: "Beverly@jmail.com", password: "password", first_name: "Beverly", city: "Denver", bio: "Hello, I'm Beverly")
-User.create(email: "Jesse@jmail.com", password: "password", first_name: "Jesse", city: "Amsterdam", bio: "Hello, I'm Jesse")
-User.create(email: "Johanna@jmail.com", password: "password", first_name: "Johanna", city: "Amsterdam", bio: "Hello, I'm Johanna")
-User.create(email: "Karen@jmail.com", password: "password", first_name: "Karen", city: "San Diego", bio: "Hello, I'm Karen")
-User.create(email: "Gus@jmail.com", password: "password", first_name: "Gus", city: "San Diego", bio: "Hello, I'm Gus")
-User.create(email: "John@jmail.com", password: "password", first_name: "John", city: "Brussels", bio: "Hello, I'm John")
-User.create(email: "Glen@jmail.com", password: "password", first_name: "Glen", city: "Brussels", bio: "Hello, I'm John")
+# skill categories + skills
 
-User.create(email: "Phil@jmail.com", password:"password", first_name: "Phil", city: "Canggu", bio: "Hey there, I'm Phil")
-User.create(email: "Ryan@jmail.com", password:"password", first_name: "Ryan", city: "Canggu", bio: "Hey there, I'm Ryan")
-User.create(email: "Irvin@jmail.com", password:"password", first_name: "Irvin", city: "Canggu", bio: "Hey there, I'm Irvin")
-User.create(email: "Amina@jmail.com", password:"password", first_name: "Amina", city: "Canggu", bio: "Hey there, I'm Amina")
-User.create(email: "Erin@jmail.com", password:"password", first_name: "Erin", city: "Canggu", bio: "Hey there, I'm Erin")
-User.create(email: "Adrien@jmail.com", password:"password", first_name: "Adrien", city: "Canggu", bio: "Hey there, I'm Adrien")
-User.create(email: "Greg@jmail.com", password:"password", first_name: "Greg", city: "Canggu", bio: "Hey there, I'm Greg")
-User.create(email: "Daniel@jmail.com", password:"password", first_name: "Daniel", city: "Canggu", bio: "Hey there, I'm Daniel")
-User.create(email: "Cassy@jmail.com", password:"password", first_name: "Cassy", city: "Canggu", bio: "Hey there, I'm Cassy")
-User.create(email: "Yitzak@jmail.com", password:"password", first_name: "Yitzak", city: "Canggu", bio: "Hey there, I'm Yitzak")
-User.create(email: "Urvi@jmail.com", password:"password", first_name: "Urvi", city: "Canggu", bio: "Hey there, I'm Urvi")
-User.create(email: "Ellyn@jmail.com", password:"password", first_name: "Ellyn", city: "Canggu", bio: "Hey there, I'm Ellyn")
-User.create(email: "Inou@jmail.com", password:"password", first_name: "Inou", city: "Canggu", bio: "Hey there, I'm Inou")
-User.create(email: "Luca@jmail.com", password:"password", first_name: "Luca", city: "Canggu", bio: "Hey there, I'm Luca")
-User.create(email: "Dirk@jmail.com", password:"password", first_name: "Dirk", city: "Canggu", bio: "Hey there, I'm Dirk")
 
-# password
-# first_name
-# last_name
-# date_of_birth
-# nationality (fill out a country here, not a nationality)
-# city
-# photo
-# bio
-# Create 10 categories:
-# - Arts & Crafts
-# - Business & Technology
-# - Food & Drinks
-# - Language & Culture
-# - Music & Dance
-# - Sports
-# - Outdoors
-# - Practical > can we find another word for this ?
-# - 1 more.....?
-#  Give every category 10 skills > arts & crafts
-# > maybe a bit more general so scrape the underwater basket weaving and jewelry making
-# e.g. knowledge on 17th century arts / modern art / design / etc.
-# the chess/ping pong etc. is are also sports, so I would skip the game category
-#  same goes for fossil picking, best to have 10 general subcategories for each skill categories
-# can some subcategories belong to several categories?
+
 SkillCategory.create(name: "Arts")
 SkillCategory.create(name: "Business and technology")
 SkillCategory.create(name: "Food and Drink")
@@ -178,98 +148,154 @@ Skill.create(name: "Volleyball", skill_category_id: 9, icon: "icons/sport_and_ac
 Skill.create(name: "Weight Lifting", skill_category_id: 9, icon: "icons/sport_and_active/weight_lifting.svg")
 Skill.create(name: "Yoga", skill_category_id: 9, icon: "icons/sport_and_active/yoga.svg")
 
+
+
+
+
+User.create(email: "william@william.com", password:"password", first_name: "William", last_name: "Calderon", city: "Bogota", nationality: "Colombia", bio: "Soy William")
+User.create(email: "chelsea@chelsea.com", password:"password", first_name: "Chelsea", city: "Canggu", bio: "I'm Chelsea")
+User.create(email: "valerie@valerie.com", password:"password", first_name: "Valerie", last_name: "Schraauwers", city: "Bogota", nationality: "Netherlands", bio: "I'm Valerie")
+
+User.create(email: "carlos@mail.com", password:"password", first_name: "Carlos", last_name: "Rodriguez", city: "Bogota",nationality: "Colombia", bio: "Soy Carlito")
+User.create(email: "catalina@mail.com", password: "password", first_name: "Catalina", last_name: "Suarez",city: "Bogota",nationality: "Colombia", bio: "I'm Catalina")
+User.create(email: "andrea@mail.com", password: "password", first_name: "Andrea", last_name: "Garcon", city: "Bogota",nationality: "Colombia", bio: "Hello, I'm Andrea")
+
+User.create(email: "daniel@mail.com", password:"password", first_name: "Daniel", last_name: "Cali", city: "Bogota",nationality: "Colombia", bio: "Hey there, I'm Daniel")
+User.create(email: "ellyn@mail.com", password:"password", first_name: "Ellyn", last_name: "Francesa", city: "Bogota",nationality: "France", bio: "Hey there, I'm Ellyn")
+User.create(email: "lucas@mail.com", password:"password", first_name: "Luca", last_name: "Santos", city: "Bogota",nationality: "Colombia", bio: "Hey there, I'm Luca")
+
+
+
+# SKILLS WILLIAM FULL MATCH
+UserSkill.create(user_id: 1, skill_id: 86, role: "teacher") #salsa
+UserSkill.create(user_id: 1, skill_id: 12, role: "teacher") #coding
+UserSkill.create(user_id: 1, skill_id: 17, role: "teacher") #javascript
+UserSkill.create(user_id: 1, skill_id: 37, role: "student") #dutch
+UserSkill.create(user_id: 1, skill_id: 63, role: "student") #outdoor survival
+UserSkill.create(user_id: 1, skill_id: 87, role: "student") #scubadiving
+
+# 3 STUDENT MATCHES
+UserSkill.create(user_id: 8, skill_id: 95, role: "teacher") #ellyn - yoga
+UserSkill.create(user_id: 8, skill_id: 61, role: "teacher") #ellyn - gardening
+UserSkill.create(user_id: 8, skill_id: 55, role: "student") #ellyn learn saxophone
+
+UserSkill.create(user_id: 4, skill_id: 44, role: "teacher") #carlos - spanish
+UserSkill.create(user_id: 4, skill_id: 7, role: "teacher") #carlos - photography
+UserSkill.create(user_id: 4, skill_id: 9, role: "student") #carlos - woodworking
+
+UserSkill.create(user_id: 5, skill_id: 6, role: "teacher") #catalina - graphic design
+UserSkill.create(user_id: 5, skill_id: 18, role: "teacher") #catalina - networking
+UserSkill.create(user_id: 5, skill_id: 1, role: "student") #catalina - painting
+
+# 3 teacher MATCHES
+UserSkill.create(user_id: 7, skill_id: 13, role: "student") #daniel mage - wants to learn css
+UserSkill.create(user_id: 6, skill_id: 38, role: "student") #andrea - wants to learn english
+UserSkill.create(user_id: 6, skill_id: 52, role: "teacher") #andrea - wants to teach cooking
+
+UserSkill.create(user_id: 9, skill_id: 88, role: "student") #luca wants to learn skiing
+UserSkill.create(user_id: 9, skill_id: 17, role: "tacher") #luca - wants to teach javascript
+
+
+
+
+
+
+
 #MATCH 1 USER 1 AND 2
-UserSkill.create(user_id: 1, skill_id: 1, role: "student")  #WILLIAM STUDENT  --- GUITAR
-UserSkill.create(user_id: 2, skill_id: 1, role: "teacher") #CHELSEA TEACHER ---- GUITAR
-#MATCH 2 USER 2 AND 1
-UserSkill.create(user_id: 2, skill_id: 2, role: "student") #CHELSEA STUDENT --- VIOLIN
-UserSkill.create(user_id: 1, skill_id: 2, role: "teacher") #WILLIAM TEACHER --- VIOLIN
-#MATCH 3 USER 3 AND 1
-UserSkill.create(user_id: 3, skill_id: 1, role: "teacher") # VALERIE TEACHER --- GUITAR
-UserSkill.create(user_id: 2, skill_id: 1, role: "student")
-#LONELY SKILL
-UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
-UserSkill.create(user_id: 2, skill_id: 7, role: "teacher")
+# UserSkill.create(user_id: 1, skill_id: 1, role: "student")  #WILLIAM STUDENT  --- GUITAR
+# UserSkill.create(user_id: 2, skill_id: 1, role: "teacher") #CHELSEA TEACHER ---- GUITAR
+# #MATCH 2 USER 2 AND 1
+# UserSkill.create(user_id: 2, skill_id: 2, role: "student") #CHELSEA STUDENT --- VIOLIN
+# UserSkill.create(user_id: 1, skill_id: 2, role: "teacher") #WILLIAM TEACHER --- VIOLIN
+# #MATCH 3 USER 3 AND 1
+# UserSkill.create(user_id: 3, skill_id: 1, role: "teacher") # VALERIE TEACHER --- GUITAR
+# UserSkill.create(user_id: 2, skill_id: 1, role: "student")
+# #LONELY SKILL
+# UserSkill.create(user_id: 3, skill_id: 7, role: "student") # VALERIE STUDENT --- SURFING
+# UserSkill.create(user_id: 2, skill_id: 7, role: "teacher")
 
-Match.create(teacher_skill_id: 2, student_skill_id: 1)
-Match.create(teacher_skill_id: 4, student_skill_id: 3)
-Match.create(teacher_skill_id: 5, student_skill_id: 1)
-# FULL MATCH
-Match.create(teacher_skill_id: 5, student_skill_id: 6)
-Match.create(teacher_skill_id: 8, student_skill_id: 7)
+# Match.create(teacher_skill_id: 2, student_skill_id: 1)
+# Match.create(teacher_skill_id: 4, student_skill_id: 3)
+# Match.create(teacher_skill_id: 5, student_skill_id: 1)
+# # FULL MATCH
+# Match.create(teacher_skill_id: 5, student_skill_id: 6)
+# Match.create(teacher_skill_id: 8, student_skill_id: 7)
 
 
 
-UserSkill.create(user_id: 3, skill_id: 24, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 5, skill_id: 24, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 6, skill_id: 21, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 21, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 20, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 9, skill_id: 20, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 10, skill_id: 17, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 17, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 24, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 5, skill_id: 24, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 16, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 13, skill_id: 16, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 6, skill_id: 21, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 21, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 14, skill_id: 14, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 14, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 20, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 9, skill_id: 20, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 12, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 17, skill_id: 12, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 10, skill_id: 17, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 17, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 18, skill_id: 10, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 10, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 16, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 13, skill_id: 16, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 8, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 21, skill_id: 8, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 14, skill_id: 14, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 14, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 6, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 23, skill_id: 6, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 3, skill_id: 12, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 17, skill_id: 12, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 4, skill_id: 50, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 50, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 18, skill_id: 10, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 10, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 48, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 7, skill_id: 48, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 3, skill_id: 8, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 21, skill_id: 8, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 8, skill_id: 46, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 46, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 6, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 23, skill_id: 6, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 43, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 11, skill_id: 43, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 4, skill_id: 50, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 50, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 12, skill_id: 41, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 41, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 48, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 7, skill_id: 48, role: "teacher") #TEACHER
 
-UserSkill.create(user_id: 3, skill_id: 39, role: "student") #VALERIE STUDENT
-UserSkill.create(user_id: 15, skill_id: 39, role: "teacher") #TEACHER
+# UserSkill.create(user_id: 8, skill_id: 46, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 46, role: "teacher") #VALERIE TEACHER
 
-UserSkill.create(user_id: 16, skill_id: 37, role: "student") #STUDENT
-UserSkill.create(user_id: 3, skill_id: 37, role: "teacher") #VALERIE TEACHER
+# UserSkill.create(user_id: 3, skill_id: 43, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 11, skill_id: 43, role: "teacher") #TEACHER
+
+# UserSkill.create(user_id: 12, skill_id: 41, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 41, role: "teacher") #VALERIE TEACHER
+
+# UserSkill.create(user_id: 3, skill_id: 39, role: "student") #VALERIE STUDENT
+# UserSkill.create(user_id: 15, skill_id: 39, role: "teacher") #TEACHER
+
+# UserSkill.create(user_id: 16, skill_id: 37, role: "student") #STUDENT
+# UserSkill.create(user_id: 3, skill_id: 37, role: "teacher") #VALERIE TEACHER
 
 #experimental matches... no idea what I am doing here... not correct.
-Match.create(teacher_skill_id: 8, student_skill_id: 25)
-Match.create(teacher_skill_id: 9, student_skill_id: 24)
-Match.create(teacher_skill_id: 10, student_skill_id: 23)
-Match.create(teacher_skill_id: 11, student_skill_id: 21)
-Match.create(teacher_skill_id: 12, student_skill_id: 22)
-Match.create(teacher_skill_id: 13, student_skill_id: 20)
-# Match.create(teacher_skill_id: 14, student_skill_id: 19)
-# Match.create(teacher_skill_id: 15, student_skill_id: 18)
-# Match.create(teacher_skill_id: 16, student_skill_id: 17)
-# Match.create(teacher_skill_id: 17, student_skill_id: 16)
-# Match.create(teacher_skill_id: 18, student_skill_id: 15)
-# Match.create(teacher_skill_id: 19, student_skill_id: 14)
-# Match.create(teacher_skill_id: 20, student_skill_id: 13)
-Match.create(teacher_skill_id: 21, student_skill_id: 12)
-Match.create(teacher_skill_id: 22, student_skill_id: 11)
-Match.create(teacher_skill_id: 23, student_skill_id: 10)
-Match.create(teacher_skill_id: 24, student_skill_id: 9)
-Match.create(teacher_skill_id: 25, student_skill_id: 8)
+# Match.create(teacher_skill_id: 8, student_skill_id: 25)
+# Match.create(teacher_skill_id: 9, student_skill_id: 24)
+# Match.create(teacher_skill_id: 10, student_skill_id: 23)
+# Match.create(teacher_skill_id: 11, student_skill_id: 21)
+# Match.create(teacher_skill_id: 12, student_skill_id: 22)
+# Match.create(teacher_skill_id: 13, student_skill_id: 20)
+# # Match.create(teacher_skill_id: 14, student_skill_id: 19)
+# # Match.create(teacher_skill_id: 15, student_skill_id: 18)
+# # Match.create(teacher_skill_id: 16, student_skill_id: 17)
+# # Match.create(teacher_skill_id: 17, student_skill_id: 16)
+# # Match.create(teacher_skill_id: 18, student_skill_id: 15)
+# # Match.create(teacher_skill_id: 19, student_skill_id: 14)
+# # Match.create(teacher_skill_id: 20, student_skill_id: 13)
+# Match.create(teacher_skill_id: 21, student_skill_id: 12)
+# Match.create(teacher_skill_id: 22, student_skill_id: 11)
+# Match.create(teacher_skill_id: 23, student_skill_id: 10)
+# Match.create(teacher_skill_id: 24, student_skill_id: 9)
+# Match.create(teacher_skill_id: 25, student_skill_id: 8)
 
 
 # #MESSAGES IN MATCH 1
