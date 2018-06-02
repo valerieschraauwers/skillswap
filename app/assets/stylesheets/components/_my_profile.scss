@@ -39,9 +39,10 @@
   justify-content: center;
   padding: 15px;
   width: 900px;
-  height: 100vh;
+  height: auto;
   background-color: #F7FAF9 !important;
   border-radius: 2px;
+  margin: 0 auto;
 }
 
 .profile-header {
@@ -51,6 +52,7 @@
 
 #profile-footer {
     background-color: #F7FAF9;
+        height: 100px;
   }
 
 .panel-body {
