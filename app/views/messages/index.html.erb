@@ -1,51 +1,48 @@
 <div class="background" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('<%= image_path 'trianglify2.png'%>')">
-<div class="container">
-      <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
-  <div class="whitecard">
+  <div class="container">
+    <%= link_to "Back", :back, class: "btn btn-xs btn-green" %>
+    <div class="whitecard2">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h4>MESSAGES</h4>
 
-
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-  <h4>MESSAGES</h4>
-
-
-      <% if @over_ten %>
-      <%= link_to 'Show Previous', '?m=all' %>
-      <% end %>
-      <br>
-      <div>
-        <% @messages.each do |message| %>
-        <% if message.content %>
-        <% user = User.find(message.user_id) %>
-        <div class="message">
-          <%= cl_image_tag user.photo, class: "avatar-medium" %>
-          <div class="message-name">
-            <h3><strong><%= user.first_name %></strong></h3>
-            <p><%= message.message_time %></p>
-          </div>
-          <div class="message-body">
-            <p>
-               <%= message.content %>
-            </p>
-          </div>
+          <% if @over_ten %>
+          <%= link_to 'Show Previous', '?m=all' %>
+          <% end %>
+          <br>
+          <div>
+            <% @messages.each do |message| %>
+            <% if message.content %>
+            <% user = User.find(message.user_id) %>
+            <div class="message">
+              <%= cl_image_tag user.photo, class: "avatar-medium" %>
+              <div class="message-name">
+                <h3><strong><%= user.first_name %></strong></h3>
+                <p><%= message.message_time %></p>
+              </div>
+              <div class="message-body">
+                <p>
+                 <%= message.content %>
+               </p>
+             </div>
+           </div>
+           <% end %>
+           <% end %>
+         </div>
+         <br>
+         <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+         <div >
+          <%= f.text_area :content, class: "form-control" %>
         </div>
-        <% end %>
-        <% end %>
-      </div>
-      <br>
-      <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-      <div >
-        <%= f.text_area :content, class: "form-control" %>
-      </div>
-      <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-      <div>
-        <br>
-        <%= f.submit "Send message", class: "btn btn-sm btn-green" %>
-      </div>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+        <div>
+          <br>
+          <%= f.submit "Send message", class: "btn btn-sm btn-green" %>
+        </div>
 
-      <% end %>
+        <% end %>
 
+      </div>
     </div>
   </div>
-</div>
 </div>

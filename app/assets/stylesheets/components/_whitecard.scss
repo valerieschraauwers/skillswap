@@ -11,14 +11,13 @@
   padding-top: 18px;
   padding: 21px;
   height: auto;
-  // background-color: white;
+  background-color: white;
   position: relative;
   transition: .2s;
   opacity: 0.8;
   border-radius: 3px;
   box-shadow: 1.5px 1.5px lightgrey;
   font-family: 'Signika';
-
 }
 
 
@@ -27,6 +26,33 @@
   color: rgb(0, 226, 201);
   font-size: 18.5px;
 }
+
+.whitecard2 {
+  margin-top: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  padding-top: 18px;
+  padding: 21px;
+  height: auto;
+  // background-color: white;
+  position: relative;
+  transition: .2s;
+  opacity: 0.8;
+  border-radius: 3px;
+  box-shadow: 1.5px 1.5px lightgrey;
+  font-family: 'Signika';
+}
+
+
+
+.whitecard2 p {
+  color: rgb(0, 226, 201);
+  font-size: 18.5px;
+}
+
+
 
 .form_whitecard {
   padding: 25px;
