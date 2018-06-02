@@ -19,7 +19,7 @@
               </tr>
               <tr>
                 <td>From</td>
-                <td><%= card_user.nationality %></td>
+                <td><%= ISO3166::Country[card_user.nationality].name %></td>
               </tr>
             </tbody>
           </table>
