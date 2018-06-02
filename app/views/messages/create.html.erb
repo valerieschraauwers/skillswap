@@ -1,1 +1,18 @@
 create.html.erb
+
+<% @messages.each do |message| %>
+        <% if message.content %>
+        <% user = User.find(message.user_id) %>
+<div class="message">
+  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="message-name">
+    <h3><strong><%= user.first_name %></strong></h3>
+    <p><%= message.message_time %></p>
+  </div>
+  <div class="message-body">
+    <p>
+       <%= message.content %>
+    </p>
+  </div>
+
+</div>
