@@ -1,6 +1,6 @@
 /* The sidebar menu */
 .sidenav {
-    // height: 100vh; /* Full-height: remove this if you want "auto" height */
+    height: 100vh; /* Full-height: remove this if you want "auto" height */
     flex: 0 0 160px; /* Set the width of the sidebar */
     z-index: 1; /* Stay on top */
     background-image: linear-gradient(-225deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%), asset-url('trianglify2.png');
